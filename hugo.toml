@@ -6,6 +6,7 @@ theme = "PaperMod"
 [params]
   description = "3D printing, engineering, and making stuff"
   author = "Shimizu"
+  defaultTheme = "dark"
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
