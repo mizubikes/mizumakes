@@ -5,8 +5,9 @@ theme = "PaperMod"
 
 [params]
   description = "3D printing, engineering, and making stuff"
-  author = "Shimizu"
+  author = "Jared"
   defaultTheme = "dark"
+  googleAnalytics = "G-H121HM747N"
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
