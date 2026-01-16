@@ -9,6 +9,13 @@
     <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <description>Welcome to MizuMakes — 3D printing, engineering, and making stuff.</description>
+    </item>
+    <item>
       <title>My First Post</title>
       <link>http://localhost:1313/posts/my-first-post/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
