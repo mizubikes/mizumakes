@@ -2,12 +2,12 @@ baseURL = "https://mizumakes.com/"
 languageCode = "en-us"
 title = "MizuMakes"
 theme = "PaperMod"
+googleAnalytics = "G-H121HM747N"
 
 [params]
   description = "3D printing, engineering, and making stuff"
   author = "Jared"
   defaultTheme = "dark"
-  googleAnalytics = "G-H121HM747N"
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
