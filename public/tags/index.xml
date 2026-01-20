@@ -6,6 +6,42 @@
     <description>Recent content in Tags on MizuMakes</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 18 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3D Printing</title>
+      <link>http://localhost:1313/tags/3d-printing/</link>
+      <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/3d-printing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functional Prints</title>
+      <link>http://localhost:1313/tags/functional-prints/</link>
+      <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/functional-prints/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Soldering</title>
+      <link>http://localhost:1313/tags/soldering/</link>
+      <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/soldering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SolidWorks</title>
+      <link>http://localhost:1313/tags/solidworks/</link>
+      <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/solidworks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workshop Organization</title>
+      <link>http://localhost:1313/tags/workshop-organization/</link>
+      <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/workshop-organization/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

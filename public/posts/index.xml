@@ -15,5 +15,12 @@
       <guid>http://localhost:1313/posts/my-3d-printing-setup/</guid>
       <description>The printer, nozzles, and filament I use for everyday printing.</description>
     </item>
+    <item>
+      <title>3D Printed Wire Holder for Soldering Station</title>
+      <link>http://localhost:1313/posts/wire-holder/</link>
+      <pubDate>Sat, 18 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wire-holder/</guid>
+      <description>A customizable wire spool holder that mounts above your workspace and keeps all your soldering wire organized and accessible.</description>
+    </item>
   </channel>
 </rss>
