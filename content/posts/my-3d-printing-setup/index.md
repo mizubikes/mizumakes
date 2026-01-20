@@ -3,6 +3,7 @@ title: "My 3D Printing Setup"
 date: 2026-01-15
 draft: false
 description: "The printer, nozzles, and filament I use for everyday printing."
+featured_image: "/posts/my-3d-printing-setup/printer.jpg"
 ---
 
 I'm Jared — an engineer who likes to tinker. I mostly print practical stuff: bike parts, things for my kids, fixes around the house, desk organization, and the occasional electromechanical project. Here's what I'm running.

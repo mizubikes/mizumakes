@@ -5,6 +5,7 @@ draft: false
 tags: ["3D printing", "workshop organization", "soldering", "functional prints", "SolidWorks"]
 categories: ["Projects"]
 summary: "A customizable wire spool holder that mounts above your workspace and keeps all your soldering wire organized and accessible."
+featured_image: "/images/Finished-wire-holder.png"
 ---
 
 ## The Problem
@@ -76,6 +77,4 @@ While this version is designed for my rack system, the beauty of 3D printing is 
 
 ## What's Next?
 
-This is the first project on MizuMakes, and there's plenty more to come. Subscribe to the [YouTube channel](https://youtube.com/@MizuMakes3D) for more practical 3D printing projects.
-
-Got ideas for workshop organization prints or questions about this design? Drop a comment below or reach out on social media.
+This is the first project on MizuMakes, and there's
