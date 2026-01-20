@@ -26,18 +26,22 @@ googleAnalytics = "G-H121HM747N"
   name = "Blog"
   url = "/posts/"
   weight = 1
+
 [[menu.main]]
   name = "Reviews"
   url = "/reviews/"
   weight = 2
+
 [[menu.main]]
   name = "Guides"
   url = "/guides/"
   weight = 3
+
 [[menu.main]]
   name = "Gear"
   url = "/gear/"
   weight = 4
+
 [[menu.main]]
   name = "About"
   url = "/about/"

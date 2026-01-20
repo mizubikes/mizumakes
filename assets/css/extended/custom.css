@@ -24,3 +24,23 @@
 .first-entry .entry-cover {
   padding-top: 50%; /* Slightly taller */
 }
+
+/* YouTube icon styling - make it teal/green and bigger */
+.social-icons a svg {
+  fill: #00ff9f !important; /* Bright green/teal */
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make MizuMakes logo/title green and bigger */
+.logo a {
+  color: #00ff9f !important; /* Bright green/teal */
+  font-size: 28px !important;
+  font-weight: 700 !important;
+}
