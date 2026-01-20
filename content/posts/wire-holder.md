@@ -77,3 +77,5 @@ While this version is designed for my rack system, the beauty of 3D printing is 
 ## What's Next?
 
 This is the first project on MizuMakes, and there's plenty more to come. Subscribe to the [YouTube channel](https://youtube.com/@MizuMakes3D) for more practical 3D printing projects.
+
+Got ideas for workshop organization prints or questions about this design? Drop a comment below or reach out on social media.
