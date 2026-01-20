@@ -1,23 +1,26 @@
+/* Featured image styling for blog post cards */
 .entry-cover {
   margin-bottom: 1rem;
   border-radius: 8px;
   overflow: hidden;
   background: var(--entry);
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
 }
 
 .entry-cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
 }
 
-/* Better image sizing for homepage cards */
-.post-entry .entry-cover img {
-  height: 200px;
-}
-
-.first-entry .entry-cover img {
-  height: 300px;
+/* Make first post image taller */
+.first-entry .entry-cover {
+  padding-top: 50%; /* Slightly taller */
 }
