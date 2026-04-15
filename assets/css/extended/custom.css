@@ -65,3 +65,7 @@
 .home-info-container + hr {
   display: none;
 }
+
+main {
+  padding-top: 0 !important;
+}
