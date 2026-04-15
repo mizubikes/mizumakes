@@ -13,6 +13,10 @@ googleAnalytics = "G-H121HM747N"
   ShowBreadCrumbs = true
   ShowShareButtons = false
 
+  [params.cover]
+    linkFullImages = true
+    hiddenInList = false
+
 [params.homeInfoParams]
   Title = "MizuMakes"
   Content = "3D printing. Engineering. Making stuff."
