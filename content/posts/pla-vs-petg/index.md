@@ -3,10 +3,10 @@ title: "PLA vs PETG: Which 3D Printing Filament Should You Use?"
 date: 2026-04-14
 description: "PLA or PETG? Here's what the difference actually is, which one to start with, and the best filaments to buy on Amazon."
 cover:
-  image: "pexels-jakubzerdzicki-31336838.jpg"
+  image: /posts/pla-vs-petg/pexels-jakubzerdzicki-31336838.jpg
   alt: "Colorful 3D printer filament spools — comparing PLA vs PETG filament"
   caption: "Photo: Jakub Zerdzicki / Pexels"
-  relative: true
+  relative: false
 ---
 
 If you just got your first 3D printer and opened Amazon to buy filament, you were probably hit with dozens of options immediately. But two names keep coming up: **PLA** and **PETG**. 
