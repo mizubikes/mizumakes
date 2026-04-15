@@ -56,3 +56,8 @@
 .posts-container {
   margin-top: 0;
 }
+
+.home-info-container ~ * {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
