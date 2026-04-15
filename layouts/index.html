@@ -1,14 +1,12 @@
 {{- define "main" }}
-{{- $posts := where .Site.RegularPages "Type" "posts" }}
+{{- $allPages := where .Site.RegularPages "Kind" "page" }}
+{{- $posts := $allPages | first 10 }}
 {{- $featured := index $posts 0 }}
 {{- $secondary := slice }}
 {{- if gt (len $posts) 1 }}{{ $secondary = $posts | after 1 | first 4 }}{{ end }}
 
-{{- $projects := where .Site.RegularPages "Type" "posts" }}
-{{- $projects = where $projects ".Params.categories" "intersect" (slice "Projects" "3D Printed Projects") | first 3 }}
-
-{{- $guides := where .Site.RegularPages "Type" "posts" }}
-{{- $guides = where $guides ".Params.categories" "intersect" (slice "Guides" "Filament") | first 3 }}
+{{- $projects := where .Site.RegularPages "Type" "projects" }}
+{{- $guides := where .Site.RegularPages "Type" "guides" }}
 
 <div class="mb-ticker">
   <span class="mb-ticker-label">Latest</span>
