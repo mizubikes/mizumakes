@@ -1,9 +1,8 @@
 {{- define "main" }}
-{{- $allPages := where .Site.RegularPages "Kind" "page" }}
-{{- $posts := $allPages | first 10 }}
-{{- $featured := index $posts 0 }}
+{{- $allPages := .Site.RegularPages.ByDate.Reverse }}
+{{- $featured := index $allPages 0 }}
 {{- $secondary := slice }}
-{{- if gt (len $posts) 1 }}{{ $secondary = $posts | after 1 | first 4 }}{{ end }}
+{{- if gt (len $allPages) 1 }}{{ $secondary = $allPages | after 1 | first 4 }}{{ end }}
 
 {{- $projects := where .Site.RegularPages "Type" "projects" }}
 {{- $guides := where .Site.RegularPages "Type" "guides" }}
@@ -11,7 +10,7 @@
 <div class="mb-ticker">
   <span class="mb-ticker-label">Latest</span>
   <div class="mb-ticker-items">
-    {{- range first 4 $posts }}
+    {{- range first 4 $allPages }}
     <a href="{{ .RelPermalink }}">{{ .Title | safeHTML }}</a>
     {{- end }}
   </div>
@@ -51,10 +50,10 @@
 <div class="mb-section">
   <div class="mb-section-header">
     <span class="mb-section-title">Latest Projects</span>
-    <a href="/categories/projects/" class="mb-section-more">View all &rarr;</a>
+    <a href="/projects/" class="mb-section-more">View all &rarr;</a>
   </div>
   <div class="mb-card-grid">
-    {{- range $projects }}
+    {{- range first 3 $projects }}
     <a href="{{ .RelPermalink }}" class="mb-card">
       {{- with .Params.cover.image }}
       <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
@@ -73,10 +72,10 @@
 <div class="mb-section">
   <div class="mb-section-header">
     <span class="mb-section-title">Guides &amp; Filament</span>
-    <a href="/categories/guides/" class="mb-section-more">View all &rarr;</a>
+    <a href="/guides/" class="mb-section-more">View all &rarr;</a>
   </div>
   <div class="mb-card-grid">
-    {{- range $guides }}
+    {{- range first 3 $guides }}
     <a href="{{ .RelPermalink }}" class="mb-card">
       {{- with .Params.cover.image }}
       <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
