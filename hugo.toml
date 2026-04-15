@@ -18,8 +18,8 @@ googleAnalytics = "G-H121HM747N"
     hiddenInList = false
 
 [params.homeInfoParams]
-  Title = "MizuMakes"
-  Content = "3D printing. Engineering. Making stuff."
+  Title = "Making things that work."
+  Content = "3D printing, engineering projects, and gear that's actually worth it."
 
 [[params.socialIcons]]
   name = "youtube"
