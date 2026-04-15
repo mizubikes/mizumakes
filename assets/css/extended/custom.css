@@ -43,3 +43,12 @@
   font-size: 28px !important;
   font-weight: 700 !important;
 }
+
+/* Reduce homepage hero spacing */
+.first-entry {
+  margin-top: 0;
+}
+
+.home-info-container {
+  padding: 20px 0;
+}
