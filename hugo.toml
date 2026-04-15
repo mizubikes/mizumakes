@@ -25,6 +25,10 @@ googleAnalytics = "G-H121HM747N"
   name = "youtube"
   url = "https://youtube.com/@MizuMakes3D"
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
 [menu]
 [[menu.main]]
   name = "Blog"
@@ -33,17 +37,17 @@ googleAnalytics = "G-H121HM747N"
 
 [[menu.main]]
   name = "Reviews"
-  url = "/reviews/"
+  url = "/categories/reviews/"
   weight = 2
 
 [[menu.main]]
   name = "Guides"
-  url = "/guides/"
+  url = "/categories/guides/"
   weight = 3
 
 [[menu.main]]
   name = "Gear"
-  url = "/gear/"
+  url = "/categories/gear/"
   weight = 4
 
 [[menu.main]]
