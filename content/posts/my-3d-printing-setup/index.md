@@ -3,6 +3,8 @@ title: "My 3D Printing Setup"
 date: 2026-01-15
 draft: false
 description: "The printer, nozzles, and filament I use for everyday printing."
+categories: ["Gear"]
+tags: ["gear", "setup", "Bambu Lab"]
 cover:
   image: /posts/my-3d-printing-setup/printer.jpg
   alt: "Bambu Lab P1S with AMS 3D printer setup"
