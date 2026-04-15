@@ -61,3 +61,7 @@
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
+.home-info-container + hr {
+  display: none;
+}
