@@ -5,7 +5,7 @@ description: "ASA filament is the go-to material for outdoor 3D prints. Here's w
 tags: ["filament", "ASA", "outdoor printing", "materials"]
 categories: ["Guides"]
 cover:
-image: /guides/what-is-asa-filament/jakub-zerdzicki-lNl46kaPG6o-unsplash.jpg
+  image: /posts/what-is-asa-filament/jakub-zerdzicki-lNl46kaPG6o-unsplash.jpg
   alt: "ASA filament spool for outdoor 3D printing"
   relative: false
 ---
