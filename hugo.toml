@@ -12,6 +12,7 @@ googleAnalytics = "G-H121HM747N"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowShareButtons = false
+  googleSiteVerification = "MwppcuM3ccw91qgRVYOLtLNzwgxWx_efJt33bIDraOQ"
 
   [params.cover]
     linkFullImages = true
