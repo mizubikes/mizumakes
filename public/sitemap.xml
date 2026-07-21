@@ -2,22 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/3d-printer-buying-guide/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ams-2-pro/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/bambu-lab/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/guides/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/p1s/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/p2s/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/bambu-p1s-sale-vs-p2s/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/bambu-lab-new-printers-2026/</loc>
+    <lastmod>2026-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/buyers-guide/</loc>
+    <lastmod>2026-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/dual-extrusion/</loc>
+    <lastmod>2026-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/fdm-printers/</loc>
+    <lastmod>2026-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/multi-material/</loc>
+    <lastmod>2026-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+    <lastmod>2026-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/asa/</loc>
+    <lastmod>2026-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/filament/</loc>
+    <lastmod>2026-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/materials/</loc>
+    <lastmod>2026-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/outdoor-printing/</loc>
+    <lastmod>2026-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/petg/</loc>
+    <lastmod>2026-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/pla/</loc>
+    <lastmod>2026-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/pla-vs-petg/</loc>
+    <lastmod>2026-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/what-is-asa-filament/</loc>
+    <lastmod>2026-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/gear/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/my-3d-printing-setup/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/tags/setup/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/wire-holder/</loc>
     <lastmod>2025-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/3d-printing/</loc>
-    <lastmod>2025-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/functional-prints/</loc>
@@ -30,9 +102,6 @@
     <lastmod>2025-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/solidworks/</loc>
-    <lastmod>2025-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/workshop-organization/</loc>

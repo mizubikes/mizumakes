@@ -2,7 +2,27 @@ baseURL = "https://mizumakes.com/"
 languageCode = "en-us"
 title = "MizuMakes"
 theme = "PaperMod"
-googleAnalytics = "G-H121HM747N"
+
+[services]
+  [services.googleAnalytics]
+    id = "G-H121HM747N"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "feed"
 
 [params]
   description = "3D printing, engineering, and making stuff"
@@ -13,10 +33,10 @@ googleAnalytics = "G-H121HM747N"
   ShowBreadCrumbs = true
   ShowShareButtons = false
   googleSiteVerification = "MwppcuM3ccw91qgRVYOLtLNzwgxWx_efJt33bIDraOQ"
-
   [params.cover]
     linkFullImages = true
     hiddenInList = false
+    responsiveImages = false
 
 [params.homeInfoParams]
   Title = "Making things that work."
@@ -26,36 +46,27 @@ googleAnalytics = "G-H121HM747N"
   name = "youtube"
   url = "https://youtube.com/@MizuMakes3D"
 
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-
 [menu]
 [[menu.main]]
   name = "Blog"
   url = "/posts/"
   weight = 1
-
 [[menu.main]]
   name = "Projects"
   url = "/categories/projects/"
   weight = 2
-
 [[menu.main]]
   name = "Reviews"
   url = "/categories/reviews/"
   weight = 3
-
 [[menu.main]]
   name = "Guides"
   url = "/categories/guides/"
   weight = 4
-
 [[menu.main]]
   name = "Gear"
   url = "/categories/gear/"
   weight = 5
-
 [[menu.main]]
   name = "About"
   url = "/about/"

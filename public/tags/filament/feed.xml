@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Filament on MizuMakes</title>
+    <link>http://localhost:1313/tags/filament/</link>
+    <description>Recent content in Filament on MizuMakes</description>
+    <generator>Hugo -- 0.159.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/filament/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PLA vs PETG: Which 3D Printing Filament Should You Use?</title>
+      <link>http://localhost:1313/posts/pla-vs-petg/</link>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/pla-vs-petg/</guid>
+      <description>PLA or PETG? Here&amp;#39;s what the difference actually is, which one to start with, and the best filaments to buy on Amazon.</description>
+    </item>
+    <item>
+      <title>What is ASA Filament? When to Stop Using PETG for Outdoor Prints</title>
+      <link>http://localhost:1313/posts/what-is-asa-filament/</link>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/what-is-asa-filament/</guid>
+      <description>ASA filament is the go-to material for outdoor 3D prints. Here&amp;#39;s what it is, why it beats PETG outdoors, and what you need to print it successfully.</description>
+    </item>
+  </channel>
+</rss>

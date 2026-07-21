@@ -1,17 +1,17 @@
----
+﻿---
 title: "My 3D Printing Setup"
 date: 2026-01-15
 draft: false
 description: "The printer, nozzles, and filament I use for everyday printing."
 categories: ["Gear"]
-tags: ["gear", "setup", "Bambu Lab"]
+tags: ["setup", "Bambu Lab"]
 cover:
   image: /posts/my-3d-printing-setup/printer.jpg
   alt: "Bambu Lab P1S with AMS 3D printer setup"
   relative: false
 ---
 
-I'm Jared — an engineer who likes to tinker. I mostly print practical stuff: bike parts, things for my kids, fixes around the house, desk organization, and the occasional electromechanical project. Here's what I'm running.
+I'm Jared â€” an engineer who likes to tinker. I mostly print practical stuff: bike parts, things for my kids, fixes around the house, desk organization, and the occasional electromechanical project. Here's what I'm running.
 
 ## Printer
 
@@ -19,7 +19,7 @@ I'm Jared — an engineer who likes to tinker. I mostly print practical stuff: b
 
 ![My P1S with AMS](printer.jpg)
 
-I've had it for about a year and it's been solid. Coming from the tinkering side of the hobby, the P1S felt almost too easy at first — but I've learned to appreciate just hitting print and having it work.
+I've had it for about a year and it's been solid. Coming from the tinkering side of the hobby, the P1S felt almost too easy at first â€” but I've learned to appreciate just hitting print and having it work.
 
 The AMS makes multi-color prints easy, but honestly I use it more for convenience. I can load up a few rolls and not worry about swapping filament mid-print.
 
@@ -29,7 +29,7 @@ I have the full set: 0.2mm, 0.4mm, 0.6mm, and 0.8mm.
 
 ![Nozzle collection](nozzles.jpg)
 
-The **0.6mm** is my go-to. It speeds up prints significantly — 30-40% faster on a lot of models — and unless I really need fine detail, most stuff still looks good. Layer lines are slightly more visible but for functional prints, who cares.
+The **0.6mm** is my go-to. It speeds up prints significantly â€” 30-40% faster on a lot of models â€” and unless I really need fine detail, most stuff still looks good. Layer lines are slightly more visible but for functional prints, who cares.
 
 The **0.2mm** comes out for small detailed parts where I need crisp edges. The **0.8mm** is great for big functional prints where strength matters more than looks.
 
