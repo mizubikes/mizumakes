@@ -14,6 +14,7 @@ import os
 import re
 import sys
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import anthropic
 import requests
@@ -31,6 +32,24 @@ MODEL = "claude-sonnet-5-5"
 AMAZON_TAG = "mizubikes-web-20"
 CATEGORIES = ["Blog", "Projects", "Reviews", "Guides", "Gear"]
 COVER_MAX_BYTES = 150 * 1024
+PACIFIC = ZoneInfo("America/Los_Angeles")
+
+# Reject stock results that show people, renders, or anything off-topic
+BANNED_TAGS = {
+    "woman", "women", "man", "men", "girl", "boy", "person", "people", "lady",
+    "model", "fashion", "beauty", "portrait", "face", "female", "male", "child",
+    "fantasy", "character", "render", "rendering", "3d render", "cgi", "daz",
+    "costume", "dress", "sexy", "cosplay", "doll", "avatar", "animation",
+}
+# Safe workshop/engineering queries if the model's query returns nothing usable
+FALLBACK_QUERIES = [
+    "3d printer", "3d printing", "filament spool", "3d printer nozzle",
+    "mechanical parts", "engineering workshop", "cnc machine", "prototype",
+]
+
+
+def today_pacific() -> dt.date:
+    return dt.datetime.now(PACIFIC).date()
 
 
 def set_output(name: str, value: str) -> None:
@@ -70,33 +89,43 @@ def next_seed_topic() -> str | None:
     return first
 
 
-SYSTEM_PROMPT = f"""You write for mizumakes.com, a 3D printing and maker site run by Jared, an engineer in Southern California with a background in embedded systems, motion control, and manufacturing process development. He prints functional parts and cares about materials, tolerances, and what actually works.
+SYSTEM_PROMPT = f"""You write for mizumakes.com, a 3D printing and maker site run by Jared, an engineer in Southern California with a background in embedded systems, motion control, and medical device process development. He prints functional, load-bearing, and heat-exposed parts, not figurines or decor, and readers come for engineering judgment.
 
-Voice: conversational, technically grounded, honest about real-world tradeoffs, practical decision-making over hype. Write in prose with short paragraphs and a few ## subheadings. Avoid bullet-heavy articles. No generic AI phrasing ("In today's fast-paced world", "game-changer", "dive in", "unleash your creativity"). Do not invent personal printing experiences or claim Jared tested something; frame hands-on claims as what the specs and reporting suggest.
+Angle: write every post as an engineer choosing a material, machine, or method for a real functional part. Ground the article in numbers and mechanisms:
+- Material properties where relevant: heat deflection temperature, glass transition, tensile strength and modulus, elongation at break, impact resistance, moisture absorption, UV and chemical resistance, shrinkage/warping tendency. Use manufacturer technical data sheets (TDS) as primary sources and note that TDS values are measured on ideal specimens, so printed parts land lower, especially across layers (Z axis).
+- Concrete print settings with numbers: nozzle and bed temperature, chamber needs, speeds and volumetric flow, cooling, drying temperature and time, nozzle material.
+- Design-for-printing guidance: print orientation relative to load, wall count vs infill, layer adhesion as the weak axis, tolerances and clearances, inserts and fasteners, creep under sustained load.
+- Failure modes and when NOT to use something. Name the use cases it fits (brackets, enclosures, jigs and fixtures, outdoor parts, snap fits, hot environments) and the ones it does not.
+- When recommending products, compare them on measurable criteria (published TDS numbers, diameter tolerance, spool weight, price per kg) rather than marketing claims.
+
+Voice: conversational, technically grounded, honest about real-world tradeoffs, practical decision-making over hype. Write in prose with short paragraphs and ## subheadings. A compact Markdown table is welcome when comparing materials or products on numbers; otherwise avoid bullet-heavy articles and listicle filler. No generic AI phrasing ("In today's fast-paced world", "game-changer", "dive in", "unleash your creativity", "whether you're a beginner or a pro"). Do not invent personal printing experiences or claim Jared tested something; frame hands-on claims as what the data sheets, specs, and reporting suggest.
 
 Originality: facts from sources are fine, wording must be entirely your own. Never copy or closely mirror sentences from any article or press release. No quotes longer than a few words.
 
-Accuracy: every spec, price, weight, and date must come from your web searches. If you can't verify something, leave it out. End the body with a short "Sources" section listing the URLs you relied on.
+Accuracy: every spec, property value, price, weight, and date must come from your web searches. If you can't verify something, leave it out. End the body with a short "Sources" section listing the URLs you relied on.
+
+Prices: US dollars only, from US retailers or US list prices (e.g. "$24.99"). Never use euros, pounds, or any other currency, and never convert from them. If you can only find a non-USD price, omit the price.
 
 Affiliate links: when you mention a specific product someone might buy, link it with an Amazon search URL in this exact form: https://www.amazon.com/s?k=URL+ENCODED+PRODUCT+NAME&tag={AMAZON_TAG}
 Never invent Amazon product IDs. Add one line near the top of the body: "*MizuMakes may earn a commission from links in this post.*"
 
 Internal links: link to 1-3 related existing MizuMakes posts where they genuinely fit, using the relative URLs provided.
 
-Length: 900-1400 words.
+Length: 1000-1600 words.
 """
 
 
 def build_user_prompt(seed: str | None, posts: list[dict]) -> str:
-    today = dt.date.today().isoformat()
+    today = today_pacific().isoformat()
     existing = "\n".join(f"- {p['title']} ({p['url']})" for p in posts) or "(none)"
     if seed:
         topic_line = f"Write about this topic: {seed}"
     else:
         topic_line = (
-            "Pick ONE topic yourself: a 3D printer or filament launch, firmware/slicer development, or buyer's-guide question "
-            "from roughly the last two weeks that fits FDM printers, filaments, slicers, upgrades, or functional printing, "
-            "has buying intent, and is NOT already covered by an existing post below."
+            "Pick ONE topic yourself: an engineering-focused question about functional FDM printing, such as a material "
+            "comparison for a specific use case, a design-for-strength technique, a printer or filament launch from roughly "
+            "the last two weeks evaluated on measurable specs, or a buyer's-guide question with clear buying intent. "
+            "It must NOT already be covered by an existing post below."
         )
     return f"""Today is {today}.
 
@@ -111,8 +140,8 @@ Research with web search first, then respond with ONLY a JSON object (no code fe
 "description": one-sentence SEO meta description, under 155 characters
 "category": exactly one of {CATEGORIES} (Guides = how-tos and buyer's guides, Reviews = single-product evaluations, Gear = tools and accessories, Projects = builds, Blog = news and opinion)
 "tags": 2-5 short tags; never use a category name (Blog, Projects, Reviews, Guides, Gear) as a tag
-"image_query": 2-4 word generic stock-photo search (e.g. "3d printer workshop"), no brand names
-"image_alt": descriptive alt text for a generic photo matching image_query
+"image_query": 2-4 word stock-photo search naming a physical object or machine, e.g. "3d printer", "filament spool", "3d printer nozzle", "mechanical parts", "engineering workshop". No brand names, no material abbreviations alone (never just "PETG" or "PLA"), no people, no abstract words.
+"image_alt": descriptive alt text for a generic photo of that object
 "body": the full article body in Markdown, without front matter or an H1
 """
 
@@ -159,24 +188,41 @@ def fetch_cover(query: str, slug: str) -> tuple[str, str, str]:
     """Returns (image path for front matter, caption, Pixabay page URL)."""
     key = os.environ["PIXABAY_API_KEY"]
 
-    def search(q: str) -> list[dict]:
+    def search(q: str, category: str | None = None) -> list[dict]:
         params = {
             "key": key,
             "q": q[:100],
             "image_type": "photo",
             "orientation": "vertical",
             "safesearch": "true",
-            "per_page": 10,
+            "per_page": 30,
         }
+        if category:
+            params["category"] = category
         r = requests.get("https://pixabay.com/api/", params=params, timeout=30)
         r.raise_for_status()
         return r.json().get("hits", [])
 
-    hits = search(query) or search("3d printer")
-    if not hits:
-        sys.exit("No Pixabay images found")
+    def usable(hit: dict) -> bool:
+        tags = {t.strip().lower() for t in hit.get("tags", "").split(",")}
+        words = {w for t in tags for w in t.split()}
+        return not (tags & BANNED_TAGS or words & BANNED_TAGS)
 
-    photo = hits[0]
+    photo = None
+    # Model's query in engineering-leaning categories first, then unrestricted,
+    # then safe fallback queries
+    attempts = [(query, c) for c in ("industry", "science", "computer")]
+    attempts.append((query, None))
+    attempts += [(q, None) for q in FALLBACK_QUERIES]
+    for q, cat in attempts:
+        good = [h for h in search(q, cat) if usable(h)]
+        if good:
+            photo = good[0]
+            print(f"Cover: query={q!r} category={cat} tags={photo.get('tags')!r}")
+            break
+    if not photo:
+        sys.exit("No usable Pixabay images found")
+
     raw = requests.get(photo["largeImageURL"], timeout=60).content
     img = Image.open(io.BytesIO(raw)).convert("RGB")
     img.thumbnail((1200, 1600))
@@ -212,7 +258,7 @@ def main() -> None:
     tags = ", ".join(yaml_str(t) for t in data["tags"])
     front = f"""---
 title: {yaml_str(data["title"])}
-date: {dt.date.today().isoformat()}
+date: {today_pacific().isoformat()}
 description: {yaml_str(data["description"])}
 slug: {data["slug"]}
 categories: [{yaml_str(data["category"])}]
