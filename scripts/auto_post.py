@@ -40,10 +40,22 @@ BANNED_TAGS = {
     "model", "fashion", "beauty", "portrait", "face", "female", "male", "child",
     "fantasy", "character", "render", "rendering", "3d render", "cgi", "daz",
     "costume", "dress", "sexy", "cosplay", "doll", "avatar", "animation",
+    # "filament spool" otherwise matches yarn and sewing photos
+    "yarn", "wool", "knit", "knitting", "crochet", "sewing", "thread", "threads",
+    "embroidery", "textile", "fabric", "skein", "needle", "needlework", "craft",
+    "handicraft", "cotton", "string", "twine", "rope", "ribbon", "tape",
+}
+# A cover must carry at least one of these tags to count as on-topic
+REQUIRED_TAGS = {
+    "3d", "printer", "printing", "3d printer", "3d printing", "filament",
+    "plastic", "polymer", "extruder", "nozzle", "machine", "machinery",
+    "technology", "engineering", "industry", "industrial", "manufacturing",
+    "prototype", "cnc", "mechanical", "mechanics", "gear", "gears", "robot",
+    "robotics", "electronics", "workshop", "tool", "tools", "maker", "parts",
 }
 # Safe workshop/engineering queries if the model's query returns nothing usable
 FALLBACK_QUERIES = [
-    "3d printer", "3d printing", "filament spool", "3d printer nozzle",
+    "3d printer", "3d printing", "3d printer nozzle", "3d printed parts",
     "mechanical parts", "engineering workshop", "cnc machine", "prototype",
 ]
 
@@ -140,7 +152,7 @@ Research with web search first, then respond with ONLY a JSON object (no code fe
 "description": one-sentence SEO meta description, under 155 characters
 "category": exactly one of {CATEGORIES} (Guides = how-tos and buyer's guides, Reviews = single-product evaluations, Gear = tools and accessories, Projects = builds, Blog = news and opinion)
 "tags": 2-5 short tags; never use a category name (Blog, Projects, Reviews, Guides, Gear) as a tag
-"image_query": 2-4 word stock-photo search naming a physical object or machine, e.g. "3d printer", "filament spool", "3d printer nozzle", "mechanical parts", "engineering workshop". No brand names, no material abbreviations alone (never just "PETG" or "PLA"), no people, no abstract words.
+"image_query": 2-4 word stock-photo search naming a physical object or machine, e.g. "3d printer", "3d printer nozzle", "3d printed parts", "mechanical parts", "engineering workshop". For filament or material topics use "3d printer" or "3d printing", never "filament spool" (it returns yarn photos). No brand names, no material abbreviations alone (never just "PETG" or "PLA"), no people, no abstract words.
 "image_alt": descriptive alt text for a generic photo of that object
 "body": the full article body in Markdown, without front matter or an H1
 """
@@ -206,7 +218,9 @@ def fetch_cover(query: str, slug: str) -> tuple[str, str, str]:
     def usable(hit: dict) -> bool:
         tags = {t.strip().lower() for t in hit.get("tags", "").split(",")}
         words = {w for t in tags for w in t.split()}
-        return not (tags & BANNED_TAGS or words & BANNED_TAGS)
+        if tags & BANNED_TAGS or words & BANNED_TAGS:
+            return False
+        return bool(tags & REQUIRED_TAGS or words & REQUIRED_TAGS)
 
     photo = None
     # Model's query in engineering-leaning categories first, then unrestricted,
