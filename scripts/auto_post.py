@@ -44,20 +44,19 @@ BANNED_TAGS = {
     "yarn", "wool", "knit", "knitting", "crochet", "sewing", "thread", "threads",
     "embroidery", "textile", "fabric", "skein", "needle", "needlework", "craft",
     "handicraft", "cotton", "string", "twine", "rope", "ribbon", "tape",
+    # "filament" and "printer" also match light bulbs and office printers
+    "bulb", "light bulb", "lightbulb", "lamp", "edison", "incandescent",
+    "office", "paper", "ink", "inkjet", "cartridge", "toner", "document",
 }
-# A cover must carry at least one of these tags to count as on-topic
+# A cover must be tagged as 3D printing specifically. Generic tags like
+# "technology" or "industrial" also appear on architecture and abstract photos.
 REQUIRED_TAGS = {
-    "3d", "printer", "printing", "3d printer", "3d printing", "filament",
-    "plastic", "polymer", "extruder", "nozzle", "machine", "machinery",
-    "technology", "engineering", "industry", "industrial", "manufacturing",
-    "prototype", "cnc", "mechanical", "mechanics", "gear", "gears", "robot",
-    "robotics", "electronics", "workshop", "tool", "tools", "maker", "parts",
+    "3d printer", "3d printing", "3d print", "3d printed", "3d-printer",
+    "3d-printing", "3dprinter", "3dprinting", "printer", "filament",
+    "extruder", "nozzle", "additive manufacturing", "prototyping",
 }
 # Safe workshop/engineering queries if the model's query returns nothing usable
-FALLBACK_QUERIES = [
-    "3d printer", "3d printing", "3d printer nozzle", "3d printed parts",
-    "mechanical parts", "engineering workshop", "cnc machine", "prototype",
-]
+FALLBACK_QUERIES = ["3d printer", "3d printing", "3d printer nozzle", "3d printed"]
 
 
 def today_pacific() -> dt.date:
@@ -152,7 +151,7 @@ Research with web search first, then respond with ONLY a JSON object (no code fe
 "description": one-sentence SEO meta description, under 155 characters
 "category": exactly one of {CATEGORIES} (Guides = how-tos and buyer's guides, Reviews = single-product evaluations, Gear = tools and accessories, Projects = builds, Blog = news and opinion)
 "tags": 2-5 short tags; never use a category name (Blog, Projects, Reviews, Guides, Gear) as a tag
-"image_query": 2-4 word stock-photo search naming a physical object or machine, e.g. "3d printer", "3d printer nozzle", "3d printed parts", "mechanical parts", "engineering workshop". For filament or material topics use "3d printer" or "3d printing", never "filament spool" (it returns yarn photos). No brand names, no material abbreviations alone (never just "PETG" or "PLA"), no people, no abstract words.
+"image_query": 2-4 word stock-photo search naming a physical object or machine, e.g. "3d printer", "3d printing", "3d printer nozzle", "3d printed parts". It must contain "3d print" or "printer". For filament or material topics use "3d printer" or "3d printing", never "filament spool" (it returns yarn photos). No brand names, no material abbreviations alone (never just "PETG" or "PLA"), no people, no abstract words.
 "image_alt": descriptive alt text for a generic photo of that object
 "body": the full article body in Markdown, without front matter or an H1
 """
@@ -220,13 +219,12 @@ def fetch_cover(query: str, slug: str) -> tuple[str, str, str]:
         words = {w for t in tags for w in t.split()}
         if tags & BANNED_TAGS or words & BANNED_TAGS:
             return False
-        return bool(tags & REQUIRED_TAGS or words & REQUIRED_TAGS)
+        return bool(tags & REQUIRED_TAGS)
 
     photo = None
     # Model's query in engineering-leaning categories first, then unrestricted,
     # then safe fallback queries
-    attempts = [(query, c) for c in ("industry", "science", "computer")]
-    attempts.append((query, None))
+    attempts = [(query, None), (query, "industry"), (query, "science")]
     attempts += [(q, None) for q in FALLBACK_QUERIES]
     for q, cat in attempts:
         good = [h for h in search(q, cat) if usable(h)]
