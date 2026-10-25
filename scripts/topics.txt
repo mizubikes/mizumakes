@@ -1,5 +1,15 @@
-# One topic per line. The auto-drafter uses the top line, then deletes it.
-# When this list is empty, Claude picks a topic from recent cycling news.
-Best gravel tires for mixed pavement and dirt in 2026
-How to set tubeless tire pressure for gravel by rider weight and tire width
-SRAM vs Shimano 13-speed gravel drivetrains compared
+Best PETG filament brands for functional parts
+PLA vs PETG vs ASA for outdoor prints
+How to dry filament: dryer boxes vs food dehydrators vs printer heated beds
+Bambu Lab AMS vs AMS 2 Pro vs AMS HT: which multi-material setup makes sense
+Best budget 3D printer under 300 dollars
+Hardened steel nozzle: when you need one and which abrasive filaments require it
+TPU printing guide: settings, direct drive, and best brands
+Best 3D printer enclosure options for ABS and ASA
+Textured PEI vs smooth PEI vs cool plate: which build plate for which filament
+Carbon fiber filament: PLA-CF vs PETG-CF vs PA-CF for functional parts
+How to design 3D printed parts for strength: wall count, infill, and orientation
+Heat set inserts vs printed threads vs captive nuts
+Best slicer settings to reduce stringing
+Prusa Core One vs Bambu Lab P2S
+Best 3D printing tools and accessories for a home workshop
