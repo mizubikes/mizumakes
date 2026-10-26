@@ -1,4 +1,4 @@
-﻿---
+---
 title: "The P1S AMS 2 Pro Combo Is $579. The P2S Combo Is $749. Here's Which One to Buy."
 date: 2026-07-20
 draft: false

@@ -1,0 +1,147 @@
+# Filament price tracker watchlist
+# ---------------------------------
+# One entry per product. The daily GitHub Action (scripts/filament_prices.py)
+# reads this file, pulls the current price from each brand's own store, and
+# writes data/filament_prices.json + data/filament_history.json.
+#
+# Fields
+#   id        unique slug, used by the {{< filament-price "id" >}} shortcode
+#   brand     must match a key under `brands` below (sets chart color)
+#   name      display name
+#   material  must match a key under `materials` below
+#   weight_g  net filament weight of the spool being priced (for $/kg)
+#   amazon    your Amazon affiliate link (shown as a button, never with a price)
+#   store     optional brand-store price source (Shopify)
+#     base     store root URL, no trailing slash
+#     handle   the product handle (the part after /products/ in the URL)
+#     match    words that must ALL appear in the variant title (case-insensitive)
+#     exclude  words that must NOT appear in the variant title
+#
+# Amazon prices are never shown — Amazon's rules only allow prices pulled
+# from their API, which needs 10+ sales in 30 days. Store prices are the
+# public reference price; the Amazon button is where readers check theirs.
+
+brands:
+  Polymaker: 1
+  ELEGOO: 2
+  HATCHBOX: 3
+  OVERTURE: 4
+
+materials:
+  - key: PLA
+    title: "PLA"
+    blurb: "The default. Easy to print, stiff, cheap. Softens around 55–60°C, so keep it out of hot cars."
+    guide: "/posts/pla-vs-petg/"
+  - key: PETG
+    title: "PETG"
+    blurb: "Tougher and more heat tolerant than PLA, a little stringier. My pick for functional parts."
+    guide: "/posts/pla-vs-petg/"
+  - key: ASA
+    title: "ASA"
+    blurb: "UV and weather resistant. For anything that lives outside. Needs an enclosure and ventilation."
+    guide: "/posts/what-is-asa-filament/"
+
+filaments:
+  # ---------- PLA ----------
+  - id: polymaker-panchroma-matte-pla
+    brand: Polymaker
+    name: "Panchroma Matte PLA"
+    material: PLA
+    weight_g: 1000
+    amazon: "https://a.co/d/00jbLCF8"
+    store:
+      base: "https://shop.polymaker.com"
+      handle: "matte-pla"
+      match: ["1.75", "1kg"]
+      exclude: ["3kg", "2.85"]
+
+  - id: hatchbox-pla
+    brand: HATCHBOX
+    name: "PLA"
+    material: PLA
+    weight_g: 1000
+    amazon: "https://a.co/d/059Q7J0E"
+    store:
+      base: "https://www.hatchbox3d.com"
+      handle: "3d-pla-1kg1-75-blk"
+
+  - id: elegoo-pla
+    brand: ELEGOO
+    name: "PLA"
+    material: PLA
+    weight_g: 1000
+    amazon: "https://a.co/d/00CQNtqz"
+    store:
+      base: "https://www.elegoo.com"
+      handle: "pla-filament-1-75mm-colored-1kg"
+      match: ["black"]
+      exclude: ["2kg", "5kg", "10kg", "bundle"]
+
+  # ---------- PETG ----------
+  - id: polymaker-petg
+    brand: Polymaker
+    name: "PETG"
+    material: PETG
+    weight_g: 1000
+    amazon: "https://a.co/d/0bwBK4ut"
+    store:
+      base: "https://shop.polymaker.com"
+      handle: "petg"
+      match: ["1.75", "1kg"]
+      exclude: ["3kg", "2.85"]
+
+  - id: hatchbox-petg
+    brand: HATCHBOX
+    name: "PETG"
+    material: PETG
+    weight_g: 1000
+    amazon: "https://a.co/d/05i4ahwu"
+    store:
+      base: "https://www.hatchbox3d.com"
+      handle: "3d-petg-1kg1-75-wht"
+
+  - id: elegoo-rapid-petg
+    brand: ELEGOO
+    name: "Rapid PETG"
+    material: PETG
+    weight_g: 1000
+    amazon: "https://a.co/d/03IrVIeP"
+    store:
+      base: "https://www.elegoo.com"
+      handle: "rapid-petg-filament-1-75mm-colored-1kg"
+      match: ["black"]
+      exclude: ["2kg", "5kg", "10kg", "bundle"]
+
+  # ---------- ASA ----------
+  - id: polymaker-asa
+    brand: Polymaker
+    name: "ASA"
+    material: ASA
+    weight_g: 1000
+    amazon: "https://amzn.to/4vAKXjq"
+    store:
+      base: "https://shop.polymaker.com"
+      handle: "asa"
+      match: ["1.75", "1kg"]
+      exclude: ["3kg", "2.85"]
+
+  - id: elegoo-asa
+    brand: ELEGOO
+    name: "ASA"
+    material: ASA
+    weight_g: 1000
+    amazon: "https://amzn.to/4mz0VGD"
+    store:
+      base: "https://www.elegoo.com"
+      handle: "asa-filament-1-75mm-colored-1kg"
+      match: ["black"]
+      exclude: ["2kg", "5kg", "10kg", "bundle"]
+
+  # OVERTURE sells mainly through Amazon — no brand store to price against,
+  # so it shows as Amazon-only (no number) until a store source is added.
+  - id: overture-asa
+    brand: OVERTURE
+    name: "ASA"
+    material: ASA
+    weight_g: 1000
+    amazon: "https://amzn.to/4mz1Jv9"

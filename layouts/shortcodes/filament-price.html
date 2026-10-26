@@ -1,0 +1,32 @@
+{{- /*
+  Live filament price card for articles.
+  Usage:  {{< filament-price "polymaker-asa" >}}
+  The id must exist in data/filaments.yaml.
+*/ -}}
+{{- $id := .Get 0 -}}
+{{- $cfg := site.Data.filaments -}}
+{{- $f := index (where $cfg.filaments "id" $id) 0 -}}
+{{- if not $f -}}
+  {{- errorf "filament-price: unknown id %q in %s" $id .Page.File.Path -}}
+{{- else -}}
+{{- $p := index (site.Data.filament_prices.items | default dict) $id | default dict -}}
+{{- $slot := index ($cfg.brands | default dict) $f.brand | default 1 -}}
+<div class="fp fp-card">
+  <div class="fp-card-main">
+    <div class="fp-card-name"><span class="fp-swatch fp-s{{ $slot }}" aria-hidden="true"></span><span class="fp-brand">{{ $f.brand }}</span> {{ $f.name }} <span class="fp-card-mat">{{ $f.material }}</span></div>
+    <div class="fp-card-price">
+      {{- if $p.per_kg -}}
+        <strong>${{ lang.FormatNumber 2 $p.per_kg }}</strong><small>/kg at the brand store</small>
+        {{- with $p.low_90 }}{{ if ge (int ($p.days_tracked | default 0)) 14 }} <span class="fp-card-low">90-day low ${{ lang.FormatNumber 2 . }}</span>{{ end }}{{ end -}}
+      {{- else -}}
+        <small>Price varies — check Amazon</small>
+      {{- end -}}
+    </div>
+    <div class="fp-card-status">{{ partial "filament/status.html" $p }}</div>
+  </div>
+  <div class="fp-card-actions">
+    {{- with $f.amazon }}<a class="fp-btn fp-btn-primary" href="{{ . }}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon</a>{{ end -}}
+    <a class="fp-link" href="/filament-prices/#{{ $f.id }}">Compare all {{ $f.material }} prices →</a>
+  </div>
+</div>
+{{- end -}}

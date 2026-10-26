@@ -1,0 +1,201 @@
+{{- define "main" }}
+{{- $cfg := site.Data.filaments -}}
+{{- $prices := site.Data.filament_prices | default dict -}}
+{{- $items := $prices.items | default dict -}}
+{{- $hist := site.Data.filament_history | default dict -}}
+{{- $brands := $cfg.brands | default dict -}}
+{{- $anyChart := false -}}
+
+<article class="post-single fp">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+    {{- with .Description }}<div class="post-description">{{ . }}</div>{{ end }}
+    {{- with $prices.updated }}
+    <div class="fp-updated">Prices checked <time datetime="{{ . }}">{{ time.Format "Jan 2, 2006" . }}</time> · updated every morning</div>
+    {{- end }}
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+
+    <nav class="fp-jump" aria-label="Jump to material">
+      {{- range $cfg.materials }}<a href="#{{ .key | urlize }}">{{ .title }}</a>{{ end -}}
+    </nav>
+
+    {{- range $m := $cfg.materials }}
+      {{- /* collect + sort this material's filaments by $/kg, unpriced last */ -}}
+      {{- $rows := slice -}}
+      {{- range where $cfg.filaments "material" $m.key }}
+        {{- $p := index $items .id | default dict -}}
+        {{- $sortKey := 99999.0 -}}
+        {{- with $p.per_kg }}{{ $sortKey = float . }}{{ end -}}
+        {{- $rows = $rows | append (dict "f" . "p" $p "k" $sortKey) -}}
+      {{- end -}}
+      {{- $rows = sort $rows "k" -}}
+
+      {{- /* chart series: products with 2+ days of history */ -}}
+      {{- $series := slice -}}
+      {{- range $rows }}
+        {{- $pts := index $hist .f.id | default slice -}}
+        {{- if ge (len $pts) 2 -}}
+          {{- $series = $series | append (dict "name" (printf "%s %s" .f.brand .f.name) "slot" (index $brands .f.brand | default 1) "points" $pts) -}}
+        {{- end -}}
+      {{- end -}}
+
+      <section class="fp-material" id="{{ $m.key | urlize }}">
+        <h2>{{ $m.title }} <span class="fp-h-sub">price per kg</span></h2>
+        <p class="fp-blurb">{{ $m.blurb }}{{ with $m.guide }} <a href="{{ . }}">Full {{ $m.title }} guide →</a>{{ end }}</p>
+
+        {{- $best := index $rows 0 -}}
+        {{- if and $best $best.p.per_kg }}
+        <div class="fp-best">
+          <div class="fp-best-label">Cheapest {{ $m.title }} right now</div>
+          <div class="fp-best-row">
+            <span class="fp-best-name"><span class="fp-swatch fp-s{{ index $brands $best.f.brand | default 1 }}" aria-hidden="true"></span>{{ $best.f.brand }} {{ $best.f.name }}</span>
+            <span class="fp-best-price">${{ lang.FormatNumber 2 $best.p.per_kg }}<small>/kg</small></span>
+          </div>
+          <div class="fp-best-actions">
+            {{- with $best.f.amazon }}<a class="fp-btn fp-btn-primary" href="{{ . }}" target="_blank" rel="sponsored nofollow noopener">Check price on Amazon</a>{{ end }}
+            {{- with $best.p.store_url }}<a class="fp-btn" href="{{ . }}" target="_blank" rel="nofollow noopener">Brand store</a>{{ end }}
+          </div>
+        </div>
+        {{- end }}
+
+        <div class="fp-table-wrap">
+          <table class="fp-table">
+            <thead>
+              <tr>
+                <th scope="col">Filament</th>
+                <th scope="col" class="fp-num">Store $/kg</th>
+                <th scope="col" class="fp-num fp-hide-sm">90-day range</th>
+                <th scope="col" class="fp-hide-sm">Status</th>
+                <th scope="col"><span class="fp-sr">Buy</span></th>
+              </tr>
+            </thead>
+            <tbody>
+            {{- range $rows }}
+              {{- $f := .f }}{{ $p := .p }}
+              <tr id="{{ $f.id }}">
+                <th scope="row" class="fp-name">
+                  <span class="fp-swatch fp-s{{ index $brands $f.brand | default 1 }}" aria-hidden="true"></span>
+                  <span><span class="fp-brand">{{ $f.brand }}</span> {{ $f.name }}<span class="fp-show-sm fp-status-sm">{{ partial "filament/status.html" $p }}</span></span>
+                </th>
+                <td class="fp-num">
+                  {{- if $p.per_kg -}}
+                    <strong>${{ lang.FormatNumber 2 $p.per_kg }}</strong>
+                    {{- with $p.compare_at }}<br><s class="fp-was">${{ lang.FormatNumber 2 . }}</s>{{ end -}}
+                  {{- else -}}<span class="fp-dash">—</span>{{- end -}}
+                </td>
+                <td class="fp-num fp-hide-sm">
+                  {{- if and $p.low_90 (ge (int ($p.days_tracked | default 0)) 2) -}}
+                    ${{ lang.FormatNumber 2 $p.low_90 }}–${{ lang.FormatNumber 2 $p.high_90 }}
+                  {{- else -}}<span class="fp-dash">—</span>{{- end -}}
+                </td>
+                <td class="fp-status fp-hide-sm">{{ partial "filament/status.html" $p }}</td>
+                <td class="fp-buy">
+                  {{- with $f.amazon }}<a class="fp-btn fp-btn-primary fp-btn-sm" href="{{ . }}" target="_blank" rel="sponsored nofollow noopener">Amazon</a>{{ end -}}
+                  {{- with $p.store_url }}<a class="fp-link" href="{{ . }}" target="_blank" rel="nofollow noopener">Store</a>{{ end -}}
+                </td>
+              </tr>
+            {{- end }}
+            </tbody>
+          </table>
+        </div>
+
+        {{- if $series }}
+          {{- $anyChart = true }}
+          <figure class="fp-chart">
+            <figcaption>{{ $m.title }} store price per kg over time</figcaption>
+            <div class="fp-chart-box"><canvas aria-label="{{ $m.title }} price history line chart" role="img"></canvas></div>
+            <script type="application/json" class="fp-chart-data">{{ dict "series" $series | jsonify | safeJS }}</script>
+          </figure>
+        {{- else }}
+          <p class="fp-note">Price history chart appears once there are a couple of days of data.</p>
+        {{- end }}
+      </section>
+    {{- end }}
+
+    <section class="fp-method">
+      <h2>How this works</h2>
+      <ul>
+        <li>Every morning a script checks each brand's own online store for a 1kg, 1.75mm spool and records the price per kg.</li>
+        <li><strong>90-day range</strong> is the lowest and highest store price seen in the last 90 days. <strong>Deal</strong> means the store has it marked down, or it's at least 10% under its typical price. <strong>90-day low</strong> needs two weeks of history before it shows.</li>
+        <li>Amazon prices aren't listed because they change through the day — tap the Amazon button to see yours. Amazon links are affiliate links; buying through them supports the site at no extra cost to you.</li>
+        <li>Shipping, tax, and color differences aren't included. Some colors cost more.</li>
+      </ul>
+    </section>
+  </div>
+</article>
+
+{{- if $anyChart }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+<script defer>
+window.addEventListener('load', function () {
+  if (!window.Chart) return;
+  var root = document.querySelector('.fp');
+  var charts = [];
+  function v(name) { return getComputedStyle(root).getPropertyValue(name).trim(); }
+  function fmtDate(d) {
+    var dt = new Date(d + 'T12:00:00');
+    return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  }
+  function build() {
+    charts.forEach(function (c) { c.destroy(); });
+    charts = [];
+    var text2 = v('--fp-text-2'), grid = v('--fp-grid'), surface = v('--fp-surface');
+    document.querySelectorAll('.fp-chart').forEach(function (fig) {
+      var data = JSON.parse(fig.querySelector('.fp-chart-data').textContent);
+      var dates = {};
+      data.series.forEach(function (s) { s.points.forEach(function (p) { dates[p.d] = 1; }); });
+      var labels = Object.keys(dates).sort();
+      var datasets = data.series.map(function (s) {
+        var m = {}; s.points.forEach(function (p) { m[p.d] = p.p; });
+        var color = v('--fp-series-' + s.slot);
+        return {
+          label: s.name,
+          data: labels.map(function (d) { return d in m ? m[d] : null; }),
+          borderColor: color, backgroundColor: color,
+          borderWidth: 2, pointRadius: 0, pointHoverRadius: 5,
+          pointHoverBorderColor: surface, pointHoverBorderWidth: 2,
+          spanGaps: true, tension: 0
+        };
+      });
+      charts.push(new Chart(fig.querySelector('canvas'), {
+        type: 'line',
+        data: { labels: labels, datasets: datasets },
+        options: {
+          responsive: true, maintainAspectRatio: false, animation: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: {
+              display: datasets.length > 1, position: 'top', align: 'start',
+              labels: { color: text2, boxWidth: 14, boxHeight: 2, usePointStyle: false, font: { size: 12 } }
+            },
+            tooltip: {
+              callbacks: {
+                title: function (items) { return fmtDate(labels[items[0].dataIndex]); },
+                label: function (ctx) { return ' ' + ctx.dataset.label + ': $' + ctx.parsed.y.toFixed(2) + '/kg'; }
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: { display: false }, border: { color: grid },
+              ticks: { color: text2, maxTicksLimit: 6, maxRotation: 0, callback: function (val) { return fmtDate(labels[val]); } }
+            },
+            y: {
+              grid: { color: grid }, border: { display: false },
+              ticks: { color: text2, maxTicksLimit: 5, callback: function (val) { return '$' + val; } }
+            }
+          }
+        }
+      }));
+    });
+  }
+  build();
+  new MutationObserver(build).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+});
+</script>
+{{- end }}
+{{- end }}{{/* end main */}}

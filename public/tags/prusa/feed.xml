@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Prusa on MizuMakes</title>
+    <link>https://mizumakes.com/tags/prusa/</link>
+    <description>Recent content in Prusa on MizuMakes</description>
+    <generator>Hugo -- 0.159.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mizumakes.com/tags/prusa/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Prusa CORE One&#43; Up Close: A 55 °C Heated Chamber and What Else Sets It Apart</title>
+      <link>https://mizumakes.com/posts/prusa-core-one-plus-heated-chamber-features/</link>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://mizumakes.com/posts/prusa-core-one-plus-heated-chamber-features/</guid>
+      <description>The Prusa CORE One&#43; is an enclosed CoreXY workhorse with an actively heated 55 °C chamber. Here&amp;#39;s what the chamber unlocks, what the &amp;#39;&#43;&amp;#39; added, and the features that actually matter — plus the honest trade-offs.</description>
+    </item>
+    <item>
+      <title>Why an 8-Tool Prusa INDX Might Be My Next Printer</title>
+      <link>https://mizumakes.com/posts/prusa-core-one-indx-8-tool-changer/</link>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://mizumakes.com/posts/prusa-core-one-indx-8-tool-changer/</guid>
+      <description>The Prusa/Bondtech INDX adds up to 8 independent toolheads to a CORE One&#43; for true multi-material printing. Here&amp;#39;s why the ~$999 8-tool kit is on my upgrade shortlist — and why &amp;#39;Nozzlegate&amp;#39; means it isn&amp;#39;t in my cart yet.</description>
+    </item>
+  </channel>
+</rss>
