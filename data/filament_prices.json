@@ -3,7 +3,7 @@
     "elegoo-asa": {
       "at_low": false,
       "available": false,
-      "checked_at": "2026-10-26T03:27:13+00:00",
+      "checked_at": "2026-10-26T03:30:19+00:00",
       "compare_at": null,
       "days_tracked": 1,
       "deal": false,
@@ -24,7 +24,7 @@
     "elegoo-pla": {
       "at_low": false,
       "available": false,
-      "checked_at": "2026-10-26T03:27:13+00:00",
+      "checked_at": "2026-10-26T03:30:19+00:00",
       "compare_at": null,
       "days_tracked": 1,
       "deal": false,
@@ -45,7 +45,7 @@
     "elegoo-rapid-petg": {
       "at_low": false,
       "available": false,
-      "checked_at": "2026-10-26T03:27:13+00:00",
+      "checked_at": "2026-10-26T03:30:19+00:00",
       "compare_at": null,
       "days_tracked": 1,
       "deal": false,
@@ -66,7 +66,7 @@
     "hatchbox-petg": {
       "at_low": false,
       "available": false,
-      "checked_at": "2026-10-26T03:27:13+00:00",
+      "checked_at": "2026-10-26T03:30:19+00:00",
       "compare_at": null,
       "days_tracked": 1,
       "deal": false,
@@ -87,7 +87,7 @@
     "hatchbox-pla": {
       "at_low": false,
       "available": true,
-      "checked_at": "2026-10-26T03:27:13+00:00",
+      "checked_at": "2026-10-26T03:30:19+00:00",
       "compare_at": null,
       "days_tracked": 1,
       "deal": false,
@@ -110,29 +110,68 @@
       "source": "amazon-only"
     },
     "polymaker-asa": {
-      "days_tracked": 0,
-      "error": "no variant matched ['1.75', '1kg'] \u2014 saw ['Black / 1kg', 'Black / 3kg', 'Black / 5kg', 'Jet Black / 1kg', 'White / 1kg', 'White / 3kg', 'White / 5kg', 'Grey / 1kg', 'Grey / 3kg', 'Grey / 5kg', 'Blue / 1kg', 'Blue / 3kg']",
+      "at_low": false,
+      "available": true,
+      "checked_at": "2026-10-26T03:30:19+00:00",
+      "compare_at": null,
+      "days_tracked": 1,
+      "deal": false,
+      "high_30": 24.99,
+      "high_90": 24.99,
       "id": "polymaker-asa",
+      "low_30": 24.99,
+      "low_90": 24.99,
+      "median_30": 24.99,
+      "median_90": 24.99,
+      "per_kg": 24.99,
+      "price": 24.99,
       "source": "store",
       "stale": false,
-      "store_url": "https://shop.polymaker.com/products/asa"
+      "store_url": "https://shop.polymaker.com/products/asa?variant=39574343254073",
+      "variant": "Black / 1kg"
     },
     "polymaker-panchroma-matte-pla": {
-      "days_tracked": 0,
-      "error": "no variant matched ['1.75', '1kg'] \u2014 saw ['Matte Charcoal Black / Spool (New Packaging) / 1kg', 'Matte Charcoal Black / Spool (Old Packaging) / 1kg', 'Matte Charcoal Black / Spool (Old Packaging) / 3kg', 'Matte Charcoal Black / Refill / 1kg', 'Matte Cotton White / Spool (New Packaging) / 1kg', 'Matt",
+      "at_low": false,
+      "available": true,
+      "checked_at": "2026-10-26T03:30:19+00:00",
+      "compare_at": null,
+      "days_tracked": 1,
+      "deal": false,
+      "high_30": 18.99,
+      "high_90": 18.99,
       "id": "polymaker-panchroma-matte-pla",
+      "low_30": 18.99,
+      "low_90": 18.99,
+      "median_30": 18.99,
+      "median_90": 18.99,
+      "per_kg": 18.99,
+      "price": 18.99,
       "source": "store",
       "stale": false,
-      "store_url": "https://shop.polymaker.com/products/matte-pla"
+      "store_url": "https://shop.polymaker.com/products/matte-pla?variant=43631458091065",
+      "variant": "Matte Charcoal Black / Spool (New Packaging) / 1kg"
     },
     "polymaker-petg": {
-      "days_tracked": 0,
-      "error": "no variant matched ['1.75', '1kg'] \u2014 saw ['Black / New Formula / 1kg', 'Dark Grey / New Formula / 1kg', 'Silver / New Formula / 1kg', 'Grey / New Formula / 1kg', 'White / New Formula / 1kg', 'Pink / New Formula / 1kg', 'Magenta / New Formula / 1kg', 'Red / New Formula / 1kg', 'Orange / New Formula /",
+      "at_low": false,
+      "available": true,
+      "checked_at": "2026-10-26T03:30:19+00:00",
+      "compare_at": null,
+      "days_tracked": 1,
+      "deal": false,
+      "high_30": 18.99,
+      "high_90": 18.99,
       "id": "polymaker-petg",
+      "low_30": 18.99,
+      "low_90": 18.99,
+      "median_30": 18.99,
+      "median_90": 18.99,
+      "per_kg": 18.99,
+      "price": 18.99,
       "source": "store",
       "stale": false,
-      "store_url": "https://shop.polymaker.com/products/petg"
+      "store_url": "https://shop.polymaker.com/products/petg?variant=45079221108793",
+      "variant": "Black / New Formula / 1kg"
     }
   },
-  "updated": "2026-10-26T03:27:13+00:00"
+  "updated": "2026-10-26T03:30:19+00:00"
 }
