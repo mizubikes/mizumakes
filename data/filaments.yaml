@@ -70,7 +70,7 @@ filaments:
     name: "PLA"
     material: PLA
     weight_g: 1000
-    amazon: "https://a.co/d/00CQNtqz"
+    amazon: "https://link.amazon/B09CFxW8o"
     store:
       base: "https://us.elegoo.com"
       handle: "pla-filament-1-75mm-colored-1kg"
