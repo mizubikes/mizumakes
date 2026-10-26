@@ -89,19 +89,19 @@ Stick with PETG when:
 
 ## My ASA Picks on Amazon
 
-**[OVERTURE ASA](https://amzn.to/4mz1Jv9)** — Amazon's Overall Pick, 4.6 stars / 2,100+ reviews, 2K+ bought last month, ±0.02mm accuracy. Prime overnight. Best all-around choice at $19.99/kg.
+**[OVERTURE ASA](https://amzn.to/4mz1Jv9)** — ±0.02mm accuracy and one of the most widely used ASAs out there. Best all-around choice.
 
-**[ELEGOO ASA](https://amzn.to/4mz0VGD)** — UV & weather resistant, high impact strength, ±0.02mm accuracy, 600+ bought last month. Best value at $19.99/kg.
+**[ELEGOO ASA](https://amzn.to/4mz0VGD)** — UV & weather resistant, high impact strength, ±0.02mm accuracy. Best value.
 
-**[Polymaker ASA](https://amzn.to/4vAKXjq)** — 4.5 stars / 2,100+ reviews, excellent batch consistency, cardboard spool. Polymaker's quality control is consistently good across their whole lineup. $25.99/kg.
+**[Polymaker ASA](https://amzn.to/4vAKXjq)** — excellent batch consistency, cardboard spool. Polymaker's quality control is consistently good across their whole lineup.
 
-| Pick | Best For | Price |
+| Pick | Best For | Store price today |
 |---|---|---|
-| [OVERTURE ASA](https://amzn.to/4mz1Jv9) | Best overall, highest rated | $19.99/kg |
-| [ELEGOO ASA](https://amzn.to/4mz0VGD) | Best value | $19.99/kg |
-| [Polymaker ASA](https://amzn.to/4vAKXjq) | Premium consistency | $25.99/kg |
+| [OVERTURE ASA](https://amzn.to/4mz1Jv9) | Best overall | {{< filament-store-price "overture-asa" >}} |
+| [ELEGOO ASA](https://amzn.to/4mz0VGD) | Best value | {{< filament-store-price "elegoo-asa" >}} |
+| [Polymaker ASA](https://amzn.to/4vAKXjq) | Premium consistency | {{< filament-store-price "polymaker-asa" >}} |
 
-*All available on Amazon with Prime shipping.*
+*Store prices update daily from each brand's own website (OVERTURE sells mainly on Amazon). Full comparison on the [filament price tracker](/filament-prices/#asa).*
 
 ---
 

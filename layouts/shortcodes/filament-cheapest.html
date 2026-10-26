@@ -1,0 +1,18 @@
+{{- /*
+  Inline text: cheapest tracked filament for a material, from today's store prices.
+  Usage:  {{< filament-cheapest "PLA" >}}   → ELEGOO PLA at $13.99/kg
+*/ -}}
+{{- $mat := .Get 0 -}}
+{{- $cfg := site.Data.filaments -}}
+{{- $items := (site.Data.filament_prices | default dict).items | default dict -}}
+{{- $rows := slice -}}
+{{- range where $cfg.filaments "material" $mat -}}
+  {{- $p := index $items .id | default dict -}}
+  {{- if $p.per_kg }}{{ $rows = $rows | append (dict "f" . "k" (float $p.per_kg)) }}{{ end -}}
+{{- end -}}
+{{- if $rows -}}
+  {{- $b := index (sort $rows "k") 0 -}}
+  <a href="/filament-prices/#{{ $b.f.id }}">{{ $b.f.brand }} {{ $b.f.name }}</a> at ${{ lang.FormatNumber 2 $b.k }}/kg
+{{- else -}}
+  the cheapest {{ $mat }} on the <a href="/filament-prices/">price tracker</a>
+{{- end -}}

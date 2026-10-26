@@ -47,8 +47,8 @@ PLA (Polylactic Acid) is the most popular 3D printing filament in the world, and
 **My go-to PLA picks on Amazon:**
 
 - **[Polymaker Panchroma Matte PLA](https://link.amazon/B0cpMvaQE)** (formerly PolyTerra) — matte finish, great for display pieces and anything you want to paint. Eco-friendly cardboard spool, prints up to 300mm/s.
-- **[HATCHBOX PLA](https://link.amazon/B0d3hHRTH)** — 40,000+ reviews, 4.7 stars, the most proven filament on Amazon. Extremely consistent, ±0.03mm accuracy. $28.00/kg.
-- **[ELEGOO PLA](https://link.amazon/B09CFxW8o)** — Amazon's Choice, ±0.02mm accuracy, cardboard spool, 2K+ bought last month. Best value at $13.99/kg.
+- **[HATCHBOX PLA](https://link.amazon/B0d3hHRTH)** — one of the longest-running, most proven filaments out there. Extremely consistent, ±0.03mm accuracy.
+- **[ELEGOO PLA](https://link.amazon/B09CFxW8o)** — ±0.02mm accuracy, cardboard spool, and usually the cheapest PLA I track. Best value.
 
 ---
 
@@ -71,9 +71,9 @@ Think of it as PLA's more capable sibling. Slightly more involved to dial in, bu
 
 **My go-to PETG picks on Amazon:**
 
-- **[Polymaker PETG](https://link.amazon/B06gg96PD)** — high speed up to 300mm/s, warp free, excellent layer adhesion, ships with exact hex color codes. 4.6 stars. $22.99/kg.
-- **[HATCHBOX PETG](https://link.amazon/B02VOthdj)** — Amazon's Overall Pick, ±0.03mm accuracy, 4.6 stars / 3,800+ reviews. Reliable and consistent. $26.00/kg.
-- **[ELEGOO Rapid PETG](https://link.amazon/B0j3VAac9)** — high speed up to 600mm/s, ±0.02mm accuracy, Amazon's Choice, 1K+ bought last month. Best value PETG at $13.99/kg.
+- **[Polymaker PETG](https://link.amazon/B06gg96PD)** — high speed up to 300mm/s, warp free, excellent layer adhesion, ships with exact hex color codes.
+- **[HATCHBOX PETG](https://link.amazon/B02VOthdj)** — ±0.03mm accuracy. Reliable and consistent.
+- **[ELEGOO Rapid PETG](https://link.amazon/B0j3VAac9)** — high speed up to 600mm/s, ±0.02mm accuracy. Best value PETG.
 
 ---
 
@@ -120,23 +120,23 @@ PLA+ is worth a quick mention. It's a modified PLA blend with improved toughness
 
 ## My Recommended Filament Picks (Summary)
 
-| Pick | Material | Best For | Price |
+| Pick | Material | Best For | Store price today |
 |---|---|---|---|
-| [Polymaker Panchroma Matte PLA](https://link.amazon/B0cpMvaQE) | PLA | Display pieces, painting | ~$22/kg |
-| [HATCHBOX PLA](https://link.amazon/B0d3hHRTH) | PLA | Reliable everyday printing | $28/kg |
-| [ELEGOO PLA](https://link.amazon/B09CFxW8o) | PLA | Best budget option | $13.99/kg |
-| [Polymaker PETG](https://link.amazon/B06gg96PD) | PETG | Functional parts, color accuracy | $22.99/kg |
-| [HATCHBOX PETG](https://link.amazon/B02VOthdj) | PETG | Reliable all-rounder | $26/kg |
-| [ELEGOO Rapid PETG](https://link.amazon/B0j3VAac9) | PETG | Best value, high-speed | $13.99/kg |
+| [Polymaker Panchroma Matte PLA](https://link.amazon/B0cpMvaQE) | PLA | Display pieces, painting | {{< filament-store-price "polymaker-panchroma-matte-pla" >}} |
+| [HATCHBOX PLA](https://link.amazon/B0d3hHRTH) | PLA | Reliable everyday printing | {{< filament-store-price "hatchbox-pla" >}} |
+| [ELEGOO PLA](https://link.amazon/B09CFxW8o) | PLA | Best budget option | {{< filament-store-price "elegoo-pla" >}} |
+| [Polymaker PETG](https://link.amazon/B06gg96PD) | PETG | Functional parts, color accuracy | {{< filament-store-price "polymaker-petg" >}} |
+| [HATCHBOX PETG](https://link.amazon/B02VOthdj) | PETG | Reliable all-rounder | {{< filament-store-price "hatchbox-petg" >}} |
+| [ELEGOO Rapid PETG](https://link.amazon/B0j3VAac9) | PETG | Best value, high-speed | {{< filament-store-price "elegoo-rapid-petg" >}} |
 
-*These are all available on Amazon with Prime shipping — most arrive next day.*
+*Store prices update daily from each brand's own website. Amazon prices often differ, so click through to check yours. Full comparison on the [filament price tracker](/filament-prices/).*
 
 ---
 
 ## Frequently Asked Questions
 
 **Can I print PLA and PETG on a Bambu Lab P1S?**
-Yes, absolutely. Both work perfectly on the P1S. You can use third-party filament without any issues — see my article on [why I don't always use Bambu Lab filament](#) for the full breakdown.
+Yes, absolutely. Both work perfectly on the P1S. You can use third-party filament without any issues — see the [filament price tracker](/filament-prices/) for how third-party prices compare.
 
 **Do I need a heated bed for PLA?**
 Not always for small prints, but 50–60°C bed temp helps with adhesion and reduces warping on larger parts. PETG generally needs a heated bed at 70–85°C.
@@ -148,8 +148,8 @@ Standard PLA is technically food-safe material, but the printing process introdu
 PLA+ uses modified binders that improve impact resistance and reduce brittleness. It's slightly harder to print than standard PLA but still doesn't need an enclosure. Think of it as a stepping stone toward PETG.
 
 **When should I move to ASA or ABS?**
-When you need parts that live outdoors long-term (ASA) or need high heat resistance and structural strength (ABS). Both require an enclosed printer. Read my full guide: [What is ASA Filament? When to Stop Using PETG](#) and [When to Use ABS: A Beginner's Guide](#).
+When you need parts that live outdoors long-term (ASA) or need high heat resistance and structural strength (ABS). Both require an enclosed printer. Read my full guide: [What is ASA Filament? When to Stop Using PETG](/posts/what-is-asa-filament/). An ABS guide is coming soon.
 
 ---
 
-*All product links are Amazon affiliate links. I only recommend filaments I've actually used — see [why I don't always buy Bambu Lab filament](#) for my full take on third-party options.*
+*All product links are Amazon affiliate links. I only recommend filaments I've actually used. Today's store prices for every brand here are on the [filament price tracker](/filament-prices/).*

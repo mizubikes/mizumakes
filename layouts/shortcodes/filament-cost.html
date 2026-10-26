@@ -1,0 +1,14 @@
+{{- /*
+  Live material cost for a part, from today's store price.
+  Usage:  {{< filament-cost "elegoo-pla" 50 >}}   → $0.70
+  Args:   filament id from data/filaments.yaml, grams of filament
+*/ -}}
+{{- $id := .Get 0 -}}
+{{- $grams := float (.Get 1) -}}
+{{- $p := index ((site.Data.filament_prices | default dict).items | default dict) $id | default dict -}}
+{{- if $p.per_kg -}}
+  ${{ lang.FormatNumber 2 (mul (float $p.per_kg) (div $grams 1000.0)) }}
+{{- else -}}
+  {{- warnf "filament-cost: no price for %q in %s" $id .Page.File.Path -}}
+  —
+{{- end -}}

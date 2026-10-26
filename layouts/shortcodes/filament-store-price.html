@@ -1,0 +1,15 @@
+{{- /*
+  Inline live store price for one filament, for tables and sentences.
+  Usage:  {{< filament-store-price "elegoo-pla" >}}   → $13.99/kg
+  Prints "Amazon only" for products with no store price source.
+*/ -}}
+{{- $id := .Get 0 -}}
+{{- if not (where site.Data.filaments.filaments "id" $id) -}}
+  {{- errorf "filament-store-price: unknown id %q in %s" $id .Page.File.Path -}}
+{{- end -}}
+{{- $p := index ((site.Data.filament_prices | default dict).items | default dict) $id | default dict -}}
+{{- if $p.per_kg -}}
+  <a href="/filament-prices/#{{ $id }}">${{ lang.FormatNumber 2 $p.per_kg }}/kg</a>
+{{- else -}}
+  Amazon only
+{{- end -}}
