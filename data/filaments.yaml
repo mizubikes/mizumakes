@@ -95,7 +95,7 @@ filaments:
     name: "PETG"
     material: PETG
     weight_g: 1000
-    amazon: "https://a.co/d/05i4ahwu"
+    amazon: "https://link.amazon/B02VOthdj"
     store:
       base: "https://www.hatchbox3d.com"
       handle: "3d-petg-1kg1-75-wht"
