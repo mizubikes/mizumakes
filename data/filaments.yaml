@@ -48,7 +48,7 @@ filaments:
     name: "Panchroma Matte PLA"
     material: PLA
     weight_g: 1000
-    amazon: "https://a.co/d/00jbLCF8"
+    amazon: "https://link.amazon/B0cpMvaQE"
     store:
       base: "https://shop.polymaker.com"
       handle: "matte-pla"
