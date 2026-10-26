@@ -60,7 +60,7 @@ filaments:
     name: "PLA"
     material: PLA
     weight_g: 1000
-    amazon: "https://a.co/d/059Q7J0E"
+    amazon: "https://link.amazon/B0d3hHRTH"
     store:
       base: "https://www.hatchbox3d.com"
       handle: "3d-pla-1kg1-75-blk"
