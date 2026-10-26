@@ -52,8 +52,8 @@ filaments:
     store:
       base: "https://shop.polymaker.com"
       handle: "matte-pla"
-      match: ["1.75", "1kg"]
-      exclude: ["3kg", "2.85"]
+      match: ["black", "spool", "1kg"]
+      exclude: ["3kg", "refill", "old packaging"]
 
   - id: hatchbox-pla
     brand: HATCHBOX
@@ -87,8 +87,8 @@ filaments:
     store:
       base: "https://shop.polymaker.com"
       handle: "petg"
-      match: ["1.75", "1kg"]
-      exclude: ["3kg", "2.85"]
+      match: ["black", "1kg"]
+      exclude: ["3kg", "old formula"]
 
   - id: hatchbox-petg
     brand: HATCHBOX
@@ -122,8 +122,8 @@ filaments:
     store:
       base: "https://shop.polymaker.com"
       handle: "asa"
-      match: ["1.75", "1kg"]
-      exclude: ["3kg", "2.85"]
+      match: ["black", "1kg"]
+      exclude: ["3kg", "5kg"]
 
   - id: elegoo-asa
     brand: ELEGOO
