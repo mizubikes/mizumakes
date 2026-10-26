@@ -72,10 +72,10 @@ filaments:
     weight_g: 1000
     amazon: "https://a.co/d/00CQNtqz"
     store:
-      base: "https://www.elegoo.com"
+      base: "https://us.elegoo.com"
       handle: "pla-filament-1-75mm-colored-1kg"
       match: ["black"]
-      exclude: ["2kg", "5kg", "10kg", "bundle"]
+      exclude: ["2kg", "5kg", "10kg", "bundle", "uk /", "eu /", "au /", "ca /", "de /"]
 
   # ---------- PETG ----------
   - id: polymaker-petg
@@ -107,10 +107,10 @@ filaments:
     weight_g: 1000
     amazon: "https://a.co/d/03IrVIeP"
     store:
-      base: "https://www.elegoo.com"
+      base: "https://us.elegoo.com"
       handle: "rapid-petg-filament-1-75mm-colored-1kg"
       match: ["black"]
-      exclude: ["2kg", "5kg", "10kg", "bundle"]
+      exclude: ["2kg", "5kg", "10kg", "bundle", "uk /", "eu /", "au /", "ca /", "de /"]
 
   # ---------- ASA ----------
   - id: polymaker-asa
@@ -132,10 +132,10 @@ filaments:
     weight_g: 1000
     amazon: "https://amzn.to/4mz0VGD"
     store:
-      base: "https://www.elegoo.com"
+      base: "https://us.elegoo.com"
       handle: "asa-filament-1-75mm-colored-1kg"
       match: ["black"]
-      exclude: ["2kg", "5kg", "10kg", "bundle"]
+      exclude: ["2kg", "5kg", "10kg", "bundle", "uk /", "eu /", "au /", "ca /", "de /"]
 
   # OVERTURE sells mainly through Amazon — no brand store to price against,
   # so it shows as Amazon-only (no number) until a store source is added.
