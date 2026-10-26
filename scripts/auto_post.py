@@ -8,6 +8,7 @@ opens a PR so Jared can review the Netlify deploy preview and merge to publish.
 """
 
 import datetime as dt
+import base64
 import io
 import json
 import os
@@ -33,6 +34,10 @@ AMAZON_TAG = "mizubikes-web-20"
 CATEGORIES = ["Blog", "Projects", "Reviews", "Guides", "Gear"]
 COVER_MAX_BYTES = 150 * 1024
 PACIFIC = ZoneInfo("America/Los_Angeles")
+VISION_MODEL = "claude-haiku-5-5"
+MAX_VISION_CHECKS = 15
+# Used when no stock photo passes the visual check; the PR flags it for a swap
+FALLBACK_COVER = "/images/Parts-printed-in-printer.png"
 
 # Reject stock results that show people, renders, or anything off-topic
 BANNED_TAGS = {
@@ -205,7 +210,7 @@ def fetch_cover(query: str, slug: str) -> tuple[str, str, str]:
             "key": key,
             "q": q[:100],
             "image_type": "photo",
-            "orientation": "vertical",
+            "orientation": "all",
             "safesearch": "true",
             "per_page": 30,
         }
@@ -215,29 +220,66 @@ def fetch_cover(query: str, slug: str) -> tuple[str, str, str]:
         r.raise_for_status()
         return r.json().get("hits", [])
 
-    def usable(hit: dict) -> bool:
+    def tag_sets(hit: dict) -> tuple[set, set]:
         tags = {t.strip().lower() for t in hit.get("tags", "").split(",")}
-        words = {w for t in tags for w in t.split()}
-        if tags & BANNED_TAGS or words & BANNED_TAGS:
+        return tags, {w for t in tags for w in t.split()}
+
+    def not_banned(hit: dict) -> bool:
+        tags, words = tag_sets(hit)
+        return not (tags & BANNED_TAGS or words & BANNED_TAGS)
+
+    def has_print_tag(hit: dict) -> bool:
+        tags, _ = tag_sets(hit)
+        return bool(tags & (REQUIRED_TAGS - {"3d"}))
+
+    def looks_right(hit: dict) -> bool:
+        """Ask Claude to look at the photo. Pixabay tags are keyword-stuffed and can't be trusted."""
+        try:
+            img_bytes = requests.get(hit["webformatURL"], timeout=30).content
+            resp = anthropic.Anthropic().messages.create(
+                model=VISION_MODEL,
+                max_tokens=5,
+                messages=[{"role": "user", "content": [
+                    {"type": "image", "source": {
+                        "type": "base64", "media_type": "image/jpeg",
+                        "data": base64.b64encode(img_bytes).decode()}},
+                    {"type": "text", "text": (
+                        "Is this a real photograph whose main subject is clearly a 3D printer, "
+                        "3D printed parts, or 3D printer filament spools? Not yarn or thread, not an "
+                        "office or paper printer, not a typewriter, not architecture, not a person, "
+                        "not a CGI render. Answer only YES or NO.")},
+                ]}],
+            )
+            answer = "".join(b.text for b in resp.content if b.type == "text").strip().upper()
+            return answer.startswith("YES")
+        except Exception as e:
+            print(f"Vision check failed for {hit.get('pageURL')}: {e}")
             return False
-        # Bare "3d" also tags CGI art, so it only counts alongside a print/printer tag
-        if tags & (REQUIRED_TAGS - {"3d"}):
-            return True
-        return "3d" in tags and bool(words & {"printer", "printing", "printed", "print", "filament", "extruder"})
 
     photo = None
-    # Model's query in engineering-leaning categories first, then unrestricted,
-    # then safe fallback queries
+    seen: set[int] = set()
+    checks = 0
     attempts = [(query, None), (query, "industry"), (query, "science")]
     attempts += [(q, None) for q in FALLBACK_QUERIES]
     for q, cat in attempts:
-        good = [h for h in search(q, cat) if usable(h)]
-        if good:
-            photo = good[0]
-            print(f"Cover: query={q!r} category={cat} tags={photo.get('tags')!r}")
+        hits = [h for h in search(q, cat) if h["id"] not in seen and not_banned(h)]
+        # Photos tagged as 3D printing first, then the rest
+        hits.sort(key=lambda h: not has_print_tag(h))
+        for h in hits:
+            seen.add(h["id"])
+            if checks >= MAX_VISION_CHECKS:
+                break
+            checks += 1
+            ok = looks_right(h)
+            print(f"Cover check {checks}: {'PASS' if ok else 'reject'} {h['pageURL']} tags={h.get('tags')!r}")
+            if ok:
+                photo = h
+                break
+        if photo or checks >= MAX_VISION_CHECKS:
             break
     if not photo:
-        sys.exit("No usable Pixabay images found")
+        print("No stock photo passed the visual check; using fallback cover")
+        return FALLBACK_COVER, "", "NONE (fallback cover used, swap in a real one before merging)"
 
     raw = requests.get(photo["largeImageURL"], timeout=60).content
     img = Image.open(io.BytesIO(raw)).convert("RGB")
