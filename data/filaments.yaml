@@ -83,7 +83,7 @@ filaments:
     name: "PETG"
     material: PETG
     weight_g: 1000
-    amazon: "https://a.co/d/0bwBK4ut"
+    amazon: "https://link.amazon/B06gg96PD"
     store:
       base: "https://shop.polymaker.com"
       handle: "petg"
