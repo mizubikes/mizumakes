@@ -46,9 +46,9 @@ PLA (Polylactic Acid) is the most popular 3D printing filament in the world, and
 
 **My go-to PLA picks on Amazon:**
 
-- **[Polymaker Panchroma Matte PLA](https://a.co/d/00jbLCF8)** (formerly PolyTerra) — matte finish, great for display pieces and anything you want to paint. Eco-friendly cardboard spool, prints up to 300mm/s.
-- **[HATCHBOX PLA](https://a.co/d/059Q7J0E)** — 40,000+ reviews, 4.7 stars, the most proven filament on Amazon. Extremely consistent, ±0.03mm accuracy. $28.00/kg.
-- **[ELEGOO PLA](https://a.co/d/00CQNtqz)** — Amazon's Choice, ±0.02mm accuracy, cardboard spool, 2K+ bought last month. Best value at $13.99/kg.
+- **[Polymaker Panchroma Matte PLA](https://link.amazon/B0cpMvaQE)** (formerly PolyTerra) — matte finish, great for display pieces and anything you want to paint. Eco-friendly cardboard spool, prints up to 300mm/s.
+- **[HATCHBOX PLA](https://link.amazon/B0d3hHRTH)** — 40,000+ reviews, 4.7 stars, the most proven filament on Amazon. Extremely consistent, ±0.03mm accuracy. $28.00/kg.
+- **[ELEGOO PLA](https://link.amazon/B09CFxW8o)** — Amazon's Choice, ±0.02mm accuracy, cardboard spool, 2K+ bought last month. Best value at $13.99/kg.
 
 ---
 
@@ -71,9 +71,9 @@ Think of it as PLA's more capable sibling. Slightly more involved to dial in, bu
 
 **My go-to PETG picks on Amazon:**
 
-- **[Polymaker PETG](https://a.co/d/0bwBK4ut)** — high speed up to 300mm/s, warp free, excellent layer adhesion, ships with exact hex color codes. 4.6 stars. $22.99/kg.
-- **[HATCHBOX PETG](https://a.co/d/05i4ahwu)** — Amazon's Overall Pick, ±0.03mm accuracy, 4.6 stars / 3,800+ reviews. Reliable and consistent. $26.00/kg.
-- **[ELEGOO Rapid PETG](https://a.co/d/03IrVIeP)** — high speed up to 600mm/s, ±0.02mm accuracy, Amazon's Choice, 1K+ bought last month. Best value PETG at $13.99/kg.
+- **[Polymaker PETG](https://link.amazon/B06gg96PD)** — high speed up to 300mm/s, warp free, excellent layer adhesion, ships with exact hex color codes. 4.6 stars. $22.99/kg.
+- **[HATCHBOX PETG](https://link.amazon/B02VOthdj)** — Amazon's Overall Pick, ±0.03mm accuracy, 4.6 stars / 3,800+ reviews. Reliable and consistent. $26.00/kg.
+- **[ELEGOO Rapid PETG](https://link.amazon/B0j3VAac9)** — high speed up to 600mm/s, ±0.02mm accuracy, Amazon's Choice, 1K+ bought last month. Best value PETG at $13.99/kg.
 
 ---
 
@@ -114,7 +114,7 @@ Both work on any open-air printer. That's the key takeaway — you don't need to
 
 PLA+ is worth a quick mention. It's a modified PLA blend with improved toughness and reduced brittleness — it bridges the gap between standard PLA and PETG. If you find yourself wanting something stronger than PLA but don't want to deal with PETG's stringing yet, PLA+ is a solid middle ground.
 
-**[ELEGOO Rapid PLA+](https://www.amazon.com/s?k=elegoo+rapid+pla+plus)** is a great pick here — tougher formula, high-speed capable, and still very easy to print.
+**[ELEGOO Rapid PLA+](https://www.amazon.com/s?k=elegoo+rapid+pla+plus&tag=mizubikes-web-20)** is a great pick here — tougher formula, high-speed capable, and still very easy to print.
 
 ---
 
@@ -122,12 +122,12 @@ PLA+ is worth a quick mention. It's a modified PLA blend with improved toughness
 
 | Pick | Material | Best For | Price |
 |---|---|---|---|
-| [Polymaker Panchroma Matte PLA](https://a.co/d/00jbLCF8) | PLA | Display pieces, painting | ~$22/kg |
-| [HATCHBOX PLA](https://a.co/d/059Q7J0E) | PLA | Reliable everyday printing | $28/kg |
-| [ELEGOO PLA](https://a.co/d/00CQNtqz) | PLA | Best budget option | $13.99/kg |
-| [Polymaker PETG](https://a.co/d/0bwBK4ut) | PETG | Functional parts, color accuracy | $22.99/kg |
-| [HATCHBOX PETG](https://a.co/d/05i4ahwu) | PETG | Reliable all-rounder | $26/kg |
-| [ELEGOO Rapid PETG](https://a.co/d/03IrVIeP) | PETG | Best value, high-speed | $13.99/kg |
+| [Polymaker Panchroma Matte PLA](https://link.amazon/B0cpMvaQE) | PLA | Display pieces, painting | ~$22/kg |
+| [HATCHBOX PLA](https://link.amazon/B0d3hHRTH) | PLA | Reliable everyday printing | $28/kg |
+| [ELEGOO PLA](https://link.amazon/B09CFxW8o) | PLA | Best budget option | $13.99/kg |
+| [Polymaker PETG](https://link.amazon/B06gg96PD) | PETG | Functional parts, color accuracy | $22.99/kg |
+| [HATCHBOX PETG](https://link.amazon/B02VOthdj) | PETG | Reliable all-rounder | $26/kg |
+| [ELEGOO Rapid PETG](https://link.amazon/B0j3VAac9) | PETG | Best value, high-speed | $13.99/kg |
 
 *These are all available on Amazon with Prime shipping — most arrive next day.*
 
