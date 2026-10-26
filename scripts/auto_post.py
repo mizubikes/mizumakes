@@ -46,14 +46,15 @@ BANNED_TAGS = {
     "handicraft", "cotton", "string", "twine", "rope", "ribbon", "tape",
     # "filament" and "printer" also match light bulbs and office printers
     "bulb", "light bulb", "lightbulb", "lamp", "edison", "incandescent",
+    "teleprinter", "teletype", "teletypewriter", "typewriter", "telex",
+    "render", "rendering", "3d rendering", "3d render", "3d model", "blender",
     "office", "paper", "ink", "inkjet", "cartridge", "toner", "document",
 }
 # A cover must be tagged as 3D printing specifically. Generic tags like
 # "technology" or "industrial" also appear on architecture and abstract photos.
 REQUIRED_TAGS = {
     "3d printer", "3d printing", "3d print", "3d printed", "3d-printer",
-    "3d-printing", "3dprinter", "3dprinting", "printer", "filament",
-    "extruder", "nozzle", "additive manufacturing", "prototyping",
+    "3d-printing", "3dprinter", "3dprinting", "3d", "additive manufacturing",
 }
 # Safe workshop/engineering queries if the model's query returns nothing usable
 FALLBACK_QUERIES = ["3d printer", "3d printing", "3d printer nozzle", "3d printed"]
@@ -219,7 +220,10 @@ def fetch_cover(query: str, slug: str) -> tuple[str, str, str]:
         words = {w for t in tags for w in t.split()}
         if tags & BANNED_TAGS or words & BANNED_TAGS:
             return False
-        return bool(tags & REQUIRED_TAGS)
+        # Bare "3d" also tags CGI art, so it only counts alongside a print/printer tag
+        if tags & (REQUIRED_TAGS - {"3d"}):
+            return True
+        return "3d" in tags and bool(words & {"printer", "printing", "printed", "print", "filament", "extruder"})
 
     photo = None
     # Model's query in engineering-leaning categories first, then unrestricted,
