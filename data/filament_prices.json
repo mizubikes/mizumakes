@@ -3,9 +3,9 @@
     "elegoo-asa": {
       "at_low": false,
       "available": true,
-      "checked_at": "2026-10-28T18:55:22+00:00",
+      "checked_at": "2026-10-29T18:59:27+00:00",
       "compare_at": null,
-      "days_tracked": 3,
+      "days_tracked": 4,
       "deal": false,
       "high_30": 16.99,
       "high_90": 16.99,
@@ -24,9 +24,9 @@
     "elegoo-pla": {
       "at_low": false,
       "available": true,
-      "checked_at": "2026-10-28T18:55:22+00:00",
+      "checked_at": "2026-10-29T18:59:27+00:00",
       "compare_at": null,
-      "days_tracked": 3,
+      "days_tracked": 4,
       "deal": false,
       "high_30": 13.99,
       "high_90": 13.99,
@@ -45,9 +45,9 @@
     "elegoo-rapid-petg": {
       "at_low": false,
       "available": true,
-      "checked_at": "2026-10-28T18:55:22+00:00",
+      "checked_at": "2026-10-29T18:59:27+00:00",
       "compare_at": null,
-      "days_tracked": 3,
+      "days_tracked": 4,
       "deal": false,
       "high_30": 13.99,
       "high_90": 13.99,
@@ -66,9 +66,9 @@
     "hatchbox-petg": {
       "at_low": false,
       "available": false,
-      "checked_at": "2026-10-28T18:55:22+00:00",
+      "checked_at": "2026-10-29T18:59:27+00:00",
       "compare_at": null,
-      "days_tracked": 3,
+      "days_tracked": 4,
       "deal": false,
       "high_30": 26.0,
       "high_90": 26.0,
@@ -87,9 +87,9 @@
     "hatchbox-pla": {
       "at_low": false,
       "available": true,
-      "checked_at": "2026-10-28T18:55:22+00:00",
+      "checked_at": "2026-10-29T18:59:27+00:00",
       "compare_at": null,
-      "days_tracked": 3,
+      "days_tracked": 4,
       "deal": false,
       "high_30": 22.99,
       "high_90": 22.99,
@@ -112,9 +112,9 @@
     "polymaker-asa": {
       "at_low": false,
       "available": true,
-      "checked_at": "2026-10-28T18:55:22+00:00",
+      "checked_at": "2026-10-29T18:59:27+00:00",
       "compare_at": null,
-      "days_tracked": 3,
+      "days_tracked": 4,
       "deal": false,
       "high_30": 24.99,
       "high_90": 24.99,
@@ -133,9 +133,9 @@
     "polymaker-panchroma-matte-pla": {
       "at_low": false,
       "available": true,
-      "checked_at": "2026-10-28T18:55:22+00:00",
+      "checked_at": "2026-10-29T18:59:27+00:00",
       "compare_at": null,
-      "days_tracked": 3,
+      "days_tracked": 4,
       "deal": false,
       "high_30": 18.99,
       "high_90": 18.99,
@@ -154,9 +154,9 @@
     "polymaker-petg": {
       "at_low": false,
       "available": true,
-      "checked_at": "2026-10-28T18:55:22+00:00",
+      "checked_at": "2026-10-29T18:59:27+00:00",
       "compare_at": null,
-      "days_tracked": 3,
+      "days_tracked": 4,
       "deal": false,
       "high_30": 18.99,
       "high_90": 18.99,
@@ -173,5 +173,5 @@
       "variant": "Black / New Formula / 1kg"
     }
   },
-  "updated": "2026-10-28T18:55:22+00:00"
+  "updated": "2026-10-29T18:59:27+00:00"
 }
