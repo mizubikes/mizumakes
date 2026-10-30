@@ -208,11 +208,29 @@
   margin-bottom: 0.3rem;
 }
 
-/* Make MizuMakes logo/title green and bigger */
-.logo a {
-  color: #00ff9f !important;
-  font-size: 28px !important;
-  font-weight: 700 !important;
+/* Mizu "Flow" logo: wave mark + lowercase wordmark, bold "mizu" in text color, regular "makes" in brand green (sister to mizubikes) */
+.logo a.mz-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  letter-spacing: -0.6px;
+  line-height: 1;
+}
+.logo a.mz-wordmark .mz-mark {
+  width: 1.15em;
+  height: 1.15em;
+  margin: 0;
+  flex-shrink: 0;
+}
+.mz-wordmark .mz-mizu { font-weight: 800; color: var(--primary); }
+.mz-wordmark .mz-makes { font-weight: 400; color: #00ff9f; }
+[data-theme="dark"] .mz-wordmark .mz-mizu { color: #ffffff; }
+/* Neon green is unreadable on white, so use a deeper green in light mode */
+:root:not([data-theme="dark"]) .mz-wordmark .mz-makes { color: #00a86b; }
+@media (max-width: 600px) {
+  .logo a.mz-wordmark { font-size: 24px; gap: 8px; }
 }
 
 /* YouTube icon styling */
