@@ -25,6 +25,8 @@ ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = ROOT / "content" / "posts"
 IMAGES_DIR = ROOT / "static" / "images"
 TOPICS_FILE = ROOT / "scripts" / "topics.txt"
+# Pixabay photo IDs already used as covers, so a photo never repeats across posts
+USED_COVERS_FILE = ROOT / "scripts" / "used_covers.txt"
 # Outside the repo so it doesn't get committed with the post
 PR_BODY_FILE = Path(os.environ.get("RUNNER_TEMP", "/tmp")) / "pr_body.md"
 
@@ -246,7 +248,8 @@ def fetch_cover(query: str, slug: str) -> tuple[str, str, str]:
             img_bytes = requests.get(hit["webformatURL"], timeout=30).content
             resp = anthropic.Anthropic().messages.create(
                 model=VISION_MODEL,
-                max_tokens=50,
+                # The model may reason before answering; a tiny budget returns empty text
+                max_tokens=1024,
                 messages=[{"role": "user", "content": [
                     {"type": "image", "source": {
                         "type": "base64", "media_type": "image/jpeg",
@@ -265,8 +268,12 @@ def fetch_cover(query: str, slug: str) -> tuple[str, str, str]:
             print(f"Vision check failed for {hit.get('pageURL')}: {e}")
             return False
 
+    used: set[int] = set()
+    if USED_COVERS_FILE.exists():
+        used = {int(x) for x in USED_COVERS_FILE.read_text().split() if x.strip().isdigit()}
+
     photo = None
-    seen: set[int] = set()
+    seen: set[int] = set(used)
     checks = 0
     attempts = [(query, None), (query, "industry"), (query, "science")]
     attempts += [(q, None) for q in FALLBACK_QUERIES]
@@ -289,6 +296,9 @@ def fetch_cover(query: str, slug: str) -> tuple[str, str, str]:
     if not photo:
         print("No stock photo passed the visual check; using fallback cover")
         return FALLBACK_COVER, "", "NONE (fallback cover used, swap in a real one before merging)"
+
+    with USED_COVERS_FILE.open("a", encoding="utf-8") as f:
+        f.write(f"{photo['id']}\n")
 
     raw = requests.get(photo["largeImageURL"], timeout=60).content
     img = Image.open(io.BytesIO(raw)).convert("RGB")
