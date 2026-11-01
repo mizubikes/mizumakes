@@ -6,9 +6,9 @@ slug: pla-vs-petg-vs-asa-outdoor-prints
 categories: ["Guides"]
 tags: ["ASA", "PETG", "PLA", "outdoor prints", "filament"]
 cover:
-  image: "/images/pla-vs-petg-vs-asa-outdoor-prints-cover.webp"
-  alt: "Enclosed desktop 3D printer printing a functional part"
-  caption: "Photo: mebner1 / Pixabay"
+  image: "/images/Parts-printed-in-printer.png"
+  alt: "Functional parts printed in dark gray on the build plate of an enclosed 3D printer"
+  caption: ""
   relative: false
 draft: false
 ---
