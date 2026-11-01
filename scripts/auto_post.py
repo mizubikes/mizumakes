@@ -192,6 +192,14 @@ def generate_post(seed: str | None, posts: list[dict]) -> dict:
         sys.exit(f"Model did not return JSON:\n{text[:2000]}")
     data = json.loads(match.group(0))
 
+    # Web search citations sometimes leak into the JSON body as raw markup:
+    # (cite index="20-6">54 °C</cite> or <cite index="...">...</cite>
+    for key in ("body", "description", "title"):
+        data[key] = re.sub(r'[(<]cite index="[^"]*">(.*?)</cite>', r"\1", data[key], flags=re.S)
+        data[key] = re.sub(r"</?cite[^>]*>", "", data[key])
+    if "cite index=" in data["body"]:
+        sys.exit("Citation markup still present in body; refusing to write the post")
+
     if data["category"] not in CATEGORIES:
         data["category"] = "Guides"
     # A term used as both a category and a tag breaks the PaperMod nav build
@@ -238,7 +246,7 @@ def fetch_cover(query: str, slug: str) -> tuple[str, str, str]:
             img_bytes = requests.get(hit["webformatURL"], timeout=30).content
             resp = anthropic.Anthropic().messages.create(
                 model=VISION_MODEL,
-                max_tokens=5,
+                max_tokens=50,
                 messages=[{"role": "user", "content": [
                     {"type": "image", "source": {
                         "type": "base64", "media_type": "image/jpeg",
@@ -251,7 +259,8 @@ def fetch_cover(query: str, slug: str) -> tuple[str, str, str]:
                 ]}],
             )
             answer = "".join(b.text for b in resp.content if b.type == "text").strip().upper()
-            return answer.startswith("YES")
+            print(f"  vision answer: {answer!r} (stop={resp.stop_reason})")
+            return "YES" in answer and "NO" not in answer.replace("YES", "")
         except Exception as e:
             print(f"Vision check failed for {hit.get('pageURL')}: {e}")
             return False
