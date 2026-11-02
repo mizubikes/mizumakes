@@ -1,7 +1,7 @@
 ---
 title: "Creator 5 Pro Deal vs H2D, INDX, U1, P2S: Worth It?"
 date: 2026-11-01
-description: "Flashforge Creator 5 Pro is $799 for Black Friday. Here is how it stacks up against the Bambu H2D and P2S, Prusa INDX, and Snapmaker U1 on price, purge waste, and engineering filaments."
+description: "Flashforge Creator 5 Pro is $849 direct for Black Friday, with more off at checkout. Here is how it stacks up against the Bambu H2D and P2S, Prusa INDX, and Snapmaker U1 on price, purge waste, and engineering filaments."
 slug: flashforge-creator-5-pro-deal-vs-h2d-indx-u1-p2s
 categories: ["Guides"]
 tags: ["toolchanger", "flashforge", "multi-material", "buying guide"]
@@ -15,11 +15,11 @@ draft: false
 
 *MizuMakes may earn a commission from links in this post.*
 
-The short version: the Flashforge Creator 5 Pro is a reasonable deal at its current price, but only if you want four dedicated tools and a heated chamber in one box. If you mostly print single-material functional parts, the Bambu P2S Combo is $150 cheaper and probably the better buy. Prices below are US prices as of November 1, 2026. Sales are moving daily, so check the cart before you commit.
+The short version: the Flashforge Creator 5 Pro is a reasonable deal at its current price, but only if you want four dedicated tools and a heated chamber in one box. If you mostly print single-material functional parts, the Bambu P2S Combo is $200 cheaper and probably the better buy. Prices below are US prices as of November 1, 2026. Sales are moving daily, so check the cart before you commit.
 
 ## Current US prices and price history
 
-Makers101 logged the Creator 5 Pro at $799 against a $949 regular price on October 26. Flashforge's Black Friday sale started quietly on October 20 and runs to November 30. The $30 code that stacked on top of that price expired October 31. Flashforge's own product page snapshot still showed $849 sale against $949 regular, so the price may vary by page and cache.
+Flashforge's US store lists the Creator 5 Pro at $849, down $100 from its $949 regular price. On top of that, the store's Black Friday "Surprise Sale" applies an automatic discount at checkout, advertised as up to $200 off 3D printers. Flashforge doesn't say how much of that applies to this model, so add it to your cart to see the real number. Makers101 logged it at $799 on October 26, which suggests a checkout price around there is realistic. The sale started October 20 and runs to November 30. A $30 stacking code expired October 31.
 
 The history matters here. In September the Pro listed at $949 with an automatic $100 cart discount, so the effective price was $849. Launch deposit pricing was $799 for the Pro. So $799 is a return to the launch floor, not a new low. One tracker says it undercuts the lowest price it has recorded since May. That is a fair price, not a steal.
 
@@ -36,7 +36,7 @@ The competition, for context:
 
 | | Creator 5 Pro | Bambu P2S Combo | Bambu H2D Combo | Prusa CORE One+ INDX (4-tool kit) | Snapmaker U1 |
 |---|---|---|---|---|---|
-| Price now | $799 | $649 | $1,599 | $1,699 | $749 |
+| Price now | $849 ($799 seen) | $649 | $1,599 | $1,699 | $749 |
 | Multi-material | 4 tools | AMS 2 Pro, 4 slots | Dual nozzle + AMS 2 Pro | 4 tools, up to 8 | 4 tools |
 | Build volume (mm) | 256×256×256 | 256×256×256 | 350×320×325 | 248×205×270 | 270×270×270 |
 | Chamber | Active, up to 65 °C | Enclosed | Active, 65 °C | Enclosed, 55 °C | Open top; cover optional |
@@ -66,7 +66,7 @@ For material choices, our [PETG brand comparison](/posts/best-petg-filament-bran
 
 ## Who should buy which
 
-**Creator 5 Pro at $799 (or about $640 via marketplace):** the cheapest enclosed four-tool machine with a real chamber heater and 320 °C hotends. It fits someone running PETG-CF, ABS, or ASA with a second tool for supports, or small batches of multicolor parts. Accept the weaker ecosystem and manual spool handling. Nylon needs an external dryer, since the spools sit outside any drying system. See [Flashforge Creator 5 Pro](https://www.amazon.com/s?k=Flashforge+Creator+5+Pro&tag=mizubikes-web-20).
+**Creator 5 Pro at $799–$849 (or about $640 via marketplace):** the cheapest enclosed four-tool machine with a real chamber heater and 320 °C hotends. It fits someone running PETG-CF, ABS, or ASA with a second tool for supports, or small batches of multicolor parts. Accept the weaker ecosystem and manual spool handling. Nylon needs an external dryer, since the spools sit outside any drying system. See [Flashforge Creator 5 Pro](https://www.amazon.com/s?k=Flashforge+Creator+5+Pro&tag=mizubikes-web-20).
 
 **P2S Combo at $649:** the default for most people. It is cheaper than all the toolchangers here, and the AMS 2 Pro dries filament. Choose it if parts are mostly single-material and you can live with purge waste. Our [P1S vs P2S comparison](/posts/bambu-p1s-sale-vs-p2s/) covers the tradeoff. See [Bambu Lab P2S Combo](https://www.amazon.com/s?k=Bambu+Lab+P2S+Combo+AMS+2+Pro&tag=mizubikes-web-20).
 
@@ -78,7 +78,7 @@ For material choices, our [PETG brand comparison](/posts/best-petg-filament-bran
 
 ## The verdict on the deal
 
-At $799 the Creator 5 Pro is a fair price but not a bargain against the $649 P2S Combo. It makes sense if you want dedicated tools and a chamber heater and are willing to tune purge settings. If you can accept marketplace buying risk, the roughly $640 AliExpress price is the one to watch. For a single-material workflow, spend the $150 elsewhere.
+At $799–$849 the Creator 5 Pro is a fair price but not a bargain against the $649 P2S Combo. It makes sense if you want dedicated tools and a chamber heater and are willing to tune purge settings. If you can accept marketplace buying risk, the roughly $640 AliExpress price is the one to watch. For a single-material workflow, spend the $150–$200 elsewhere.
 
 ## Sources
 
