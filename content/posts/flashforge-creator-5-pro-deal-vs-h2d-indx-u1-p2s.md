@@ -82,31 +82,10 @@ At $799–$849 the Creator 5 Pro is a fair price but not a bargain against the $
 
 ## Sources
 
-- https://www.flashforge.com/products/flashforge-creator-5-pro
-- https://www.antonmansson.com/3d-printing-blog/flashforge-black-friday-2026
-- https://makers101.com/best-black-friday-3d-printer-deals/
-- https://3dprinting.com/news/flashforge-creator-5-and-creator-5-pro-launch/
-- https://slickdeals.net/f/20238549-flashforge-creator-5-pro-toolchanger-multicolor-3d-printer-639-55-free-s-h
-- https://plasticfantasticdeals.com/flashforge-creator-5-pro/
-- https://enterprise.flashforge.com/pages/flashforge-creator-5-pro-4-toolhead-multi-color-3d-printer
-- https://www.notebookcheck.net/Four-print-heads-less-waste-Creator-5-Pro-tested.1364964.0.html
-- https://www.howtogeek.com/flashforge-creator-5-pro-review/
-- https://www.fauxhammer.com/reviews/flashforge-creator-5-pro-review-the-best-toolchanger-held-back-by-its-own-ecosystem/
-- https://simplyprint.io/compatibility/flashforge-creator-5-pro
-- https://us.store.bambulab.com/pages/black-friday-sale
-- https://makers101.com/bambu-lab-black-friday-2026/
-- https://bambuhub.net/articles/bambu-black-friday-2026
-- https://auroratechchannel.com/price-details.php?brand=BambuLab&model=H2D+AMS
-- https://shop3duniverse.com/products/bambu-lab-h2d-ams-combo
-- https://3dprinting.com/products/bambu-lab-p2s-combo/
-- https://www.prusa3d.com/p/bondtech-indx/
-- https://www.prusa3d.com/product/prusa-core-one-gen-2-indx-8-tool/
-- https://www.prusa3d.com/product/indx-4-tool-conversion-kit-for-core-one-gen2/
-- https://www.prusa3d.com/p/black-friday-2026/
-- https://us.snapmaker.com/products/snapmaker-u1-3d-printer
-- https://www.creativebloq.com/3d/3d-printing/run-dont-walk-the-snapmaker-u1-hits-its-lowest-price-ever-for-prime-day
-- https://www.tomshardware.com/3d-printing/snapmaker-u1-review
-- https://makers101.com/bambu-x2d-vs-snapmaker-u1/
-- https://www.jcprintfarm.com/blogs/3d-printing-tech/snapmaker-u1-review
-- https://filascope.com/printers/snapmaker-u1
-- https://3dprint.com/322447/snapmaker-u1-tool-changing-for-the-masses/
+- [Flashforge Creator 5 Pro (official)](https://www.flashforge.com/products/flashforge-creator-5-pro)
+- [Notebookcheck: Creator 5 Pro tested](https://www.notebookcheck.net/Four-print-heads-less-waste-Creator-5-Pro-tested.1364964.0.html)
+- [How-To Geek: Creator 5 Pro review](https://www.howtogeek.com/flashforge-creator-5-pro-review/)
+- [Makers101: Black Friday 3D printer deals](https://makers101.com/best-black-friday-3d-printer-deals/)
+- [Bambu Lab Black Friday sale](https://us.store.bambulab.com/pages/black-friday-sale)
+- [Prusa CORE One Gen 2 INDX 4-tool](https://www.prusa3d.com/product/indx-4-tool-conversion-kit-for-core-one-gen2/)
+- [Tom's Hardware: Snapmaker U1 review](https://www.tomshardware.com/3d-printing/snapmaker-u1-review)

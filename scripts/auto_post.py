@@ -121,7 +121,7 @@ Voice: conversational, technically grounded, honest about real-world tradeoffs, 
 
 Originality: facts from sources are fine, wording must be entirely your own. Never copy or closely mirror sentences from any article or press release. No quotes longer than a few words.
 
-Accuracy: every spec, property value, price, weight, and date must come from your web searches. If you can't verify something, leave it out. End the body with a short "Sources" section listing the URLs you relied on.
+Accuracy: every spec, property value, price, weight, and date must come from your web searches. If you can't verify something, leave it out. End the body with a short "Sources" section listing only the 4-7 most important sources (official product pages, data sheets, and the main reviews or price trackers), each as a Markdown link with a short descriptive name, e.g. "- [Notebookcheck: Creator 5 Pro tested](https://...)". Do not list every page you searched.
 
 Prices: US dollars only, from US retailers or US list prices (e.g. "$24.99"). Never use euros, pounds, or any other currency, and never convert from them. If you can only find a non-USD price, omit the price.
 
