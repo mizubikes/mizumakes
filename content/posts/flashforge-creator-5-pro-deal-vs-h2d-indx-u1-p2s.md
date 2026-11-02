@@ -6,9 +6,9 @@ slug: flashforge-creator-5-pro-deal-vs-h2d-indx-u1-p2s
 categories: ["Guides"]
 tags: ["toolchanger", "flashforge", "multi-material", "buying guide"]
 cover:
-  image: "/images/Parts-printed-in-printer.png"
-  alt: "Functional parts printed in dark gray on the build plate of an enclosed 3D printer"
-  caption: ""
+  image: "/images/flashforge-creator-5-pro-cover.webp"
+  alt: "Flashforge Creator 5 Pro with its enclosure lid and four filament spools mounted on the side"
+  caption: "Image: Flashforge"
   relative: false
 draft: false
 ---
