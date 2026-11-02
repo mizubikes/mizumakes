@@ -1,4 +1,4 @@
-Flashforge Creator 5 Pro: 4-toolhead toolchanger review for functional multi-material printing (specs, purge waste vs AMS, enclosure and engineering filaments, price vs Bambu H2D and Prusa INDX)
+Flashforge Creator 5 Pro sale: is the current deal worth it, and how it compares to the Bambu Lab H2D, Prusa CORE One with INDX, Snapmaker U1, and Bambu P2S with AMS 2 Pro on price, toolheads vs purge waste, build volume, enclosure and engineering filaments. Lead with current US sale prices and price history, then a comparison table, then who should buy which.
 How to dry filament: dryer boxes vs food dehydrators vs printer heated beds
 Bambu Lab AMS vs AMS 2 Pro vs AMS HT: which multi-material setup makes sense
 Best budget 3D printer under 300 dollars
