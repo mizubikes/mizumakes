@@ -2,6 +2,7 @@ baseURL = "https://mizumakes.com/"
 languageCode = "en-us"
 title = "MizuMakes"
 theme = "PaperMod"
+enableRobotsTXT = true
 
 [services]
   [services.googleAnalytics]
@@ -32,11 +33,13 @@ theme = "PaperMod"
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowShareButtons = false
-  googleSiteVerification = "MwppcuM3ccw91qgRVYOLtLNzwgxWx_efJt33bIDraOQ"
   [params.cover]
     linkFullImages = true
     hiddenInList = false
     responsiveImages = false
+
+[params.analytics.google]
+  SiteVerificationTag = "MwppcuM3ccw91qgRVYOLtLNzwgxWx_efJt33bIDraOQ"
 
 [params.homeInfoParams]
   Title = "Making things that work."
