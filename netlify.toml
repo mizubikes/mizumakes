@@ -3,3 +3,35 @@
   command = "hugo"
 [build.environment]
   HUGO_VERSION = "0.154.5"
+
+# Old URLs Google still has (Search Console "Not found (404)")
+[[redirects]]
+  from = "/index.xml"
+  to = "/feed.xml"
+  status = 301
+
+[[redirects]]
+  from = "/tags/gear/*"
+  to = "/categories/gear/"
+  status = 301
+
+# Stub section pages removed in favor of /categories/ term pages
+[[redirects]]
+  from = "/gear/*"
+  to = "/categories/gear/"
+  status = 301
+
+[[redirects]]
+  from = "/guides/*"
+  to = "/categories/guides/"
+  status = 301
+
+[[redirects]]
+  from = "/projects/*"
+  to = "/categories/projects/"
+  status = 301
+
+[[redirects]]
+  from = "/reviews/*"
+  to = "/categories/reviews/"
+  status = 301
