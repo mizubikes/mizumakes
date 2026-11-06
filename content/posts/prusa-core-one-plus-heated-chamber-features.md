@@ -2,7 +2,7 @@
 title: "Prusa CORE One+ Heated Chamber: What 55 °C Actually Unlocks"
 date: 2026-08-19
 draft: false
-description: "The Prusa CORE One+ is an enclosed CoreXY printer with an actively heated 55 °C chamber. What that unlocks for ASA and nylon, what the + added, and the trade-offs."
+description: "The Prusa CORE One+ has an actively heated 55 °C chamber. What that unlocks for ASA and nylon, what the + version added, and the honest trade-offs."
 tags: ["prusa", "core one", "core one plus", "heated chamber", "corexy", "enclosed printer"]
 categories: ["Guides"]
 cover:

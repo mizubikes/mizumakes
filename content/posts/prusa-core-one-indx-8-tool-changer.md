@@ -2,7 +2,7 @@
 title: "Why an 8-Tool Prusa INDX Might Be My Next Printer"
 date: 2026-08-19
 draft: false
-description: "Prusa INDX adds up to 8 independent toolheads to the CORE One+ for true multi-material printing. Why it's on my shortlist, and why Nozzlegate keeps it out of my cart."
+description: "Prusa INDX adds up to 8 toolheads to the CORE One+ for true multi-material printing. Why it's on my shortlist, and why Nozzlegate keeps it out of my cart."
 tags: ["prusa", "core one", "indx", "toolchanger", "multi-material", "bondtech"]
 categories: ["Guides"]
 cover:
