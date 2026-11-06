@@ -4,6 +4,7 @@ date: 2025-01-18
 draft: false
 tags: ["3D printing", "workshop organization", "soldering", "functional prints", "SolidWorks"]
 categories: ["Projects"]
+description: "A 3D printed wire spool holder I designed in SolidWorks that mounts above a soldering station and keeps solder and hookup wire organized and easy to pull."
 summary: "A customizable wire spool holder that mounts above your workspace and keeps all your soldering wire organized and accessible."
 cover:
   image: /images/Finished-wire-holder.png

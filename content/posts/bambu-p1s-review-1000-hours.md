@@ -1,7 +1,7 @@
 ---
-title: "Bambu Lab P1S Review After 1,000+ Hours: Still a Great Buy in 2026"
+title: "Bambu P1S Review After 1,000+ Hours: Still Worth It in 2026?"
 date: 2026-10-25
-description: "Over 1,000 hours of printing functional parts on a Bambu Lab P1S with zero significant issues. Here's what held up, what I'd change, and why it's still worth buying even with the P2S out."
+description: "1,000+ hours of functional parts on a Bambu Lab P1S with no significant issues: what held up, what I'd change, and why it's still worth buying over the P2S."
 categories: ["Reviews"]
 tags: ["bambu lab", "p1s", "3d printer review", "ams"]
 cover:

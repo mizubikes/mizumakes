@@ -8,6 +8,20 @@ enableRobotsTXT = true
   [services.googleAnalytics]
     id = "G-H121HM747N"
 
+[related]
+  includeNewer = true
+  threshold = 20
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "categories"
+    weight = 30
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
 [taxonomies]
   category = "categories"
   tag = "tags"
@@ -26,7 +40,8 @@ enableRobotsTXT = true
     baseName = "feed"
 
 [params]
-  description = "3D printing, engineering, and making stuff"
+  description = "Engineering-first 3D printing: filament data-sheet comparisons, printer buying guides, live filament prices per kg, and functional part projects."
+  images = ["logo.png"]
   author = "Jared"
   defaultTheme = "dark"
   ShowReadingTime = true

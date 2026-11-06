@@ -128,7 +128,9 @@ Prices: US dollars only, from US retailers or US list prices (e.g. "$24.99"). Ne
 Affiliate links: when you mention a specific product someone might buy, link it with an Amazon search URL in this exact form: https://www.amazon.com/s?k=URL+ENCODED+PRODUCT+NAME&tag={AMAZON_TAG}
 Never invent Amazon product IDs. Add one line near the top of the body: "*MizuMakes may earn a commission from links in this post.*"
 
-Internal links: link to 1-3 related existing MizuMakes posts where they genuinely fit, using the relative URLs provided.
+Internal links: link to 2-4 related existing MizuMakes posts where they genuinely fit, using the relative URLs provided, with descriptive anchor text (never "click here").
+
+Search: pick the one phrase a person would type into Google for this topic (the primary keyword, e.g. "pla vs petg vs asa"). Use it naturally in the title, in the first two sentences of the body, and in at least one ## subheading. Write ## subheadings as the questions or comparisons people search for. Open with a direct answer to the search question in the first paragraph, then go deeper. Never stuff keywords.
 
 Length: 1000-1600 words.
 """
@@ -154,9 +156,9 @@ Existing MizuMakes posts (avoid duplicates, use for internal links):
 {existing}
 
 Research with web search first, then respond with ONLY a JSON object (no code fence, no other text) with these keys:
-"title": post title, under 70 characters
+"title": post title, 40-60 characters, primary keyword near the front, no clickbait, no prices (they go stale)
 "slug": lowercase-hyphenated slug
-"description": one-sentence SEO meta description, under 155 characters
+"description": meta description, 120-155 characters, includes the primary keyword and says what the reader will learn
 "category": exactly one of {CATEGORIES} (Guides = how-tos and buyer's guides, Reviews = single-product evaluations, Gear = tools and accessories, Projects = builds, Blog = news and opinion)
 "tags": 2-5 short tags; never use a category name (Blog, Projects, Reviews, Guides, Gear) as a tag
 "image_query": 2-4 word stock-photo search naming a physical object or machine, e.g. "3d printer", "3d printing", "3d printer nozzle", "3d printed parts". It must contain "3d print" or "printer". For filament or material topics use "3d printer" or "3d printing", never "filament spool" (it returns yarn photos). No brand names, no material abbreviations alone (never just "PETG" or "PLA"), no people, no abstract words.
@@ -202,6 +204,9 @@ def generate_post(seed: str | None, posts: list[dict]) -> dict:
     if "cite index=" in data["body"]:
         sys.exit("Citation markup still present in body; refusing to write the post")
 
+    if len(data["description"]) > 160:
+        cut = data["description"][:157].rsplit(" ", 1)[0].rstrip(",;:")
+        data["description"] = cut + "..."
     if data["category"] not in CATEGORIES:
         data["category"] = "Guides"
     # A term used as both a category and a tag breaks the PaperMod nav build

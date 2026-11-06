@@ -1,5 +1,5 @@
 ---
-title: "What is ASA Filament? When to Stop Using PETG for Outdoor Prints"
+title: "What Is ASA Filament? When to Switch From PETG Outdoors"
 date: 2026-04-14
 description: "ASA filament is the go-to material for outdoor 3D prints. Here's what it is, why it beats PETG outdoors, and what you need to print it successfully."
 tags: ["filament", "ASA", "outdoor printing", "materials"]

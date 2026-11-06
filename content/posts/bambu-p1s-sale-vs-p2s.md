@@ -1,8 +1,8 @@
 ---
-title: "The P1S AMS 2 Pro Combo Is $579. The P2S Combo Is $749. Here's Which One to Buy."
+title: "Bambu P1S vs P2S Combo: Which One to Buy With the AMS 2 Pro"
 date: 2026-07-20
 draft: false
-description: "Bambu dropped the P1S to $399 and the AMS 2 Pro combo to $579. The P2S combo is $749. That $170 gap is the whole buying decision, and the answer isn't what the spec sheet suggests."
+description: "Bambu P1S vs P2S with the AMS 2 Pro: the price gap between the combos is the whole buying decision, and the answer isn't what the spec sheet suggests."
 tags: ["bambu lab", "p1s", "p2s", "ams 2 pro", "3d printer buying guide"]
 categories: ["Guides"]
 cover:

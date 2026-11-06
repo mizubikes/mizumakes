@@ -1,7 +1,7 @@
 ---
 title: "PLA vs PETG: Which 3D Printing Filament Should You Use?"
 date: 2026-04-14
-description: "PLA or PETG? Here's what the difference actually is, which one to start with, and the best filaments to buy on Amazon."
+description: "PLA vs PETG explained: strength, heat resistance, ease of printing, which one to start with, and the best PLA and PETG filaments to buy."
 categories: ["Guides"]
 tags: ["filament", "PLA", "PETG", "materials"]
 cover:

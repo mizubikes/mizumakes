@@ -1,0 +1,37 @@
+{{- /* MizuMakes: "Keep reading" related posts (internal links for readers and search), then PaperMod's prev/next nav */ -}}
+{{- if eq .Section "posts" }}
+{{- $related := site.RegularPages.Related . | first 3 }}
+{{- if lt (len $related) 3 }}
+  {{- $fill := where (where site.RegularPages "Section" "posts") "Permalink" "ne" .Permalink }}
+  {{- $related = $related | append $fill | uniq | first 3 }}
+{{- end }}
+{{- with $related }}
+<nav class="mz-related" aria-label="Related posts">
+  <div class="mz-related-title">Keep reading</div>
+  <ul>
+    {{- range . }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{- end }}
+  </ul>
+</nav>
+{{- end }}
+{{- end }}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- if and (gt (len $pages) 1) (in $pages . ) }}
+<nav class="paginav">
+  {{- with $pages.Next . }}
+  <a class="prev" href="{{ .Permalink }}">
+    <span class="title">« {{ i18n "prev_page" }}</span>
+    <br>
+    <span>{{- .Name -}}</span>
+  </a>
+  {{- end }}
+  {{- with $pages.Prev . }}
+  <a class="next" href="{{ .Permalink }}">
+    <span class="title">{{ i18n "next_page" }} »</span>
+    <br>
+    <span>{{- .Name -}}</span>
+  </a>
+  {{- end }}
+</nav>
+{{- end }}

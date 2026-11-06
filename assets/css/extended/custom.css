@@ -250,3 +250,25 @@
   .mb-card-grid { grid-template-columns: 1fr; }
   .mb-wide-grid { grid-template-columns: 1fr; }
 }
+
+/* "Keep reading" related posts under each post */
+.mz-related {
+  margin: 24px 0;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--entry);
+}
+.mz-related-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #00ff9f;
+  margin-bottom: 8px;
+}
+:root:not([data-theme="dark"]) .mz-related-title { color: #00a86b; }
+.mz-related ul { margin: 0; padding-left: 18px; }
+.mz-related li { margin: 6px 0; }
+.mz-related a { color: var(--primary); text-decoration: none; }
+.mz-related a:hover { text-decoration: underline; }
