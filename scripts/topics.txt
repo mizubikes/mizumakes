@@ -1,4 +1,3 @@
-Bambu Lab H3C just launched (announced Nov 3, 2026): nine-tool toolchanger with a motorized tool magazine. Cover verified specs, US price and availability, how its tool changing compares to the H2C's Vortek hotend swapping, and how it stacks up against the Flashforge Creator 5 Pro and Prusa CORE One+ INDX for functional multi-material parts (purge waste, chamber temperature, build volume, price per tool). Link the existing Creator 5 Pro and INDX posts. Only state specs confirmed by Bambu or launch coverage.
 Best budget 3D printer under 300 dollars
 Hardened steel nozzle: when you need one and which abrasive filaments require it
 TPU printing guide: settings, direct drive, and best brands
