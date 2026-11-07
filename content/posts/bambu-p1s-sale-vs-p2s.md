@@ -1,8 +1,8 @@
 ---
-title: "Bambu P1S vs P2S Combo: Which One to Buy With the AMS 2 Pro"
+title: "P1S AMS 2 Pro Combo vs P2S Combo: Which One to Buy"
 date: 2026-07-20
 draft: false
-description: "Bambu P1S vs P2S with the AMS 2 Pro: the price gap between the combos is the whole buying decision, and the answer isn't what the spec sheet suggests."
+description: "P1S AMS 2 Pro combo vs P2S combo, plus why the first-gen P1S AMS combo is a trap. The price gap is the whole decision, and the answer isn't on the spec sheet."
 tags: ["bambu lab", "p1s", "p2s", "ams 2 pro", "3d printer buying guide"]
 categories: ["Guides"]
 cover:

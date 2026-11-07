@@ -1,7 +1,8 @@
 ---
-title: "PLA vs PETG: Which 3D Printing Filament Should You Use?"
+title: "PLA vs PETG: Strength, Heat Resistance, and Which to Use"
 date: 2026-04-14
-description: "PLA vs PETG explained: strength, heat resistance, ease of printing, which one to start with, and the best PLA and PETG filaments to buy."
+lastmod: 2026-11-06
+description: "PLA vs PETG compared with data-sheet numbers: heat resistance, stiffness, toughness, print settings, and price, plus which filament to use for which part."
 categories: ["Guides"]
 tags: ["filament", "PLA", "PETG", "materials"]
 cover:
@@ -11,9 +12,9 @@ cover:
   relative: false
 ---
 
-If you just got your first 3D printer and opened Amazon to buy filament, you were probably hit with dozens of options immediately. But two names keep coming up: **PLA** and **PETG**. 
+**Short answer:** PLA is easier to print, stiffer, and cheaper. PETG is tougher, less brittle, and handles more heat. Bambu Lab's data sheets put PLA's heat deflection temperature at about 54–57 °C and PETG's at about 68–71 °C. Use PLA for prototypes, models, and indoor parts. Use PETG for functional parts that take impact, flex, or sit somewhere warm.
 
-The good news is that these are the two best filaments to start with — and for most people, they're the only two you'll ever need. Here's what they actually are, how they're different, and which one to reach for first.
+If you just got your first 3D printer and opened Amazon to buy filament, you were probably hit with dozens of options immediately. But two names keep coming up: **PLA** and **PETG**. These are the two best filaments to start with, and for most people they're the only two you'll ever need. Here's how they differ, by the numbers, and which one to reach for first.
 
 ---
 
@@ -58,13 +59,13 @@ PETG (Polyethylene Terephthalate Glycol) sits between PLA and engineering-grade 
 
 Think of it as PLA's more capable sibling. Slightly more involved to dial in, but not dramatically so.
 
-**PETG is great for:**
+**PETG pros (what it's great for):**
 - Functional parts that need to handle stress
 - Brackets, clips, tool holders, enclosures
-- Parts that see moderate heat (up to ~75–80°C)
+- Parts that see moderate heat (heat deflection around 70 °C)
 - Anything that needs a bit of give rather than snapping
 
-**Where PETG falls short:**
+**PETG cons:**
 - Strings more than PLA — you'll need to dial in retraction
 - Slightly more sensitive to moisture (store it sealed)
 - Doesn't sand or paint as cleanly as PLA
@@ -77,15 +78,44 @@ Think of it as PLA's more capable sibling. Slightly more involved to dial in, bu
 
 ---
 
-## PLA vs PETG: Head-to-Head
+## PLA vs PETG by the Numbers
+
+Marketing pages say PETG is "stronger." The data sheets tell a more useful story. Here are Bambu Lab's published figures for their basic PLA and PETG, which are representative of what most brands list:
+
+| Property (Bambu Lab TDS) | PLA Basic | PETG |
+|---|---|---|
+| Heat deflection temp (0.45 MPa) | 57 °C | 71 °C |
+| Heat deflection temp (1.8 MPa) | 54 °C | 68 °C |
+| Glass transition temp | 60 °C | 66 °C |
+| Bending modulus (stiffness) | ~2,750 MPa | ~2,050 MPa |
+| Nozzle temp | 190–230 °C | 230–260 °C |
+| Bed temp | 35–45 °C | 65–75 °C |
+| Drying | 50 °C, 8 h | 65 °C, 8 h |
+
+*PETG heat figures are from Bambu PETG Basic; Tg, stiffness, and settings are from the PETG HF sheet. Sources at the bottom.*
+
+Treat every data-sheet number as a ceiling. Those test bars are printed under ideal conditions, and a real part with walls, seams, and layer lines will come in lower, especially across layers. Bambu's PETG HF sheet shows impact strength dropping from 31.5 kJ/m² in the XY direction to 10.6 kJ/m² in Z. That drop is the most important design lesson for either material: orient the part so the load runs along the layers, not across them.
+
+## Is PETG Stronger Than PLA?
+
+It depends on what "stronger" means for your part.
+
+- **Stiffness:** PLA wins. Its bending modulus is roughly a third higher, so a PLA bracket deflects less under the same load. That's why PLA feels so rigid.
+- **Toughness:** PETG wins. PLA is brittle and tends to snap without warning. PETG bends and yields first, which is what you want for clips, snap fits, and anything that gets dropped or hit.
+- **Heat:** PETG wins by about 14 °C on heat deflection. That margin is the difference between a part that survives a warm room and one that sags on a car dashboard.
+- **Creep:** PLA creeps under sustained load as it gets warm, because it's working close to its glass transition even on a hot day.
+
+So for a rigid, indoor fixture, PLA is often the better engineering choice. For a part that flexes, takes impact, or lives anywhere warm, use PETG.
+
+## Quick Comparison
 
 | | PLA | PETG |
 |---|---|---|
 | **Ease of printing** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
 | **Enclosure required** | No | No |
-| **Heat resistance** | ~60°C | ~75–80°C |
-| **Strength** | Medium | Higher |
-| **Flexibility** | Brittle | Slightly flexible |
+| **Heat resistance (HDT)** | ~55–57 °C | ~68–71 °C |
+| **Stiffness** | Higher | Lower |
+| **Toughness** | Brittle | Tougher |
 | **Stringing** | Low | Moderate |
 | **Best for** | Decorative, prototypes | Functional parts |
 | **Typical price** | $14–28/kg | $20–25/kg |
@@ -108,11 +138,13 @@ Both work on any open-air printer. That's the key takeaway — you don't need to
 
 **Not sure?** Default to PLA. It's easier to work with and you can always reprint in PETG once you know what the part needs to do.
 
+**Printing for outdoors?** Neither is ideal long term. PETG handles moisture and shade well, but for direct sun, read [PLA vs PETG vs ASA for outdoor prints](/posts/pla-vs-petg-vs-asa-outdoor-prints/). For brand-by-brand PETG data, see the [best PETG filament brands for functional parts](/posts/best-petg-filament-brands-functional-parts/). If PETG is stringing badly, wet filament is the usual cause, so see [how to dry filament](/posts/how-to-dry-filament-dryer-box-vs-dehydrator-vs-heated-bed/).
+
 ---
 
-## What About PLA+?
+## PLA+ vs PETG
 
-PLA+ is worth a quick mention. It's a modified PLA blend with improved toughness and reduced brittleness — it bridges the gap between standard PLA and PETG. If you find yourself wanting something stronger than PLA but don't want to deal with PETG's stringing yet, PLA+ is a solid middle ground.
+PLA+ is a modified PLA blend with improved toughness and reduced brittleness. It bridges the gap between standard PLA and PETG: it prints almost as easily as PLA and snaps less, but it keeps PLA's low heat resistance. If the part will see heat, PETG still wins. If you just want something less brittle than PLA without PETG's stringing, PLA+ is a solid middle ground.
 
 **[ELEGOO Rapid PLA+](https://www.amazon.com/s?k=elegoo+rapid+pla+plus&tag=mizubikes-web-20)** is a great pick here — tougher formula, high-speed capable, and still very easy to print.
 
@@ -135,6 +167,15 @@ PLA+ is worth a quick mention. It's a modified PLA blend with improved toughness
 
 ## Frequently Asked Questions
 
+**Is PETG stronger or better than PLA?**
+PETG is tougher and more heat resistant, but PLA is stiffer. PLA resists bending better; PETG resists snapping better. For functional parts that take impact or heat, PETG is usually the better choice.
+
+**Is PETG harder to print than PLA?**
+Slightly. It needs hotter temperatures (230–260 °C nozzle, 65–75 °C bed), strings more, and is more sensitive to moisture. It doesn't need an enclosure.
+
+**Can PLA or PETG be used outdoors?**
+PLA softens near 55–60 °C and degrades under UV, so it's a poor choice outdoors. PETG lasts longer in shade or partial sun. For parts in direct sun, use ASA.
+
 **Can I print PLA and PETG on a Bambu Lab P1S?**
 Yes, absolutely. Both work perfectly on the P1S. You can use third-party filament without any issues — see the [filament price tracker](/filament-prices/) for how third-party prices compare.
 
@@ -153,3 +194,9 @@ When you need parts that live outdoors long-term (ASA) or need high heat resista
 ---
 
 *All product links are Amazon affiliate links. I only recommend filaments I've actually used. Today's store prices for every brand here are on the [filament price tracker](/filament-prices/).*
+
+## Sources
+
+- [Bambu Lab PLA Basic technical data sheet](https://wiki.bambulab.com/filament-acc/abs-asa-pc/bambu_pla_basic_technical_data_sheet.pdf)
+- [Bambu Lab PETG Basic](https://us.store.bambulab.com/products/petg-basic)
+- [Bambu Lab PETG HF (manual and specs)](https://manuals.plus/bambu-filament/petg-hf-launches-new-high-speed-manual)

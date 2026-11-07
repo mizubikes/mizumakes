@@ -1,5 +1,5 @@
 ---
-title: "Bambu Lab H2D vs H2S vs X2D: The New Lineup Explained"
+title: "Bambu Lab New Printers 2026: H2D, H2S, and X2D Explained"
 date: 2026-04-20
 draft: false
 description: "Bambu Lab replaced their entire prosumer lineup in 12 months. Here's what's new, what each machine does, and which one makes sense for your setup."
