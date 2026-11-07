@@ -6,9 +6,9 @@ slug: bambu-lab-h3c-toolchanger-specs-price
 categories: ["Blog"]
 tags: ["bambu lab", "toolchanger", "multi-material", "h3c"]
 cover:
-  image: "/images/bambu-lab-h3c-toolchanger-specs-price-cover.webp"
-  alt: "Enclosed desktop 3D printer with multiple tool heads for multi-material printing"
-  caption: "Photo: Graftencom / Pixabay"
+  image: "/images/bambu-lab-h3c-cover.webp"
+  alt: "Bambu Lab H3C nine-tool 3D printer with the AMS 3H filament system on top"
+  caption: "Image: Bambu Lab"
   relative: false
 draft: false
 ---
@@ -21,6 +21,9 @@ I haven't printed on one. Everything below comes from Bambu's launch material, t
 
 ## What is the Bambu Lab H3C, and what does it cost?
 
+![The H3C's nine PrintTools, each with its own filament path](/images/bambu-lab-h3c-printtools.webp)
+*Image: Bambu Lab*
+
 Bambu calls the system Swaptek. Each tool has its own filament path and heating element, so the material stays loaded and pre-heated. The nine tools are held by a rack mounted on the front of the chamber. The rack is not a fixed shelf. It retracts and adjusts its vertical position during tool pickup, and Bambu says this improves alignment and moves the filament tubes away from the print area. Tom's Hardware found it adds a layer of unneeded complexity, so it is one more mechanism to watch for wear.
 
 Confirmed specs from launch coverage:
@@ -29,6 +32,8 @@ Confirmed specs from launch coverage:
 - It accepts 0.2, 0.4, 0.6, and 0.8 mm nozzles and 1.75 mm or 2.85 mm filament.
 - Maximum speed is 1,400 mm/s and maximum hotend flow is 40 mm³/s.
 - Every nozzle is hardened steel at HRC 55+.
+- The chamber is actively heated and cooled, so it can run warm for engineering materials and stay cool for PLA.
+- Bambu lists automated multi-process tool switching: besides printing, tools can cut, draw, and deboss in the same job.
 - The printer measures 493 × 571 × 587 mm and weighs 36.28 kg including the AMS 3H.
 
 There is one launch configuration. It has eight 0.4 mm PrintTools for 1.75 mm filament and a ninth 0.4 mm tool with a dedicated 2.85 mm path. So running nine colors of standard 1.75 mm filament needs one more 1.75 mm PrintTool. Bambu's US store lists an additional regular PrintTool at $219, and it showed as sold out.
