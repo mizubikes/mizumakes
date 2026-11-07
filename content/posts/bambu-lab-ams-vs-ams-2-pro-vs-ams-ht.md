@@ -6,16 +6,16 @@ slug: bambu-lab-ams-vs-ams-2-pro-vs-ams-ht
 categories: ["Guides"]
 tags: ["bambu lab", "ams", "multi-material", "filament drying"]
 cover:
-  image: "/images/bambu-lab-ams-vs-ams-2-pro-vs-ams-ht-cover.webp"
-  alt: "Enclosed desktop 3D printer on a workbench"
-  caption: "Photo: vexmatech / Pixabay"
+  image: "/images/bambu-p1s-ams-cover.webp"
+  alt: "Bambu Lab AMS on top of a Bambu Lab P1S in a home workshop"
+  caption: ""
   relative: false
 draft: false
 ---
 
 *MizuMakes may earn a commission from links in this post.*
 
-For most people choosing between the **Bambu Lab AMS vs AMS 2 Pro vs AMS HT**, the answer is the AMS 2 Pro: four spools with active drying. Add an AMS HT only if you print materials that need more heat than the 2 Pro can deliver. The original AMS only makes sense if you find it discounted and you print PLA and PETG. Each unit is a feeder, a sealed storage box, and in two cases a dryer. For functional parts, the dryer matters more than the colour count.
+For most people choosing between the **Bambu Lab AMS vs AMS 2 Pro vs AMS HT**, the answer is the AMS 2 Pro: four spools with active drying. Add an AMS HT only if you print materials that need more heat than the 2 Pro can deliver. The original AMS only makes sense if you find it discounted and you print PLA and PETG. Each unit is a feeder, a sealed storage box, and in two cases a dryer. For functional parts, the dryer matters more than the color count.
 
 ## What is the actual difference between AMS, AMS 2 Pro, and AMS HT?
 
@@ -40,7 +40,7 @@ The data sheets for your filament decide this, not the marketing. Bambu's own po
 
 Here is how that maps to materials. PLA and PETG are fine at 65°C or below. For nylon, polycarbonate, ABS, and ASA, the 85°C unit is the one built for them. Even the HT may not fully dry PVA, PPS-CF or PPA-CF. Those need an oven or a dedicated dryer. See the [filament drying comparison](/posts/how-to-dry-filament-dryer-box-vs-dehydrator-vs-heated-bed/) for that.
 
-There is a PLA trap as well. PLA starts to soften around 55–60°C, so don't improvise higher temperatures. The AMS also lowers the setpoint when a neighbouring spool is in use. It drops to 45°C when drying PETG while printing PLA, and to 55°C when drying ABS while printing PETG. That protects the spool in the feed path. It also means a drying cycle during a print is slower than one done idle.
+There is a PLA trap as well. PLA starts to soften around 55–60°C, so don't improvise higher temperatures. The AMS also lowers the setpoint when a neighboring spool is in use. It drops to 45°C when drying PETG while printing PLA, and to 55°C when drying ABS while printing PETG. That protects the spool in the feed path. It also means a drying cycle during a print is slower than one done idle.
 
 ## Can you dry and print at the same time?
 
@@ -50,13 +50,13 @@ Power adds another constraint. The AMS HT uses its included mains power cord, be
 
 ## What does the AMS HT bypass outlet do?
 
-Abrasive and flexible filaments are hard on a roller-based feed path. The HT has a bypass outlet for TPE, generic TPU, Bambu PET-CF and TPU 95A, and other carbon- or glass-fibre filament. The AMS 2 Pro's unsupported list includes TPE, generic TPU, Bambu PET-CF/TPU 95A, and other filament that contains carbon or glass fibre. Bambu's own PLA-CF, PETG-CF and PAHT-CF are listed as supported on both units.
+Abrasive and flexible filaments are hard on a roller-based feed path. The HT has a bypass outlet for TPE, generic TPU, Bambu PET-CF and TPU 95A, and other carbon- or glass-fiber filament. The AMS 2 Pro's unsupported list includes TPE, generic TPU, Bambu PET-CF/TPU 95A, and other filament that contains carbon or glass fiber. Bambu's own PLA-CF, PETG-CF and PAHT-CF are listed as supported on both units.
 
 There is a catch. With TPU, the HT cannot use automatic feed and return, but it can serve as a drying box. It also can't dry while a print is being fed through the bypass port. So the bypass is a dry, clean path for one spool, not automation. For TPU gaskets or bumpers you manually load that spool, and it stays isolated from the AMS rollers.
 
 ## Which AMS setup makes sense for functional parts?
 
-Be honest about what you need multi-material for. Brackets, jigs, and enclosures are mostly single-material parts. Colour changes are cosmetic, and purge waste is set by having a single nozzle, not by the unit feeding it. The real jobs are dry storage, automatic spool swaps, and occasional support interfaces. Soluble or PLA-on-PETG supports are the typical case.
+Be honest about what you need multi-material for. Brackets, jigs, and enclosures are mostly single-material parts. Color changes are cosmetic, and purge waste is set by having a single nozzle, not by the unit feeding it. The real jobs are dry storage, automatic spool swaps, and occasional support interfaces. Soluble or PLA-on-PETG supports are the typical case.
 
 These are the setups I'd reach for, based on the specs:
 
@@ -64,9 +64,9 @@ These are the setups I'd reach for, based on the specs:
 
 **Nylon, PC, or PA-CF as a regular material.** Add an [AMS HT](https://www.amazon.com/s?k=Bambu+Lab+AMS+HT&tag=mizubikes-web-20), and consider it before a second 2 Pro. These materials absorb moisture quickly, and wet nylon prints poorly and loses toughness. A dryer that can reach their data-sheet temperature is the better investment. At $139 list, it costs less than half of a 2 Pro.
 
-**Mixed workflow.** Combine them. H2-series printers take up to four AMS or AMS 2 Pro units plus eight AMS HT, for 24 filaments in total. On P1 and X1 printers, the limit is four units in any mix, for 16 colours. A 2 Pro for daily PLA/PETG plus an HT for the engineering spool is a sensible mix on a P1S. The [H2D/H2S/X2D lineup post](/posts/bambu-lab-new-printers-2026/) covers what the larger machines add.
+**Mixed workflow.** Combine them. H2-series printers take up to four AMS or AMS 2 Pro units plus eight AMS HT, for 24 filaments in total. On P1 and X1 printers, the limit is four units in any mix, for 16 colors. A 2 Pro for daily PLA/PETG plus an HT for the engineering spool is a sensible mix on a P1S. The [H2D/H2S/X2D lineup post](/posts/bambu-lab-new-printers-2026/) covers what the larger machines add.
 
-**Original AMS.** The [original AMS](https://www.amazon.com/s?k=Bambu+Lab+AMS+automatic+material+system&tag=mizubikes-web-20) is the budget pick if you can get it at or near $199 and print only PLA and PETG. Desiccant in a sealed box does keep dry filament dry. It can't recover a damp spool, and it won't take TPU or carbon fibre. The cost difference to the 2 Pro is small compared with the printer, so I wouldn't choose it for a new engineering setup.
+**Original AMS.** The [original AMS](https://www.amazon.com/s?k=Bambu+Lab+AMS+automatic+material+system&tag=mizubikes-web-20) is the budget pick if you can get it at or near $199 and print only PLA and PETG. Desiccant in a sealed box does keep dry filament dry. It can't recover a damp spool, and it won't take TPU or carbon fiber. The cost difference to the 2 Pro is small compared with the printer, so I wouldn't choose it for a new engineering setup.
 
 ## What the specs don't tell you
 
