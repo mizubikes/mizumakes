@@ -1,11 +1,11 @@
 {
   "items": {
     "elegoo-asa": {
-      "at_low": false,
+      "at_low": true,
       "available": true,
-      "checked_at": "2026-11-07T18:04:51+00:00",
+      "checked_at": "2026-11-08T18:23:33+00:00",
       "compare_at": null,
-      "days_tracked": 13,
+      "days_tracked": 14,
       "deal": false,
       "high_30": 16.99,
       "high_90": 16.99,
@@ -22,11 +22,11 @@
       "variant": "Deep Black"
     },
     "elegoo-pla": {
-      "at_low": false,
+      "at_low": true,
       "available": true,
-      "checked_at": "2026-11-07T18:04:51+00:00",
+      "checked_at": "2026-11-08T18:23:33+00:00",
       "compare_at": null,
-      "days_tracked": 13,
+      "days_tracked": 14,
       "deal": false,
       "high_30": 13.99,
       "high_90": 13.99,
@@ -43,11 +43,11 @@
       "variant": "PLA (RFID) / Black"
     },
     "elegoo-rapid-petg": {
-      "at_low": false,
+      "at_low": true,
       "available": true,
-      "checked_at": "2026-11-07T18:04:51+00:00",
+      "checked_at": "2026-11-08T18:23:33+00:00",
       "compare_at": null,
-      "days_tracked": 13,
+      "days_tracked": 14,
       "deal": false,
       "high_30": 13.99,
       "high_90": 13.99,
@@ -64,11 +64,11 @@
       "variant": "Black"
     },
     "hatchbox-petg": {
-      "at_low": false,
+      "at_low": true,
       "available": false,
-      "checked_at": "2026-11-07T18:04:51+00:00",
+      "checked_at": "2026-11-08T18:23:33+00:00",
       "compare_at": null,
-      "days_tracked": 13,
+      "days_tracked": 14,
       "deal": false,
       "high_30": 26.0,
       "high_90": 26.0,
@@ -85,11 +85,11 @@
       "variant": "Default Title"
     },
     "hatchbox-pla": {
-      "at_low": false,
+      "at_low": true,
       "available": true,
-      "checked_at": "2026-11-07T18:04:51+00:00",
+      "checked_at": "2026-11-08T18:23:33+00:00",
       "compare_at": null,
-      "days_tracked": 13,
+      "days_tracked": 14,
       "deal": false,
       "high_30": 22.99,
       "high_90": 22.99,
@@ -110,11 +110,11 @@
       "source": "amazon-only"
     },
     "polymaker-asa": {
-      "at_low": false,
+      "at_low": true,
       "available": true,
-      "checked_at": "2026-11-07T18:04:51+00:00",
+      "checked_at": "2026-11-08T18:23:33+00:00",
       "compare_at": null,
-      "days_tracked": 13,
+      "days_tracked": 14,
       "deal": false,
       "high_30": 24.99,
       "high_90": 24.99,
@@ -131,11 +131,11 @@
       "variant": "Black / 1kg"
     },
     "polymaker-panchroma-matte-pla": {
-      "at_low": false,
+      "at_low": true,
       "available": true,
-      "checked_at": "2026-11-07T18:04:51+00:00",
+      "checked_at": "2026-11-08T18:23:33+00:00",
       "compare_at": null,
-      "days_tracked": 13,
+      "days_tracked": 14,
       "deal": false,
       "high_30": 18.99,
       "high_90": 18.99,
@@ -152,11 +152,11 @@
       "variant": "Matte Charcoal Black / Spool (New Packaging) / 1kg"
     },
     "polymaker-petg": {
-      "at_low": false,
+      "at_low": true,
       "available": true,
-      "checked_at": "2026-11-07T18:04:51+00:00",
+      "checked_at": "2026-11-08T18:23:33+00:00",
       "compare_at": null,
-      "days_tracked": 13,
+      "days_tracked": 14,
       "deal": false,
       "high_30": 18.99,
       "high_90": 18.99,
@@ -173,5 +173,5 @@
       "variant": "Black / New Formula / 1kg"
     }
   },
-  "updated": "2026-11-07T18:04:51+00:00"
+  "updated": "2026-11-08T18:23:33+00:00"
 }
