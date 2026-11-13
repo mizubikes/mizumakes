@@ -1,4 +1,3 @@
-Hardened steel nozzle: when you need one and which abrasive filaments require it
 TPU printing guide: settings, direct drive, and best brands
 Best 3D printer enclosure options for ABS and ASA
 Textured PEI vs smooth PEI vs cool plate: which build plate for which filament
