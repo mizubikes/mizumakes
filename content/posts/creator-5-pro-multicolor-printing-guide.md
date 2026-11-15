@@ -7,9 +7,9 @@ slug: creator-5-pro-multicolor-printing-guide
 categories: ["Guides"]
 tags: ["Flashforge", "Creator 5 Pro", "multi-color", "multi-material", "toolchanger"]
 cover:
-  image: "/images/creator-5-pro-unicorn-print.webp"
-  alt: "Four-color articulated unicorn 3D printed on a Flashforge Creator 5 Pro, in white, pink, purple, and navy"
-  caption: "A four-color articulated unicorn, painted in Flash Studio and printed on the Creator 5 Pro"
+  image: "/images/creator-5-pro-color-painting.webp"
+  alt: "Painting a model in four colors in Flash Studio for the Flashforge Creator 5 Pro"
+  caption: ""
   relative: false
 draft: false
 ---
@@ -18,7 +18,7 @@ draft: false
 
 **Short answer:** to print multiple colors on the Flashforge Creator 5 Pro, load each color into its own toolhead, then set that toolhead's material and color on the printer's screen. In Flash Studio, assign colors to the model and slice with the prime tower on. When you send the job, map each slicer color to the matching toolhead. The printer swaps whole toolheads instead of unloading and reloading filament, so there's no long purge between colors.
 
-I came to the Creator 5 Pro from a [Bambu P1S with an AMS](/posts/bambu-p1s-review-1000-hours/), and the multi-color workflow is different enough that it's worth walking through. This is the setup I'm using, and the example throughout is the four-color articulated unicorn above, which I colored entirely with Flash Studio's paint tool. If you're still deciding on the printer, I covered [why I chose the Creator 5 Pro over the Bambu H2D](/posts/why-i-chose-flashforge-creator-5-pro/).
+I came to the Creator 5 Pro from a [Bambu P1S with an AMS](/posts/bambu-p1s-review-1000-hours/), and the multi-color workflow is different enough that it's worth walking through. This is the setup I'm using, and the example throughout is a four-color flexi unicorn I painted in Flash Studio. The full build is in my [flexi unicorn project post](/posts/flexi-unicorn-multicolor-creator-5-pro/). If you're still deciding on the printer, I covered [why I chose the Creator 5 Pro over the Bambu H2D](/posts/why-i-chose-flashforge-creator-5-pro/).
 
 ## How multi-color works on a toolchanger (and why it wastes less)
 
