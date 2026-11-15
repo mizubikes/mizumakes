@@ -44,6 +44,9 @@ Bambu's prices are from its US store sale that runs October 27 to December 1. Fl
 
 **Best for most people: [Bambu Lab P2S Combo](https://www.amazon.com/s?k=Bambu+Lab+P2S+Combo&tag=mizubikes-web-20), $649.** That's $100 off, and it includes the AMS 2 Pro, which dries filament. It's enclosed, fast, and runs PLA, PETG, ABS, and ASA. If you're choosing between it and the cheaper P1S AMS 2 Pro Combo at $509, my [P1S vs P2S breakdown](/posts/bambu-p1s-sale-vs-p2s/) covers the trade-off.
 
+![Flashforge Creator 5 Pro Black Friday sale](/images/flashforge-creator-5-pro-black-friday.webp)
+*Flashforge applies the discount automatically in the cart. Image: Flashforge*
+
 **Best multi-material for functional parts: [Flashforge Creator 5 Pro](https://www.amazon.com/s?k=Flashforge+Creator+5+Pro&tag=mizubikes-web-20), $749.** Four independent toolheads, a 65 °C heated chamber, and hardened nozzles. $749 is below its $799 launch price and the lowest it's been on Flashforge's own store. It's the printer [I chose over the Bambu H2D](/posts/why-i-chose-flashforge-creator-5-pro/), and I wrote a [multi-color setup guide](/posts/creator-5-pro-multicolor-printing-guide/) for it.
 
 **Best budget enclosed printer: Elegoo Centauri Carbon 2, $319.** It's an enclosed CoreXY printer at a price where most printers are open-frame, which matters if you want to try ASA or ABS. See my [best budget 3D printer under $300](/posts/best-budget-3d-printer-under-300/) guide for the trade-offs at this price.
