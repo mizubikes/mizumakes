@@ -53,8 +53,11 @@ Dry your filament before a long multi-color job. A wet spool strings more, and s
 
 Flashforge's slicer for the Creator 5 series is **Flash Studio**, a Flashforge fork of OrcaSlicer. Standard OrcaSlicer and Orca-Flashforge also work with the right printer profile. If you've used Bambu Studio or OrcaSlicer, the layout will feel familiar.
 
-1. Select the **Creator 5 Pro** printer profile.
-2. In the filament list, add one filament per color you plan to use, up to four.
+![Flash Studio's Printer and Filament panels with four numbered filament slots](/images/flash-studio-filament-panel.webp)
+*The Printer and Filament panels in Flash Studio's Prepare tab. Each numbered slot is one toolhead.*
+
+1. In the **Printer** panel, select the **Flashforge Creator 5** printer profile and your nozzle (0.4 mm hardened steel by default).
+2. In the **Filament** panel, set one filament per color you plan to use, up to four slots. Click the pencil icon next to a slot to edit its settings.
 3. Set each filament's type and color to match what's loaded on the printer. The colors in the slicer are only for your preview, but the types have to match the printer.
 
 ## Step 4: Assign colors to the model

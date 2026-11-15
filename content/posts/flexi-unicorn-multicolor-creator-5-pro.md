@@ -36,6 +36,25 @@ The panel gives you a few ways to do it:
 
 Zoom in close on the edges. The color boundary follows the mesh triangles, so a quick stroke near an edge prints as a jagged line. The full painting walkthrough, with every control on that panel, is in my [Creator 5 Pro multi-color guide](/posts/creator-5-pro-multicolor-printing-guide/).
 
+## Slicer setup
+
+![The flexi unicorn project in Flash Studio, with the Creator 5 Pro printer profile, four PLA filaments, and the 0.10mm process profile](/images/creator-5-pro-flash-studio-setup.webp)
+*The project in Flash Studio's Prepare tab. The purple block on the right is the prime tower.*
+
+| Setting | Value |
+|---|---|
+| Printer | Flashforge Creator 5 Pro |
+| Nozzle | 0.4 mm hardened steel |
+| Filament | Flashforge PLA in slots 1, 2, and 4; Flashforge HS PLA in slot 3 |
+| Process profile | 0.10mm Standard |
+| Layer height | 0.10 mm (0.20 mm first layer) |
+| Line width | 0.42 mm (0.50 mm first layer) |
+| Seam | Aligned |
+| Unicorn size | 77 × 39 × 49 mm |
+| Supports | None (print-in-place) |
+
+The fine 0.10 mm layer height is a good choice for a small, rounded toy. It keeps the stair-stepping down on the curved head and body, and it gives the paint boundaries more layers to land on, so they look smoother. It costs time, though, so for functional parts I'd go back up to 0.20 mm.
+
 ## Slicing two at once
 
 ![Two painted flexi unicorns sliced on the Creator 5 Pro build plate](/images/creator-5-pro-unicorn-sliced.webp)
