@@ -60,12 +60,12 @@
   <div class="mb-card-grid">
     {{- range $projects }}
     <a href="{{ .RelPermalink }}" class="mb-card">
-      {{- with .Params.cover.image }}
-      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+      {{- if .Params.cover.image }}
+      <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
       {{- end }}
       <div class="mb-cat">{{- with .Params.tags }}{{ range first 1 . }}{{ . | upper }}{{ end }}{{- end }}</div>
       <div class="mb-card-title">{{ .Title | safeHTML }}</div>
-      <div class="mb-card-excerpt">{{ .Summary | truncate 100 }}</div>
+      <div class="mb-card-excerpt">{{ with .Description }}{{ . | plainify | truncate 110 }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 110 }}{{ end }}</div>
       <div class="mb-card-date">{{ .Date.Format "Jan 2, 2006" }}</div>
     </a>
     {{- end }}
@@ -82,12 +82,12 @@
   <div class="mb-card-grid">
     {{- range $guides }}
     <a href="{{ .RelPermalink }}" class="mb-card">
-      {{- with .Params.cover.image }}
-      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+      {{- if .Params.cover.image }}
+      <img src="{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
       {{- end }}
       <div class="mb-cat">{{- with .Params.tags }}{{ range first 1 . }}{{ . | upper }}{{ end }}{{- end }}</div>
       <div class="mb-card-title">{{ .Title | safeHTML }}</div>
-      <div class="mb-card-excerpt">{{ .Summary | truncate 100 }}</div>
+      <div class="mb-card-excerpt">{{ with .Description }}{{ . | plainify | truncate 110 }}{{ else }}{{ .Summary | plainify | htmlUnescape | truncate 110 }}{{ end }}</div>
       <div class="mb-card-date">{{ .Date.Format "Jan 2, 2006" }}</div>
     </a>
     {{- end }}
