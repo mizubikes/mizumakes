@@ -68,10 +68,10 @@ Price per tool below is the whole machine divided by its tool count. It is a rou
 | Max nozzle | 350 °C | 320 °C | Not confirmed in sources |
 | Change time (vendor) | ~6 s | ~7 s | ~12 s |
 | Purge per change (vendor) | ~38 mg | Marketed as zero purge | ~13 mg |
-| US price | $2,499 | $849 sale ($949 list) | $2,249 assembled, $1,949 kit |
-| Price per tool | ~$278 | ~$212 (~$237 at list) | ~$281 (~$244 kit) |
+| US price | $2,499 | $749 Black Friday ($949 list) | $2,249 assembled, $1,949 kit |
+| Price per tool | ~$278 | ~$187 (~$237 at list) | ~$281 (~$244 kit) |
 
-Sources for the table: the H3C figures are above. The Flashforge numbers come from its product page ($849 sale, $949 regular, 256³ mm, 320 °C, 32 mm³/s), with a 7-second FlashSwap. The Prusa numbers are $2,249 assembled and $1,949 as a kit with eight tools, a 248 × 205 × 270 mm volume, and 55 °C in the chamber.
+Sources for the table: the H3C figures are above. The Flashforge numbers come from its product page and Black Friday sale page ($749 sale through November 30, $949 regular, 256³ mm, 320 °C, 32 mm³/s), with a 7-second FlashSwap. The Prusa numbers are $2,249 assembled and $1,949 as a kit with eight tools, a 248 × 205 × 270 mm volume, and 55 °C in the chamber.
 
 By volume, the H3C is about 34 L. The Creator 5 Pro is about 17 L, and Prusa lists 13.7 liters for the INDX. The INDX also gives up some X and Y travel to the tool rack, which sits at the front. All four Creator 5 Pro toolheads reach the full 256 mm cube. One independent test measured a 60 °C firmware ceiling on the Creator, so don't count on the full 65 °C.
 

@@ -45,7 +45,7 @@ The Creator 5 Pro has an active heated chamber rated up to 65 °C, 320 °C hoten
 
 The H2D is the more capable machine on paper. It has a bigger 350 × 320 × 325 mm build volume, a 350 °C nozzle, the same 65 °C chamber rating, and Bambu's software and ecosystem, which are still the best in the business. If I regularly printed large parts, it would have won.
 
-But I don't. Most of what I print, like brackets, fixtures, mounts, and bike parts, fits comfortably in 256 mm. And the price gap is big. As I covered in the [Creator 5 Pro deal breakdown](/posts/flashforge-creator-5-pro-deal-vs-h2d-indx-u1-p2s/), the H2D Combo is $1,599 even at its record-low Black Friday price, while the Creator 5 Pro is listed at $849 on Flashforge's store, with more off at checkout during the sale. That's roughly half the price for more toolheads.
+But I don't. Most of what I print, like brackets, fixtures, mounts, and bike parts, fits comfortably in 256 mm. And the price gap is big. As I covered in the [Creator 5 Pro deal breakdown](/posts/flashforge-creator-5-pro-deal-vs-h2d-indx-u1-p2s/), the H2D Combo is $1,599 even at its record-low Black Friday price, while the Creator 5 Pro is $749 on Flashforge's store during the Black Friday sale. That's under half the price for more toolheads.
 
 I also looked at the Prusa CORE One+ with INDX, which is the most refined toolchanger out there. At $1,699 for the 4-tool kit or $1,999 assembled, it costs about twice as much and gives up build volume.
 
