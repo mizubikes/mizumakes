@@ -1,14 +1,15 @@
 ---
 title: "How to Print Multiple Colors on the Flashforge Creator 5 Pro"
 date: 2026-11-08
+lastmod: 2026-11-14
 description: "Step-by-step multi-color printing on the Flashforge Creator 5 Pro: calibration, loading filament, assigning colors in Flash Studio, the prime tower, and toolhead mapping."
 slug: creator-5-pro-multicolor-printing-guide
 categories: ["Guides"]
 tags: ["Flashforge", "Creator 5 Pro", "multi-color", "multi-material", "toolchanger"]
 cover:
-  image: "/images/why-i-chose-flashforge-creator-5-pro-cover.webp"
-  alt: "Flashforge Creator 5 Pro four-toolhead 3D printer on a workbench"
-  caption: ""
+  image: "/images/creator-5-pro-unicorn-print.webp"
+  alt: "Four-color articulated unicorn 3D printed on a Flashforge Creator 5 Pro, in white, pink, purple, and navy"
+  caption: "A four-color articulated unicorn, painted in Flash Studio and printed on the Creator 5 Pro"
   relative: false
 draft: false
 ---
@@ -17,7 +18,7 @@ draft: false
 
 **Short answer:** to print multiple colors on the Flashforge Creator 5 Pro, load each color into its own toolhead, then set that toolhead's material and color on the printer's screen. In Flash Studio, assign colors to the model and slice with the prime tower on. When you send the job, map each slicer color to the matching toolhead. The printer swaps whole toolheads instead of unloading and reloading filament, so there's no long purge between colors.
 
-I came to the Creator 5 Pro from a [Bambu P1S with an AMS](/posts/bambu-p1s-review-1000-hours/), and the multi-color workflow is different enough that it's worth walking through. This is the setup I'm using. If you're still deciding on the printer, I covered [why I chose the Creator 5 Pro over the Bambu H2D](/posts/why-i-chose-flashforge-creator-5-pro/).
+I came to the Creator 5 Pro from a [Bambu P1S with an AMS](/posts/bambu-p1s-review-1000-hours/), and the multi-color workflow is different enough that it's worth walking through. This is the setup I'm using, and the example throughout is the four-color articulated unicorn above, which I colored entirely with Flash Studio's paint tool. If you're still deciding on the printer, I covered [why I chose the Creator 5 Pro over the Bambu H2D](/posts/why-i-chose-flashforge-creator-5-pro/).
 
 ## How multi-color works on a toolchanger (and why it wastes less)
 
@@ -62,7 +63,21 @@ There are three ways to color a model, the same as in other Orca-based slicers:
 
 - **Separate objects or parts.** If the model comes as separate pieces, like a multi-part 3MF or several STLs, select each part and set its filament. This gives the cleanest color boundaries because they follow real geometry.
 - **Split a single model.** Some single-body models can be split into parts, which you then color individually. Not every model splits cleanly.
-- **Paint it.** Use the color painting tool to brush colors onto surfaces, or fill whole faces at once. This is how you add a logo or accent color to a model designed in one color.
+- **Paint it.** Use the color painting tool to brush colors onto surfaces, or fill whole faces at once. This is how you add a logo or accent color to a model designed in one color, and it's how I colored the unicorn.
+
+### How painting works in Flash Studio
+
+![Painting a multi-color model in Flash Studio, with the Filaments, Tool type, Brush size, and Section view controls](/images/creator-5-pro-color-painting.webp)
+*Flash Studio's color painting panel. Each numbered swatch is one filament, which maps to one toolhead.*
+
+1. **Set a base filament.** Assign the main color to the whole object first. Here that's the white body. Everything you don't paint prints in this color.
+2. **Open the paint tool.** Select the model and click the color painting button in the top toolbar. A panel opens with your **Filaments** across the top, numbered 1 to 4.
+3. **Pick a filament, then paint.** Click a numbered swatch and brush over the area you want in that color. In the screenshot, filament 2 (pink) is the mane, 4 (red) is the horn, and 1 (purple) is the hooves, tail, and eyes.
+4. **Choose the right tool type.** The circle brush is for general painting. The other tool types fill whole faces or areas at once, which is faster and cleaner on a separate feature like a horn or a hoof, because the color stops at the edge of the geometry.
+5. **Adjust as you go.** **Brush size** sets the brush width. The **Vertical** and **Horizontal** checkboxes limit painting to surfaces facing that way. **Section view** cuts away part of the model so you can reach hidden areas, like the gaps between the unicorn's body segments.
+6. **Fix mistakes.** Paint over an area with the base filament to undo it, or use **Erase all** to start over. **Remap filaments** swaps which filament a painted color uses, without repainting. Click **Done** when you're finished.
+
+A small tip from painting this one: zoom in close at feature edges. The color boundary follows the triangles of the mesh, so a sloppy brush stroke near an edge shows up as a jagged line on the print.
 
 A note on MakerWorld files: multi-color 3MF projects made for Bambu printers often need remapping on the Creator 5 Pro. You'll usually need to reselect the printer, the plate, and each filament profile before it slices correctly.
 
@@ -76,6 +91,9 @@ Leave it on, especially for your first prints. Turning it off saves a few grams 
 - **Priming into infill is an option** in some setups, but the prime tower is the default. Stick with the tower until your results are consistent.
 
 ## Step 6: Send the job and map toolheads
+
+![Two painted unicorns sliced and ready to print on the Creator 5 Pro build plate](/images/creator-5-pro-unicorn-sliced.webp)
+*Two unicorns on one plate in the slicer. Check the preview before you send it, because painting mistakes are easy to spot here.*
 
 Slice, then send the job to the printer. In the send step, match each color in your sliced file to the toolhead that has that filament loaded. If a color won't map, check the material type on the printer for that toolhead. A type mismatch blocks the job.
 
