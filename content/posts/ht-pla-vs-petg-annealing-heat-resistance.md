@@ -7,7 +7,7 @@ categories: ["Guides"]
 tags: ["HT-PLA", "PETG", "annealing", "heat resistance"]
 cover:
   image: "/images/ht-pla-vs-petg-annealing-heat-resistance-cover.webp"
-  alt: "Functional 3D printed parts on a workbench"
+  alt: "Enclosed desktop FDM 3D printer"
   caption: "Photo: Graftencom / Pixabay"
   relative: false
 draft: false
