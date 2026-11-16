@@ -75,7 +75,7 @@ None of the three needs a hardened nozzle in plain form. Carbon-fiber blends of 
 Prices move constantly, so treat these as a snapshot from mid-November 2026.
 
 - PETG is the cheapest, with roundups putting Sunlu at $14–18 and Overture at $16–20 per kg.
-- ASA runs wide. Bambu's list price is $29.99 for 1 kg (it is often discounted), while a price tracker shows an Elegoo ASA 1 kg spool at $16.99.
+- ASA runs wide. Bambu's list price is $29.99 for 1 kg (it is often discounted), while my [filament price tracker](/filament-prices/) shows ELEGOO ASA at $16.99 per kg.
 - PCTG is the premium. 3D-Fuel's US-made Pro PCTG lists at $29.95 per 1 kg spool in common colors, and one roundup puts US makers' stores at $28.95–$34.99 per kg.
 
 The PCTG premium over PETG is roughly $10–15 per kg. For a bracket that uses 50 g, that is under a dollar. Cost shouldn't decide this choice. Failure modes should.
