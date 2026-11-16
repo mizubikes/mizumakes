@@ -7,8 +7,8 @@ categories: ["Guides"]
 tags: ["flashforge creator 5 pro", "bambu lab x2d", "toolchanger", "multi-material"]
 cover:
   image: "/images/creator-5-pro-vs-bambu-x2d-cover.webp"
-  alt: "Enclosed desktop 3D printer printing a part inside its chamber"
-  caption: "Photo: ZMorph3D / Pixabay"
+  alt: "Flashforge Creator 5 Pro and Bambu Lab X2D side by side"
+  caption: "Images: Flashforge, Bambu Lab"
   relative: false
 draft: false
 ---
@@ -21,7 +21,7 @@ I run a Creator 5 Pro and a P1S, so I haven't printed on an X2D. The X2D side of
 
 ## Creator 5 Pro vs X2D: price and specs side by side
 
-Black Friday pricing is the reason this comparison is live. The Creator 5 Pro lists at $849 and is $749 in the Black Friday sale at Flashforge's store. Flashforge's sale runs until November 30. On Bambu's side, the X2D and X2D AMS Combo are $589 and $789, against regular prices of $649 and $899. That sale runs through December 1, 2026.
+Black Friday pricing is the reason this comparison is live. The Creator 5 Pro's regular price is $949, and it's $749 in the Black Friday sale at Flashforge's store. Flashforge's sale runs until November 30. On Bambu's side, the X2D and X2D AMS Combo are $589 and $789, against regular prices of $649 and $899. That sale runs through December 1, 2026.
 
 | Spec | Creator 5 Pro | X2D |
 |---|---|---|
@@ -35,7 +35,7 @@ Black Friday pricing is the reason this comparison is live. The Creator 5 Pro li
 | Nozzle material | Hardened steel | Hardened steel, 0.4 mm included |
 | Filament loading | Manual | Automatic through the AMS |
 
-The gap is $160 against the solo X2D, but only $40 against the combo. Most buyers who want multi-material will end up in the combo comparison, because the solo X2D ships with two single-spool racks rather than an AMS.
+The Creator 5 Pro costs $160 more than the solo X2D, but $40 less than the X2D AMS Combo. Most buyers who want multi-material will end up in the combo comparison, because the solo X2D ships with two single-spool racks rather than an AMS.
 
 ## How do the two multi-material systems actually work?
 
@@ -81,7 +81,7 @@ Flashforge is Orca-based. It supports Orca-Flashforge and standard OrcaSlicer ov
 
 ## Which should you buy for functional parts?
 
-Buy the Creator 5 Pro if you regularly need three or four materials in one part, such as a rigid body, a flexible seal, and a support interface. Also pick it if you print a lot of TPU alongside rigid filaments, or if you hate purge towers. Notebookcheck puts it this way: prospective buyers should check whether they really need a toolchanger, because it is a specialized machine. I chose mine for those reasons, and the longer reasoning is in [why I chose the Creator 5 Pro](/posts/why-i-chose-flashforge-creator-5-pro/).
+Buy the Creator 5 Pro if you regularly need three or four materials in one part, such as a rigid body, a flexible seal, and a support interface. Also pick it if you print a lot of TPU alongside rigid filaments, or if you hate purge towers. Notebookcheck puts it this way: prospective buyers should check whether they really need a toolchanger, because it is a specialized machine. I chose mine for the four toolheads, the heated chamber, and a dedicated nozzle per material, and the longer reasoning is in [why I chose the Creator 5 Pro](/posts/why-i-chose-flashforge-creator-5-pro/).
 
 Buy the X2D if your parts are mostly one engineering material with clean supports, if you want automatic loading and drying from an AMS, or if you want a 16-to-25-color ceiling. Notebookcheck says it may be the more practical choice for many home users. At $589 solo or $789 with the AMS, it is also the cheaper way into an actively heated chamber.
 
