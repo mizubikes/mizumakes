@@ -1,7 +1,8 @@
 ---
-title: "How Much Does 3D Printer Filament Cost? (Live Prices Per Kg)"
+title: "How Much Does 3D Printer Filament Cost? Per Kg and Per Gram"
 date: 2026-10-25
-description: "What PLA, PETG, and ASA actually cost per kg, what a printed part really costs you, and when the expensive spool is worth it, with prices that update daily."
+lastmod: 2026-11-15
+description: "What PLA, PETG, and ASA filament cost per kg and per gram, what a printed part really costs, and when the expensive spool is worth it. Prices update daily."
 categories: ["Guides"]
 tags: ["filament", "PLA", "PETG", "ASA", "prices"]
 cover:
@@ -71,6 +72,20 @@ A 1kg spool of PLA is still a 1kg spool of PLA. The spread comes from a handful 
 My take: for brackets, jigs, enclosures, and prototypes, the budget spools are fine. I pay more when I need color consistency across a batch, or a specific formula like matte PLA for parts that will be on camera.
 
 ---
+
+## Filament Cost Per Gram
+
+Slicers report filament in grams, so per-gram cost is the number you actually use. Divide the price per kg by 1,000:
+
+| Price per kg | Cost per gram | Typical filament at that price |
+|---|---|---|
+| $9 | 0.9¢ | Budget PLA or PETG in 10 kg bundles |
+| $14 | 1.4¢ | Budget 1 kg PLA or PETG (ELEGOO, Bambu Basic) |
+| $20 | 2.0¢ | Mid-range PETG or ASA |
+| $26 | 2.6¢ | Premium PLA or ASA (Polymaker, Prusament) |
+| $50 | 5.0¢ | Carbon-fiber nylon and other engineering blends |
+
+So most PLA and PETG costs 1–2.5¢ per gram. Density matters a little too: PETG (about 1.27 g/cm³) is slightly denser than PLA (about 1.24 g/cm³), so the same part uses about 2% more filament by weight in PETG. My [PLA vs PETG](/posts/pla-vs-petg/) guide covers the rest of the trade-offs.
 
 ## What a 3D Print Actually Costs
 

@@ -1,6 +1,7 @@
 ---
 title: "P1S AMS 2 Pro Combo vs P2S Combo: Which One to Buy"
 date: 2026-07-20
+lastmod: 2026-11-15
 draft: false
 description: "P1S AMS 2 Pro combo vs P2S combo, plus why the first-gen P1S AMS combo is a trap. The price gap is the whole decision, and the answer isn't on the spec sheet."
 tags: ["bambu lab", "p1s", "p2s", "ams 2 pro", "3d printer buying guide"]
@@ -13,15 +14,17 @@ cover:
   hiddenInList: false
 ---
 
+> **Black Friday update (November 15, 2026):** Bambu's Black Friday sale (October 27 to December 1) has cut every configuration below. The **P1S AMS 2 Pro Combo is $509** and the **P2S Combo is $649**, which shrinks the gap from $170 to **$140**. The first-gen P1S AMS Combo is $479. Current prices and the full history are in the [price history table](#price-history) below. The buying logic in this post still holds at the new prices.
+
 Bambu's P1S pricing has stopped pretending to be a sale. The $699 MSRP is still printed on the product page with a line through it, but the actual price has been $399 through Black Friday, New Year's, June, and again right now. That's the price. The strikethrough is decoration.
 
 I've got about 1,200 hours on my own P1S at this point and it's still printing like it did in week one. That's worth stating up front, because it colors everything below: I'm not comparing spec sheets from the outside, and I'm also not neutral. The machine earned its keep.
 
 What's more interesting is what happened to the combo pricing, because that's where the real decision lives — and where most buying guides are still quoting stale numbers.
 
-## The actual prices, as of today
+## The actual prices, as of July 20
 
-Straight off Bambu's US store:
+Straight off Bambu's US store when I wrote this. For today's prices, see the [price history](#price-history) below.
 
 | Configuration | Price | Was |
 |---|---|---|
@@ -80,6 +83,22 @@ So:
 **Get the P1S solo at $399 if** you genuinely only print single-color functional parts. That's most of what comes off my machines, and $399 is the cheapest credible path to an enclosed CoreXY. Just be honest with yourself about whether "I'll never need multicolor" survives contact with your first year of printing — because upgrading later costs $299 instead of $180.
 
 **Get neither if** you don't need an enclosure. The A1 at $299 or the A1 Mini at $219 handles PLA and PETG for a lot less, and an enclosure you don't need is a cooling problem, not a feature.
+
+## Price history
+
+US prices on Bambu's own store. The Black Friday prices run October 27 to December 1, 2026.
+
+| Configuration | July 20, 2026 | Late October 2026 (regular) | Black Friday 2026 |
+|---|---|---|---|
+| P1S | $399 | $399 | **$349** |
+| P1S AMS Combo (first-gen AMS) | $549 | $549 | **$479** |
+| P1S AMS 2 Pro Combo | $579 | $579 | **$509** |
+| P2S | $549 | $549 | **$449** |
+| P2S Combo (AMS 2 Pro) | $749 | $749 | **$649** |
+
+Two things changed and one didn't. The P2S Combo took the bigger cut, $100 against $70 for the P1S AMS 2 Pro Combo, so the gap between them dropped from $170 to $140. That makes the P2S a little easier to justify. The first-gen AMS combo is still only $30 under the AMS 2 Pro combo, so it's still a trap. If you're buying either, buy before the sale ends December 1.
+
+For every other Black Friday printer and filament deal, see my [Black Friday 3D printer and filament deals](/posts/black-friday-3d-printer-filament-deals-2026/).
 
 ## Two things to watch before you order
 

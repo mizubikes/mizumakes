@@ -1,7 +1,7 @@
 ---
-title: "Bambu Lab H3C Toolchanger: Specs, Price vs H2C & INDX"
+title: "Bambu Lab H3C Price and Specs, Plus H3C vs INDX vs H2C"
 date: 2026-11-06
-description: "Bambu Lab H3C specs, US price, and how its nine-tool Swaptek changer compares with the H2C, Creator 5 Pro, and Prusa INDX for functional parts."
+description: "Bambu Lab H3C price ($2,499) and specs, plus H3C vs Prusa INDX vs H2C on tool change speed, purge waste, and build volume for functional parts."
 slug: bambu-lab-h3c-toolchanger-specs-price
 categories: ["Blog"]
 tags: ["bambu lab", "toolchanger", "multi-material", "h3c"]

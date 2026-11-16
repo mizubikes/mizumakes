@@ -1,7 +1,7 @@
 ---
 title: "PLA vs PETG: Strength, Heat Resistance, and Which to Use"
 date: 2026-04-14
-lastmod: 2026-11-06
+lastmod: 2026-11-15
 description: "PLA vs PETG compared with data-sheet numbers: heat resistance, stiffness, toughness, print settings, and price, plus which filament to use for which part."
 categories: ["Guides"]
 tags: ["filament", "PLA", "PETG", "materials"]
@@ -148,6 +148,20 @@ PLA+ is a modified PLA blend with improved toughness and reduced brittleness. It
 
 **[ELEGOO Rapid PLA+](https://www.amazon.com/s?k=elegoo+rapid+pla+plus&tag=mizubikes-web-20)** is a great pick here — tougher formula, high-speed capable, and still very easy to print.
 
+## PLA vs PETG HF (High Flow)
+
+PETG HF is Bambu Lab's high-flow PETG, made to print fast. It's still PETG, with the same toughness and roughly the same heat resistance, just formulated to melt and flow quickly at high print speeds. If you print PETG on a fast CoreXY machine, HF versions let you run closer to PLA speeds. The comparison with PLA doesn't change: PETG HF is tougher and handles more heat, and PLA is stiffer and easier. Several of the numbers in the table above come from Bambu's PETG HF data sheet.
+
+## Is PETG Cheaper Than PLA?
+
+Usually they cost about the same, and budget PETG is sometimes cheaper than premium PLA. On my [filament price tracker](/filament-prices/), ELEGOO PLA and ELEGOO Rapid PETG both sit at $13.99/kg. At Polymaker's own store, PETG lists at $18.99 against $23.99 for PolyLite PLA Pro. PETG isn't a premium material. It's a common plastic, and "PLA" covers a lot of specialty blends (matte, silk, Pro, HT) that cost more than plain PETG.
+
+Per part, PETG costs slightly more for the same model because it's denser. Bambu lists PLA Basic at 1.24 g/cm³, and eSUN lists its PETG at 1.27 g/cm³. A 1 kg spool of PETG is about 2% shorter than a 1 kg spool of PLA, and the same part weighs about 2% more in PETG. That's too small to matter for most prints. For more on what a print actually costs, see [how much 3D printer filament costs](/posts/how-much-does-3d-printer-filament-cost/).
+
+## PLA vs PETG vs Resin
+
+Resin isn't an alternative filament. It's a different kind of printer. Resin (MSLA) printers cure liquid photopolymer with UV light, layer by layer, and they don't use filament at all. Resin wins on fine detail and smooth surfaces, which is why it's the go-to for miniatures and jewelry masters. Standard resin parts are more brittle than PETG, though, and resin printing means gloves, ventilation, washing in alcohol, and UV curing. If you're choosing a material for functional parts on a filament printer, it's PLA or PETG. If you need tiny detail, that's a resin printer.
+
 ---
 
 ## My Recommended Filament Picks (Summary)
@@ -188,6 +202,15 @@ Standard PLA is technically food-safe material, but the printing process introdu
 **What's the difference between PLA and PLA+?**
 PLA+ uses modified binders that improve impact resistance and reduce brittleness. It's slightly harder to print than standard PLA but still doesn't need an enclosure. Think of it as a stepping stone toward PETG.
 
+**Can I use PLA instead of PETG (or the other way around)?**
+For most indoor parts, yes. Swap in PLA if the part stays cool and doesn't take impact, and swap in PETG if PLA parts have been cracking or sagging. Change the print settings with the material, though, because PETG needs a hotter nozzle and bed (see the table above). Don't use PLA for anything that sits in a hot car or direct sun.
+
+**Is PETG more flexible than PLA?**
+Yes. PETG has a lower bending modulus (about 2,050 MPa vs 2,750 MPa in Bambu's data), so it bends more before it breaks. That makes it better for clips, snap fits, and living hinges. PLA is stiffer and tends to snap.
+
+**Is PETG lighter or heavier than PLA?**
+Slightly heavier. PETG's density is about 1.27 g/cm³ vs 1.24 g/cm³ for PLA, so the same part weighs about 2% more in PETG.
+
 **When should I move to ASA or ABS?**
 When you need parts that live outdoors long-term (ASA) or need high heat resistance and structural strength (ABS). Both require an enclosed printer. Read my full guide: [What is ASA Filament? When to Stop Using PETG](/posts/what-is-asa-filament/). An ABS guide is coming soon.
 
@@ -200,3 +223,5 @@ When you need parts that live outdoors long-term (ASA) or need high heat resista
 - [Bambu Lab PLA Basic technical data sheet](https://wiki.bambulab.com/filament-acc/abs-asa-pc/bambu_pla_basic_technical_data_sheet.pdf)
 - [Bambu Lab PETG Basic](https://us.store.bambulab.com/products/petg-basic)
 - [Bambu Lab PETG HF (manual and specs)](https://manuals.plus/bambu-filament/petg-hf-launches-new-high-speed-manual)
+- [eSUN PETG technical data sheet](https://www.esun3d.com/uploads/PETG-Basic-TDS21.pdf)
+- [Polymaker Black Friday sale prices](https://shop.polymaker.com/pages/bfcm-sale-2026)
