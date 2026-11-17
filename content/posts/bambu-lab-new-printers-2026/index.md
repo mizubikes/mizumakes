@@ -1,8 +1,9 @@
 ---
-title: "Bambu Lab New Printers 2026: H2D, H2S, and X2D Explained"
+title: "Bambu Lab New Printers 2026: H3C, X2D, H2C, and Release Dates"
 date: 2026-04-20
+lastmod: 2026-11-15
 draft: false
-description: "Bambu Lab replaced their entire prosumer lineup in 12 months. Here's what's new, what each machine does, and which one makes sense for your setup."
+description: "Every new Bambu Lab printer of 2026, including the H3C and X2D, with release dates for the whole lineup, current prices, and which one makes sense to buy."
 categories: ["Guides"]
 tags: ["bambu lab", "fdm printers", "multi-material", "dual extrusion", "buyer's guide"]
 cover:
@@ -10,6 +11,8 @@ cover:
   alt: "Bambu Lab X2D 3D printer"
   relative: false
 ---
+
+> **Updated November 15, 2026.** Since this post first ran in April, Bambu has launched two more machines: the A2L (June 2026) and the [H3C nine-tool changer](/posts/bambu-lab-h3c-toolchanger-specs-price/) (November 2026). The [release dates](#bambu-lab-printer-release-dates) and [current prices](#current-prices-november-2026) are below. Prices further down the post are April launch prices.
 
 If you've been loosely following Bambu Lab news, you already know they've been on a tear. In the span of about a year, they released multiple new machines, discontinued their flagship X1 Carbon, and just this week dropped a brand-new printer that undercut everyone's price expectations. It's a lot to keep up with — so here's a breakdown of what's actually out there right now and what each machine is trying to do.
 
@@ -29,7 +32,7 @@ Released in March 2025, the H2D was Bambu's most ambitious machine to date. The 
 
 **Key specs:**
 - Build volume: 350 × 320 × 325 mm (biggest Bambu has made)
-- IDEX dual extrusion — independent carriages, so both nozzles move separately
+- Dual nozzles on a single toolhead (left and right), so two materials print with almost no purge
 - Max nozzle temp: 350°C (engineering materials like PPA-CF, PPS, PPS-CF)
 - New AMS 2 Pro with active filament drying
 - Speed: 1,000 mm/s toolhead, 20,000 mm/s² acceleration
@@ -41,7 +44,7 @@ Released in March 2025, the H2D was Bambu's most ambitious machine to date. The 
 - H2D Laser Full Combo (10W): $2,799
 - H2D Laser Full Combo (40W): $3,499
 
-The IDEX setup is the real headline. With two independent carriages, the H2D can print two identical objects simultaneously in mirror or clone mode, or run a dedicated support material nozzle with zero purging. That's a genuinely different workflow from the AMS purge method.
+The dual-nozzle setup is the real headline. Two nozzles sit side by side on one toolhead, so the H2D can run a dedicated support material nozzle, or two colors, with almost no purging. That's a genuinely different workflow from the AMS purge method. It isn't IDEX, though: the nozzles don't move independently, so there's no mirror or clone mode for printing two copies at once.
 
 If you primarily print large functional parts or want laser cutting in the same footprint as your printer, the H2D is hard to argue with. For most hobbyists though, it's a lot of machine.
 
@@ -89,7 +92,7 @@ That's $550 cheaper than the X1C Combo was at Kickstarter launch.
 - LiDAR standard
 - AMS 2 Pro in Combo version
 
-The dual-nozzle setup works differently than the H2D's IDEX. Both nozzles share one toolhead — the left is direct drive (great for TPU and precision materials), the right is Bowden (designed mainly for support material or secondary color). Switching is purely mechanical, which keeps the head light and fast. Bambu says it survived over a million switching cycles in testing without any degradation.
+Like the H2D, both nozzles share one toolhead — the left is direct drive (great for TPU and precision materials), the right is Bowden (designed mainly for support material or secondary color). Switching is purely mechanical, which keeps the head light and fast. Bambu says it survived over a million switching cycles in testing without any degradation.
 
 The practical killer feature: **clean support removal**. By running a support material through the right nozzle — something that doesn't bond to your main filament — supports peel off without tearing up your part surface. No purging, no waste tower.
 
@@ -108,9 +111,54 @@ Early reviews from Tom's Hardware and TechRadar both called the print quality an
 | X2D | $649 | Yes (shared toolhead) | 256×256×260 mm | Prosumer, dual-material |
 | X2D Combo | $899 | Yes + AMS 2 Pro | 256×256×260 mm | Best all-around buy right now |
 | H2S | $1,249 | Yes | 340×320×340 mm | Larger prints, engineering materials |
-| H2D | $1,899 | Yes (IDEX) | 350×320×325 mm | Large format, laser/cutting combo |
+| H2D | $1,899 | Yes (dual nozzle) | 350×320×325 mm | Large format, laser/cutting combo |
 
 ---
+
+## Bambu Lab Printer Release Dates
+
+Bambu doesn't pre-announce printers, so the best guide to what's next is the pace so far: several new machines a year since 2025.
+
+| Printer | Released | What it is |
+|---|---|---|
+| X1 / X1 Carbon | May 2022 | Original flagship (now end-of-life) |
+| P1P | November 2022 | Open-frame budget CoreXY |
+| P1S | July 2023 | Enclosed P1P |
+| A1 mini | September 2023 | Small bed-slinger |
+| X1E | October 2023 | Enterprise X1 |
+| A1 | December 2023 | Full-size bed-slinger |
+| H2D | March 2025 | Large dual-nozzle, optional laser |
+| H2S | August 2025 | Large single-nozzle H2 |
+| H2D Pro | August 2025 | Enterprise H2D |
+| P2S | October 2025 | P1S successor |
+| H2C | November 2025 | H2 with Vortek hotend swapping |
+| X2D | April 2026 | Compact dual-nozzle |
+| A2L | June 2026 | Next-gen A-series |
+| H3C | November 2026 | Nine-tool changer |
+
+Bambu also released the R1, a standalone laser cutter and engraver, in September 2026. It isn't a 3D printer.
+
+## Current Prices (November 2026)
+
+Bambu's Black Friday sale runs through December 1, 2026. US store prices:
+
+| Printer | Black Friday price | Regular |
+|---|---|---|
+| A1 mini | $199 | $219 |
+| A1 | $259 | $299 |
+| A2L | $439 | $469 |
+| P1S | $349 | $399 |
+| P2S | $449 | $549 |
+| P2S Combo | $649 | $749 |
+| X2D | $589 | $649 |
+| X2D AMS Combo | $789 | $899 |
+| H2S | $1,049 | $1,199 |
+| H2D | $1,399 | $1,549 |
+| H2D AMS Combo | $1,599 | $1,749 |
+| H2C AMS Combo | $1,899 | $2,199 |
+| H3C Combo | $2,499 (not on sale) | $2,499 |
+
+For printer and filament deals from other brands, see my [Black Friday deals roundup](/posts/black-friday-3d-printer-filament-deals-2026/). If you're choosing between the P1S and P2S, my [P1S vs P2S breakdown](/posts/bambu-p1s-sale-vs-p2s/) has the price history.
 
 ## Should You Upgrade?
 

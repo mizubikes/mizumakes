@@ -1,8 +1,9 @@
 ---
-title: "Prusa INDX: Why the 8-Tool Changer Might Be My Next Printer"
+title: "Prusa INDX Reviews: What Testers Found, and Why It's on My List"
 date: 2026-08-19
+lastmod: 2026-11-15
 draft: false
-description: "Prusa INDX adds up to 8 toolheads to the CORE One+ for true multi-material printing. Why it's on my shortlist, and why Nozzlegate keeps it out of my cart."
+description: "Prusa CORE One+ INDX review roundup: what Tom's Hardware and TechRadar found on speed, purge waste, and problems, plus current prices and why it's on my list."
 tags: ["prusa", "core one", "indx", "toolchanger", "multi-material", "bondtech"]
 categories: ["Guides"]
 cover:
@@ -69,6 +70,20 @@ The INDX is a different axis entirely. A filament-switcher fundamentally can't c
 There's also a money angle worth naming: Bambu's own true multi-material answer, the H2C, is a whole new machine in the ~$2,400 range, while the INDX is a $749–$999 upgrade to a CORE One+ you might want anyway. If you're already eyeing an enclosed CoreXY, that reframes the toolchanger from "expensive luxury" to "the cheaper path to capability" — assuming the rollout settles down.
 
 So the way I'm framing my own decision: color-on-a-budget stays with Bambu; capability-I-can't-get-anywhere-else is what the INDX is for.
+
+## What the reviews found
+
+Since I first wrote this, the full reviews have landed. I haven't tested an INDX myself, so here's what the two most thorough reviews found.
+
+**[Tom's Hardware](https://tomshardware.com/3d-printing/prusa-core-one-plus-indx-review) (September 20, 2026, Editor's Choice).** Its headline result was waste. The INDX has no prime tower; a wiper deposits small blobs of about 13 mg per change. Measured totals were 6.84 g over 537 tool changes on a PETG planter, 9.4 g over 632 changes on ASA/ABS containers, and 18 g over 1,646 changes on a PLA dragon. On one model it finished nearly nine hours faster than a Bambu H2C, with 83.58 g less waste. The cons: it's expensive, it had no TPU profile at launch (the reviewer's own TPU profile oozed and jammed), you have to map filament colors manually in the slicer, and the bed loses 15 mm of Y and 2 mm of X compared with a standard CORE One+.
+
+**[TechRadar](https://www.techradar.com/pro/prusa-core-one-indx-8-tool-3d-printer-review) (September 13, 2026, 5/5, Editor's Choice).** The verdict was that "the speed is just unmatched by anything a multi-filament printer offers." Tool changes take a couple of seconds, and the induction-heated toolheads reach temperature in about 12 seconds. The cons: recalibration takes a while, the workflow takes getting used to, the build area is small at 248 × 205 × 270 mm, and the spools on the side are fiddly to feed. The reviewer also saw early misprints and a tool printing slightly high, both fixed by firmware updates and recalibration.
+
+**The nozzle question.** Both reviews confirm what Nozzlegate was about: the INDX nozzles aren't hardened. TechRadar puts their rated life at about 10 kg of PETG-CF or 5 kg of PC-CF, and Tom's Hardware notes hardened nozzles weren't available at launch. If you print abrasive filaments, budget for nozzle replacements. My [hardened steel nozzle guide](/posts/hardened-steel-nozzle-abrasive-filaments/) explains why.
+
+**Current prices.** Prusa lists the CORE One+ INDX at $2,249 assembled with eight tools, $1,949 as an eight-tool kit, and $1,699 as a four-tool kit. Owners of an existing CORE One or CORE One+ can convert with a $749 four-tool or $999 eight-tool kit. Prusa's Black Friday gifts don't apply to INDX printers or kits.
+
+For how it compares with Bambu's new nine-tool changer, see [Bambu Lab H3C vs INDX](/posts/bambu-lab-h3c-toolchanger-specs-price/). For a cheaper four-tool option, see the [Flashforge Creator 5 Pro](/posts/why-i-chose-flashforge-creator-5-pro/), which is what I bought.
 
 ## Bottom line
 
