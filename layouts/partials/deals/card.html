@@ -8,10 +8,11 @@
 {{- else if $it.rare }}{{ $flag = `<span class="dp-card-flag dp-flag-rare">★ Rarely on sale</span>` }}
 {{- else if $it.popular }}{{ $flag = `<span class="dp-card-flag dp-flag-gen">Current gen</span>` }}{{ end -}}
 {{- $flag = $flag | safeHTML -}}
-<a class="dp-card" href="{{ $href }}"
-   {{- if not $internal }} target="_blank" rel="{{ if $it.sponsored }}sponsored {{ end }}nofollow noopener"{{ end }}
+<div class="dp-card"
    data-cat="{{ $it.category }}" data-pct="{{ math.Round (mul $it.pct 100) }}" data-price="{{ $it.price }}" data-score="{{ $it.score | default 0 }}" data-since="{{ $it.since }}" data-rank="{{ .rank | default 0 }}" data-sizes="{{ with $it.sizes }}{{ delimit . "|" }}{{ end }}"
    data-store="{{ $it.store_name }}" data-brand="{{ $it.brand }}" data-name="{{ $it.name | default $it.title }}">
+  <a class="dp-card-main" href="{{ $href }}"
+     {{- if not $internal }} target="_blank" rel="{{ if $it.sponsored }}sponsored {{ end }}nofollow noopener"{{ end }}>
   <span class="dp-card-img">
     {{- with $it.image }}<img src="{{ . }}" alt="" loading="lazy" decoding="async" width="400" height="400" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('dp-noimg');this.remove()">{{ else }}<span class="dp-card-ph" aria-hidden="true">{{ $it.brand | default $it.store_name }}</span>{{ end }}
     <span class="dp-card-off">{{ math.Round (mul $it.pct 100) }}% off</span>
@@ -27,3 +28,7 @@
     <span class="dp-card-meta">{{ if .short }}{{ .cat }}{{ else }}{{ $it.store_name }}{{ with .cat }} · {{ . }}{{ end }}{{ end }}{{ if $it.stale }} · not rechecked today{{ end }}</span>
   </span>
 </a>
+  {{- if and $it.amazon (not $internal) }}
+  <a class="dp-card-amz" href="{{ $it.amazon }}" target="_blank" rel="sponsored nofollow noopener">Check Amazon</a>
+  {{- end }}
+</div>

@@ -40,7 +40,9 @@ settings:
                  Micro Swiss, BIQU, BigTreeTech, xTool, Prusa]
   brands_block: []
   brands_boost: [Bambu Lab, Bambu, Polymaker, Flashforge]
-  amazon_tag: ""                # Amazon prices are never shown; no Amazon buttons
+  amazon_tag: ""                  # off: search links aren't the exact item or a verified Amazon sale
+  amazon_skip: []                 # categories without the Amazon button
+  amazon_skip_brands: [Prusa, Original Prusa]   # brands not sold on Amazon
   rare_sale_brands: [Prusa, Slice Engineering, Micro Swiss, E3D, Bondtech]
 
   # current generation people are shopping for: ranked higher, count from 10% off

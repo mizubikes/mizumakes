@@ -16,8 +16,7 @@ body:has(article.dp) { background: var(--code-bg); }
 }
 .dp-grid[hidden] { display: none; }
 
-.post-content a.dp-card,
-a.dp-card {
+.dp-card {
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -30,8 +29,32 @@ a.dp-card {
   overflow: hidden;
   transition: border-color 0.12s, transform 0.12s;
 }
-a.dp-card:hover { border-color: var(--fp-accent); transform: translateY(-2px); }
-a.dp-card:focus-visible { outline: 2px solid var(--fp-accent); outline-offset: 2px; }
+.dp-card:hover { border-color: var(--fp-accent); transform: translateY(-2px); }
+.dp-card:focus-within { outline: 2px solid var(--fp-accent); outline-offset: 2px; }
+.dp-card:has(:focus:not(:focus-visible)) { outline: none; }
+/* the store link wraps photo + details; its children lay out as the card's own */
+.dp-card-main { display: contents; color: inherit; }
+.post-content a.dp-card-main,
+.post-content a.dp-card-amz { box-shadow: none; text-decoration: none; }
+.dp-card-body { flex: 1 1 auto; }
+.dp-card-amz {
+  display: block;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 12px 12px;
+  padding: 7px 10px;
+  border: 1px solid var(--tertiary);
+  border-radius: 8px;
+  color: var(--primary);
+  font-size: 13.5px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.dp-card-amz:hover { border-color: #ff9900; color: #ff9900; }
 
 /* photo: product shots are on white, so the frame stays white in dark mode too */
 .dp-card-img {
@@ -347,9 +370,10 @@ a.dp-home-btn:hover { filter: brightness(0.92); }
 /* ----- phones: one deal per row, photo left, details right (like Slickdeals) ----- */
 @media (max-width: 640px) {
   .dp-grid, .dp-row { grid-template-columns: 1fr; gap: 6px; }
-  .post-content a.dp-card,
-  a.dp-card { flex-direction: row; align-items: center; }
-  a.dp-card:hover { transform: none; }
+  .dp-card { flex-direction: row; flex-wrap: wrap; align-items: center; }
+  .dp-card:hover { transform: none; }
+  .dp-card-body { flex: 1 1 0; min-width: 0; }
+  .dp-card-amz { flex: 0 0 calc(100% - 16px); margin: 0 8px 8px; padding: 5px 8px; font-size: 13px; }
   .dp-card-img {
     width: 92px;
     margin: 8px 0 8px 8px;
@@ -368,8 +392,8 @@ a.dp-home-btn:hover { filter: brightness(0.92); }
   .dp-card-ph { font-size: 11px; padding: 4px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  a.dp-card { transition: none; }
-  a.dp-card:hover { transform: none; }
+  .dp-card { transition: none; }
+  .dp-card:hover { transform: none; }
 }
 
 /* ----- page banner ----- */

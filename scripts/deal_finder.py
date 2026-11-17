@@ -81,6 +81,7 @@ DEFAULTS = {
     "wanted_terms": [],         # product lines people buy; the main lists need a match (see keep_main)
     "amazon_tag": "",           # Amazon Associates tag; empty = no Amazon buttons
     "amazon_skip": ["printers"],             # categories Amazon links aren't wanted for
+    "amazon_skip_brands": [],   # brands not sold on Amazon (no button)
     "jsonld_max_products": 400, # product pages read per jsonld store per run
 }
 
@@ -793,7 +794,9 @@ def scan_store(store: dict, cfg: dict, brands: "SiteBrands", seen: dict) -> tupl
             "save": round(was - price, 2),
             "category": category,
             "amazon": amazon_link(brand, title, tag)
-                      if tag and category not in (cfg.get("amazon_skip") or []) else "",
+                      if tag and category not in (cfg.get("amazon_skip") or [])
+                      and brand.lower() not in {b.lower() for b in (cfg.get("amazon_skip_brands") or [])}
+                      else "",
             "url": href,
             "sponsored": sponsored,
             "image": image_for(p),
