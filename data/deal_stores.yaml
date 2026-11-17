@@ -167,9 +167,13 @@ stores:
     name: Sovol
     brand: Sovol
     base: https://www.sovol3d.com
+  # Creality: product pages list only today's price (no regular price), and
+  # sale prices on its collection pages load in the browser. Paused until
+  # there is a public source with both prices.
   - id: creality
     name: Creality
     brand: Creality
+    enabled: false
     base: https://store.creality.com
     type: jsonld
     include: '/products/[a-z0-9-]*(3d-printer|k2|k1|hi-|sparkx|ender|cfs|filament|pla|petg|nozzle|hotend|plate|dryer|enclosure|falcon)[a-z0-9-]*'
