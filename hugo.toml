@@ -66,6 +66,11 @@ enableRobotsTXT = true
 
 [menu]
 [[menu.main]]
+  identifier = "deals"
+  name = "Deals"
+  url = "/3d-printer-deals/"
+  weight = -1
+[[menu.main]]
   identifier = "blog"
   name = "Blog"
   url = "/posts/"

@@ -1,0 +1,29 @@
+{{- /* Home page strip: five of today's best deals, one per category. Cards go to the store; the button goes to /3d-printer-deals/ */ -}}
+{{- $d := site.Data.deals | default dict -}}
+{{- $picks := slice -}}
+{{- $seen := slice -}}
+{{- range ($d.top | default slice) -}}
+  {{- if and (lt (len $picks) 5) (not (in $seen .category)) -}}
+    {{- $picks = $picks | append . -}}
+    {{- $seen = $seen | append .category -}}
+  {{- end -}}
+{{- end -}}
+{{- if ge (len $picks) 3 }}
+{{- $titles := dict -}}
+{{- range $d.categories }}{{ $titles = merge $titles (dict .key .title) }}{{ end -}}
+<div class="mb-section fp dp dp-home">
+  <div class="mb-section-header">
+    <span class="mb-section-title">Best Deals Today</span>
+    <a href="/3d-printer-deals/" class="dp-home-cta">All deals &rarr;</a>
+  </div>
+  <div class="dp-grid dp-row">
+    {{- range $picks }}
+    {{ partial "deals/card.html" (dict "it" . "cat" (index $titles .category)) }}
+    {{- end }}
+  </div>
+  <div class="dp-home-more">
+    <a class="dp-home-btn" href="/3d-printer-deals/">See {{ with $d.total_found }}all {{ lang.FormatNumber 0 . }}{{ else }}more{{ end }} deals today &rarr;</a>
+    <span class="dp-home-foot">Printers, filament, upgrades and accessories · checked every morning{{ with $d.updated }} · last run {{ time.Format "Jan 2" . }}{{ end }}</span>
+  </div>
+</div>
+{{- end }}

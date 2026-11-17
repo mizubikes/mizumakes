@@ -1,0 +1,229 @@
+# 3D printing deal finder: stores and settings
+# ---------------------------------------------
+# The daily GitHub Action (.github/workflows/deals.yml) runs
+# scripts/deal_finder.py, which reads this file and writes data/deals.json,
+# data/deal_history.json and static/deals-all.json for /3d-printer-deals/.
+#
+# Store fields
+#   id        unique slug
+#   name      shown on deal cards ("Elegoo", "Printed Solid")
+#   base      store root URL, no trailing slash
+#   brand     set for one-brand stores, so every product carries that brand
+#   type      leave out for Shopify stores (read from /products.json);
+#             "jsonld" reads public product pages found in the sitemap (Bambu Lab)
+#   include / exclude   (jsonld only) regexes on product URLs to read
+#   enabled   false to pause a store
+#   affiliate optional link template: {url} or {url_encoded} is the product URL
+#
+# Bambu Lab, Elegoo and the others are read from public pages and catalogs only.
+# Stores that block automated reads (Cloudflare, 403) are left out, not worked around.
+
+settings:
+  min_discount: 0.20            # 20% off or more...
+  rare_min_discount: 0.10       # ...or 10%+ on gear that rarely goes on sale / current gen
+  rare_sale_rate: 0.05
+  rare_sale_min_products: 25
+  big_save_min_discount: 0.12   # ...or 12%+ with $150+ saved
+  big_save_min: 150
+  min_price: 12
+  per_category: 25              # cards per category on the main deals page
+  per_category_page: 120        # deals on each category's own page
+  per_store_per_category: 8
+  top_count: 10
+  front_sections: [printers, filament, upgrades, accessories, resin]
+  front_per_section: 5
+  max_age_years: 2
+  site_brands_only: true        # brands the articles mention, plus brands_allow
+  brand_min_mentions: 2
+  brands_allow: [Bambu Lab, Bambu, Elegoo, Anycubic, Flashforge, Snapmaker, Qidi, Sovol, Creality,
+                 Polymaker, Sunlu, Overture, Hatchbox, Siraya Tech, 3DXTech, Slice Engineering,
+                 Micro Swiss, BIQU, BigTreeTech, xTool, Prusa]
+  brands_block: []
+  brands_boost: [Bambu Lab, Bambu, Polymaker, Flashforge]
+  amazon_tag: ""                # Amazon prices are never shown; no Amazon buttons
+  rare_sale_brands: [Prusa, Slice Engineering, Micro Swiss, E3D, Bondtech]
+
+  # current generation people are shopping for: ranked higher, count from 10% off
+  popular_terms:
+    - Bambu P2S
+    - Bambu H2D
+    - Bambu H2S
+    - Bambu H2C
+    - Bambu X2D
+    - Bambu A1
+    - Bambu AMS 2 Pro
+    - Bambu AMS HT
+    - Centauri Carbon
+    - Creality K2
+    - Creator 5
+    - AD5X
+    - Kobra S1
+    - Kobra 3
+    - Qidi Plus4
+    - Qidi Q2
+    - Qidi Max4
+    - Snapmaker U1
+    - SV08
+    - Core One
+    - Saturn 4
+    - Mars 5
+    - Photon Mono M7
+    - Panchroma
+    - Fiberon
+    - PolyLite
+    - Rapid PETG
+    - PETG HF
+    - PLA Basic
+    - PLA Matte
+    - hardened nozzle
+    - hardened steel
+    - filament dryer
+    - xTool F1
+    - xTool P2
+    - xTool S1
+    - xTool M1
+
+  # previous generations: stay searchable, off the main lists
+  older_gen_terms:
+    - P1P
+    - Ender 3 V2
+    - Ender 3 S1
+    - Ender 3 Pro
+    - Ender 5
+    - Kobra 2
+    - Neptune 3
+    - Adventurer 3
+    - Adventurer 4
+    - Mars 3
+    - Saturn 2
+    - Snapmaker 2.0
+    - Snapmaker A350
+    - Snapmaker A250
+    - CR 10
+
+  # product lines people buy; the main lists need a match (or a reason above)
+  wanted_terms:
+    - PLA
+    - PETG
+    - PCTG
+    - ABS
+    - ASA
+    - TPU
+    - PA6*
+    - PA12
+    - nylon
+    - CF
+    - carbon fiber
+    - PC
+    - filament
+    - resin
+    - nozzle
+    - hotend
+    - hot end
+    - extruder
+    - build plate
+    - PEI
+    - AMS
+    - CFS
+    - ACE Pro
+    - dryer
+    - dry box
+    - enclosure
+    - toolhead
+    - wash cure
+    - laser
+    - engraver
+
+stores:
+  # ---------- printer brands ----------
+  - id: bambu-lab
+    name: Bambu Lab
+    brand: Bambu Lab
+    base: https://us.store.bambulab.com
+    type: jsonld
+    include: '/products/(a1|a1-mini|a2|p1s|p2s|x1|x1c|x1e|x2d|h2d|h2s|h2c|h3c|ams|[a-z0-9-]*(pla|petg|abs|asa|tpu|pa6|pa-?cf|paht|pc|pet-?cf|support|plate|nozzle|hotend|hot-end|dryer|laser|cutting|vision|cam|enclosure)[a-z0-9-]*)(\?|$|/)'
+    max_products: 400
+  - id: elegoo
+    name: Elegoo
+    brand: Elegoo
+    base: https://us.elegoo.com
+  - id: anycubic
+    name: Anycubic
+    brand: Anycubic
+    base: https://store.anycubic.com
+  - id: flashforge
+    name: Flashforge
+    brand: Flashforge
+    base: https://www.flashforge.com
+  - id: snapmaker
+    name: Snapmaker
+    brand: Snapmaker
+    base: https://us.snapmaker.com
+  - id: qidi
+    name: Qidi
+    brand: Qidi
+    base: https://qidi3d.com
+  - id: sovol
+    name: Sovol
+    brand: Sovol
+    base: https://www.sovol3d.com
+  # Creality: product pages list only today's price (no regular price), and
+  # sale prices on its collection pages load in the browser. Paused until
+  # there is a public source with both prices.
+  - id: creality
+    name: Creality
+    brand: Creality
+    enabled: false
+    base: https://store.creality.com
+    type: jsonld
+    include: '/products/[a-z0-9-]*(3d-printer|k2|k1|hi-|sparkx|ender|cfs|filament|pla|petg|nozzle|hotend|plate|dryer|enclosure|falcon)[a-z0-9-]*'
+    max_products: 300
+
+  # ---------- filament and resin ----------
+  - id: polymaker
+    name: Polymaker
+    brand: Polymaker
+    base: https://us.polymaker.com
+  - id: sunlu
+    name: Sunlu
+    brand: Sunlu
+    base: https://store.sunlu.com
+  - id: overture
+    name: Overture
+    brand: Overture
+    base: https://overture3d.com
+  - id: hatchbox
+    name: Hatchbox
+    brand: Hatchbox
+    base: https://www.hatchbox3d.com
+  - id: siraya-tech
+    name: Siraya Tech
+    brand: Siraya Tech
+    base: https://siraya.tech
+  - id: 3dxtech
+    name: 3DXTech
+    brand: 3DXTech
+    base: https://www.3dxtech.com
+
+  # ---------- retailers and upgrades ----------
+  - id: printed-solid
+    name: Printed Solid
+    base: https://www.printedsolid.com
+  - id: slice-engineering
+    name: Slice Engineering
+    brand: Slice Engineering
+    base: https://www.sliceengineering.com
+  - id: micro-swiss
+    name: Micro Swiss
+    brand: Micro Swiss
+    base: https://store.micro-swiss.com
+  - id: biqu
+    name: BIQU / BigTreeTech
+    brand: BIQU
+    base: https://biqu.equipment
+
+  # ---------- lasers ----------
+  - id: xtool
+    name: xTool
+    brand: xTool
+    base: https://www.xtool.com
