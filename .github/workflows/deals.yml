@@ -1,0 +1,55 @@
+name: 3D printing deals
+
+on:
+  schedule:
+    # Daily at 14:07 UTC (7:07am PDT / 6:07am PST), after the filament price run
+    - cron: "7 14 * * *"
+  workflow_dispatch:
+  # Re-run whenever the store list or script changes
+  push:
+    branches: [main]
+    paths:
+      - data/deal_stores.yaml
+      - scripts/deal_finder.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deals
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v5
+        with:
+          ref: main      # always the latest main, even for a run that sat in the queue
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      - name: Find deals
+        run: python scripts/deal_finder.py
+
+      - name: Commit updated deal data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/deals.json data/deal_history.json static/deals-all.json
+          if git diff --cached --quiet; then
+            echo "No deal changes."
+            exit 0
+          fi
+          git commit -m "Update 3D printing deals $(date -u +%Y-%m-%d)"
+          # if another run committed data meanwhile, this run's fresher data wins
+          git pull --rebase -X theirs origin main
+          git push origin HEAD:main
