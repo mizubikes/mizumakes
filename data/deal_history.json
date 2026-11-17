@@ -1255,8 +1255,26 @@
   "low": 17.99,
   "seed": true
  },
+ "bambu-lab:asa-aero": {
+  "first": "2026-11-16",
+  "last": "2026-11-16",
+  "low": 29.99
+ },
  "bambu-lab:asa-filament": {
   "first": "2026-11-16",
+  "info": {
+   "brand": "Bambu Lab",
+   "category": "filament",
+   "pct": 0.4,
+   "price": 17.99,
+   "sponsored": false,
+   "store": "bambu-lab",
+   "store_name": "Bambu Lab",
+   "title": "ASA",
+   "url": "https://us.store.bambulab.com/products/asa-filament",
+   "variant": "White (45100) / Filament with spool / 1kg",
+   "was": 29.99
+  },
   "last": "2026-11-16",
   "low": 17.99,
   "seed": true
@@ -1266,6 +1284,24 @@
   "last": "2026-11-16",
   "low": 24.49,
   "seed": true
+ },
+ "bambu-lab:bambu-dual-texture-pei-plate": {
+  "first": "2026-11-16",
+  "info": {
+   "brand": "Bambu",
+   "category": "upgrades",
+   "pct": 0.3,
+   "price": 17.49,
+   "sponsored": false,
+   "store": "bambu-lab",
+   "store_name": "Bambu Lab",
+   "title": "Dual-Texture PEI Plate",
+   "url": "https://us.store.bambulab.com/products/bambu-dual-texture-pei-plate",
+   "variant": "A1 mini",
+   "was": 24.99
+  },
+  "last": "2026-11-16",
+  "low": 17.49
  },
  "bambu-lab:bambu-engineering-plate": {
   "first": "2026-11-16",
@@ -1467,6 +1503,16 @@
   "low": 35.99,
   "seed": true
  },
+ "bambu-lab:pc-filament": {
+  "first": "2026-11-16",
+  "last": "2026-11-16",
+  "low": 23.99
+ },
+ "bambu-lab:pc-fr": {
+  "first": "2026-11-16",
+  "last": "2026-11-16",
+  "low": 32.99
+ },
  "bambu-lab:pet-cf": {
   "first": "2026-11-16",
   "last": "2026-11-16",
@@ -1564,6 +1610,24 @@
   "last": "2026-11-16",
   "low": 55.99,
   "seed": true
+ },
+ "bambu-lab:ppa-cf": {
+  "first": "2026-11-16",
+  "info": {
+   "brand": "Bambu Lab",
+   "category": "accessories",
+   "pct": 0.4,
+   "price": 89.99,
+   "sponsored": false,
+   "store": "bambu-lab",
+   "store_name": "Bambu Lab",
+   "title": "PPA-CF",
+   "url": "https://us.store.bambulab.com/products/ppa-cf",
+   "variant": "Black (73100) / Filament with spool / 0.75 kg",
+   "was": 149.99
+  },
+  "last": "2026-11-16",
+  "low": 89.99
  },
  "bambu-lab:support-for-pla-new": {
   "first": "2026-11-16",
@@ -5789,7 +5853,7 @@
    "was": 114.95
   },
   "last": "2026-11-16",
-  "low": 65.0,
+  "low": 52.0,
   "seed": true
  },
  "snapmaker:6960215490747": {
