@@ -1,0 +1,69 @@
+# Exact Amazon matches for store deals (mizumakes only)
+# ----------------------------------------------------
+# deal_finder.py adds a "Check Amazon" button to a deal card only when ALL of these hold:
+#   - the store product page (host + /products/<handle>) is in this list
+#   - the item is on today's deal list (so the store sale is real)
+#   - amazon_price is the same as or below today's store deal price
+#   - today is on or before `until`
+#   - the deal's variant matches `variant` (regex, case-insensitive), when given, so a
+#     2-pack or 8 kg bundle never gets a button for a single unit on Amazon. Multi-packs
+#     ("*2", "x2", "2 pack") are always rejected.
+# Amazon prices are never shown on the site (Associates rules); they only decide
+# whether the button appears. They come from Jared's Nov 2026 Amazon deals sheet and
+# were not checked live, so each entry expires. Add or refresh entries by hand.
+
+tag: mizubikes-web-20
+
+matches:
+  - store_url: https://store.anycubic.com/products/kobra-x
+    asin: B0GQGSQNF8
+    name: Anycubic Kobra X
+    amazon_price: 299.99
+    source: sheet Nov 16, 2026 (Prime price)
+    until: 2026-12-01
+
+  - store_url: https://store.anycubic.com/products/pla-4kg
+    variant: "(^|\\D)4\\s?kg"
+    asin: B0D53R2W7R
+    name: Anycubic PLA 4 kg bundle
+    amazon_price: 42.99
+    source: sheet, tracker snippet
+    until: 2026-12-01
+
+  - store_url: https://store.anycubic.com/products/pla-cf
+    variant: "(^|\\D)1\\s?kg"
+    asin: B0GJ4MQ1VV
+    name: Anycubic PLA-CF 1 kg
+    amazon_price: 22.22
+    source: sheet, Amazon API data via BasketPrice, Nov 17, 2026
+    until: 2026-12-01
+
+  - store_url: https://www.flashforge.com/products/adventurer-5m-3d-printer
+    asin: B0CHJGFVSL
+    name: Flashforge Adventurer 5M
+    amazon_price: 249.00
+    source: sheet, Oct 31, 2026
+    until: 2026-12-01
+
+
+  - store_url: https://store.sunlu.com/products/new-version-sunlu-filadryer-s2
+    asin: B0G4T7N4VQ
+    name: Sunlu FilaDryer S2
+    amazon_price: 38.24
+    source: sheet, Nov 6, 2026
+    until: 2026-12-01
+
+  - store_url: https://store.sunlu.com/products/buy-more-get-more-free-1000g-standard-resin-water-wash-standard-resin-and-standard-plus-resin
+    variant: "1000\\s?g|(^|\\D)1\\s?kg"
+    asin: B09Q64GYVP
+    name: Sunlu Standard Resin 1 kg
+    amazon_price: 13.59
+    source: sheet, Oct 31, 2026
+    until: 2026-12-01
+
+  - store_url: https://www.sovol3d.com/products/large-filament-dryer-box
+    asin: B09686Z5R3
+    name: Sovol SH01 dryer box
+    amazon_price: 43.99
+    source: sheet, pricehistory.app Nov 17, 2026
+    until: 2026-12-01

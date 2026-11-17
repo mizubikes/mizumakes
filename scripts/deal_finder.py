@@ -38,6 +38,7 @@ import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 STORES = ROOT / "data" / "deal_stores.yaml"
+AMAZON_MATCHES = ROOT / "data" / "amazon_matches.yaml"
 DEALS = ROOT / "data" / "deals.json"
 HISTORY = ROOT / "data" / "deal_history.json"
 ALL = ROOT / "static" / "deals-all.json"    # every deal, for the page's search box
@@ -432,6 +433,48 @@ def link_for(store: dict, url: str) -> tuple[str, bool]:
                .replace("{url}", url)), True
 
 
+def load_amazon_matches() -> tuple[dict, str]:
+    """Exact Amazon listings for store products, keyed by host + /products/<handle>."""
+    if not AMAZON_MATCHES.exists():
+        return {}, ""
+    raw = yaml.safe_load(AMAZON_MATCHES.read_text(encoding="utf-8")) or {}
+    out = {}
+    for m in raw.get("matches") or []:
+        out[product_key(m["store_url"])] = m
+    return out, (raw.get("tag") or "").strip()
+
+
+def product_key(url: str) -> str:
+    u = urllib.parse.urlsplit(url)
+    path = u.path.rstrip("/")
+    if "/products/" in path:
+        path = "/products/" + path.split("/products/")[-1]
+    return (u.netloc.lower().removeprefix("www.") + path.lower())
+
+
+MULTI_PACK = re.compile(r"[*x×]\s*[2-9]\b|\b[2-9]\s*(pack|pcs|sets|units)\b", re.I)
+
+
+def amazon_match_link(url: str, price: float, matches: dict, tag: str, today: dt.date,
+                      variant: str = "") -> str:
+    """Link to the exact Amazon listing, only when it is the same item (variant check, no
+    multi-packs), Amazon is the same price or cheaper, and the entry hasn't expired.
+    Never a search link, never a price."""
+    m = matches.get(product_key(url))
+    if not m or not tag:
+        return ""
+    if MULTI_PACK.search(variant or ""):
+        return ""
+    if m.get("variant") and not re.search(m["variant"], variant or "", re.I):
+        return ""
+    until = m.get("until")
+    if until and today > (until if isinstance(until, dt.date) else dt.date.fromisoformat(str(until))):
+        return ""
+    if float(m.get("amazon_price") or 1e9) > price + 0.005:
+        return ""
+    return f"https://www.amazon.com/dp/{m['asin']}?tag={tag}"
+
+
 def amazon_link(brand: str, title: str, tag: str) -> str:
     """Amazon search link carrying the Associates tag. Never a price: Amazon
     only allows prices pulled from its own API, so this is a "check it" link."""
@@ -793,10 +836,13 @@ def scan_store(store: dict, cfg: dict, brands: "SiteBrands", seen: dict) -> tupl
             "pct": round(pct, 3),
             "save": round(was - price, 2),
             "category": category,
-            "amazon": amazon_link(brand, title, tag)
-                      if tag and category not in (cfg.get("amazon_skip") or [])
-                      and brand.lower() not in {b.lower() for b in (cfg.get("amazon_skip_brands") or [])}
-                      else "",
+            "amazon": amazon_match_link(url, price, *cfg.get("_amazon", ({}, "")),
+                                        dt.datetime.now(ZoneInfo("America/Los_Angeles")).date(),
+                                        "" if vtitle.lower() == "default title" else vtitle)
+                      or (amazon_link(brand, title, tag)
+                          if tag and category not in (cfg.get("amazon_skip") or [])
+                          and brand.lower() not in {b.lower() for b in (cfg.get("amazon_skip_brands") or [])}
+                          else ""),
             "url": href,
             "sponsored": sponsored,
             "image": image_for(p),
@@ -841,7 +887,9 @@ def main() -> int:
     args = ap.parse_args()
 
     raw = yaml.safe_load(STORES.read_text(encoding="utf-8")) or {}
+    amazon_matches = load_amazon_matches()
     cfg = {**DEFAULTS, **(raw.get("settings") or {})}
+    cfg["_amazon"] = amazon_matches
     # stores flagged `used: true` sell mostly second-hand gear and are skipped
     stores = [s for s in raw.get("stores", [])
               if s.get("enabled", True) and not s.get("used")]

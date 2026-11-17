@@ -1,4 +1,4 @@
-{{- /* MizuMakes: GA4 event when a reader clicks through to a deal. Works for the
+{{- /* MizuMakes: GA4 event (deal_dest = store or amazon) when a reader clicks through to a deal. Works for the
        deals page, category deal pages, search results and the homepage strip. */ -}}
 <script>
 (function () {
@@ -9,7 +9,8 @@
     return location.pathname.replace(/^\/3d-printer-deals\/?/, '').replace(/\/$/, '') || 'all_deals';
   }
   function track(e) {
-    var a = e.target.closest && e.target.closest('a.dp-card');
+    var link = e.target.closest && e.target.closest('a.dp-card-main, a.dp-card-amz');
+    var a = link && link.closest('.dp-card');
     if (!a || typeof gtag !== 'function') return;
     if (e.type === 'auxclick' && e.button !== 1) return;     /* middle click only */
     var d = a.dataset;
@@ -20,6 +21,7 @@
       deal_name: (d.name || '').slice(0, 100),
       deal_discount: parseFloat(d.pct) || 0,
       deal_location: where(a),
+      deal_dest: link.classList.contains('dp-card-amz') ? 'amazon' : 'store',
       value: parseFloat(d.price) || 0,
       currency: 'USD',
       transport_type: 'beacon'

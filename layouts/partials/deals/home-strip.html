@@ -23,7 +23,7 @@
   </div>
   <div class="dp-home-more">
     <a class="dp-home-btn" href="/3d-printer-deals/">See {{ with $d.total_found }}all {{ lang.FormatNumber 0 . }}{{ else }}more{{ end }} deals today &rarr;</a>
-    <span class="dp-home-foot">Printers, filament, upgrades and accessories · checked every morning{{ with $d.updated }} · last run {{ time.Format "Jan 2" . }}{{ end }}</span>
+    <span class="dp-home-foot">Printers, filament, upgrades and accessories · checked every morning · As an Amazon Associate I earn from qualifying purchases{{ with $d.updated }} · last run {{ time.Format "Jan 2" . }}{{ end }}</span>
   </div>
 </div>
 {{- end }}
