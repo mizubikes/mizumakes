@@ -447,3 +447,8 @@ body:has(article.dp) .main { max-width: calc(var(--main-width) + var(--gap) * 2)
 .dp-home .dp-row > .dp-card:nth-child(n+5) { display: none; }
 @media (max-width: 760px) { .dp-home .dp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .dp-home .dp-grid { grid-template-columns: 1fr; } }
+/* wide home strip: shorter photo frame so cards don't turn into big squares */
+@media (min-width: 641px) {
+  .dp-home .dp-card-img { aspect-ratio: 4 / 3; }
+  .dp-home .dp-card-img img { object-fit: contain; padding: 8px; box-sizing: border-box; }
+}

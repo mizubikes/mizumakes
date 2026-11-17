@@ -272,3 +272,16 @@
 .mz-related li { margin: 6px 0; }
 .mz-related a { color: var(--primary); text-decoration: none; }
 .mz-related a:hover { text-decoration: underline; }
+
+/* Home page: use the full header width instead of the 720px article column.
+   Articles keep PaperMod's narrower, readable --main-width. */
+:root { --nav-width: 1200px; }
+body:has(.mb-hero) { --main-width: 1200px; }
+body:has(.mb-hero) .main { max-width: calc(var(--main-width) + var(--gap) * 2); }
+body:has(.mb-hero) .mb-hero { grid-template-columns: minmax(0, 1fr) 420px; gap: 2rem; }
+@media (max-width: 1100px) {
+  body:has(.mb-hero) .mb-hero { grid-template-columns: minmax(0, 1fr) 340px; }
+}
+@media (max-width: 768px) {
+  body:has(.mb-hero) .mb-hero { grid-template-columns: 1fr; }
+}
