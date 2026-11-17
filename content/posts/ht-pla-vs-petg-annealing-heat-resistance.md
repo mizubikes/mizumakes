@@ -7,8 +7,8 @@ categories: ["Guides"]
 tags: ["HT-PLA", "PETG", "annealing", "heat resistance"]
 cover:
   image: "/images/ht-pla-vs-petg-annealing-heat-resistance-cover.webp"
-  alt: "Enclosed desktop FDM 3D printer"
-  caption: "Photo: Graftencom / Pixabay"
+  alt: "Bar chart of heat deflection at 1.8 MPa: HT-PLA as printed 58.6 °C, annealed 71.7 °C, PETG 75 °C, ASA 100.2 °C"
+  caption: "Data: Polymaker technical data sheets"
   relative: false
 draft: false
 ---

@@ -7,8 +7,8 @@ categories: ["Guides"]
 tags: ["build plates", "PEI", "bed adhesion", "Bambu Lab"]
 cover:
   image: "/images/textured-pei-vs-smooth-pei-vs-cool-plate-cover.webp"
-  alt: "Open 3D printer with a magnetic spring steel build plate on the heated bed"
-  caption: "Photo: LPArt / Pixabay"
+  alt: "Bambu Lab Textured PEI Plate, a gold spring steel build plate with a textured PEI coating"
+  caption: "Bambu Lab Textured PEI Plate"
   relative: false
 draft: false
 ---

@@ -10,20 +10,11 @@
 {{- $guides := where .Site.RegularPages "Type" "posts" }}
 {{- $guides = where $guides ".Params.categories" "intersect" (slice "Guides" "Filament") | first 3 }}
 
-<div class="mb-ticker">
-  <span class="mb-ticker-label">Latest</span>
-  <div class="mb-ticker-items">
-    {{- range first 4 $posts }}
-    <a href="{{ .RelPermalink }}">{{ .Title | safeHTML }}</a>
-    {{- end }}
-  </div>
-</div>
-
 {{- if $featured }}
 <div class="mb-hero">
   <a href="{{ $featured.RelPermalink }}" class="mb-hero-main">
     {{- with $featured.Params.cover.image }}
-    <img src="{{ . }}" alt="{{ $featured.Title }}" loading="eager">
+    <img src="{{ . }}" alt="{{ $featured.Params.cover.alt | default $featured.Title }}" loading="eager">
     {{- end }}
     <div class="mb-hero-overlay">
       <div class="mb-hero-cat">{{- with $featured.Params.tags }}{{ range first 1 . }}{{ . | upper }}{{ end }}{{- end }}</div>
@@ -33,10 +24,10 @@
   </a>
 
   <div class="mb-hero-sidebar">
-    {{- range $secondary }}
+    {{- range $secondary }}{{ $p := . }}
     <a href="{{ .RelPermalink }}" class="mb-side-card">
       {{- with .Params.cover.image }}
-      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+      <img src="{{ . }}" alt="{{ $p.Params.cover.alt | default $p.Title }}" loading="lazy">
       {{- end }}
       <div class="mb-side-info">
         <div class="mb-cat">{{- with .Params.tags }}{{ range first 1 . }}{{ . | upper }}{{ end }}{{- end }}</div>

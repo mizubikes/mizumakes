@@ -1,4 +1,4 @@
-{{- /* One deal card. Context: dict "it" (deal) "cat" (category title, optional) "href" (optional override) "rank" (int, optional). */ -}}
+{{- /* One deal card. Context: dict "it" (deal) "cat" (category title, optional) "href" (optional override) "rank" (int, optional) "short" (bool: meta shows only the category). */ -}}
 {{- $it := .it -}}
 {{- $internal := .href -}}
 {{- $href := .href | default $it.url -}}
@@ -24,6 +24,6 @@
     <span class="dp-card-sizes" title="Colors in stock at this price: {{ delimit . ", " }}"><span class="dp-card-sizes-label">Colors:</span> {{ delimit (first 8 .) " · " }}{{ if gt (len .) 8 }} +{{ sub (len .) 8 }}{{ end }}</span>
     {{- end }}
     {{- with $flag }}<span class="dp-card-tag">{{ . }}</span>{{ end }}
-    <span class="dp-card-meta">{{ $it.store_name }}{{ with .cat }} · {{ . }}{{ end }}{{ if $it.stale }} · not rechecked today{{ end }}</span>
+    <span class="dp-card-meta">{{ if .short }}{{ .cat }}{{ else }}{{ $it.store_name }}{{ with .cat }} · {{ . }}{{ end }}{{ end }}{{ if $it.stale }} · not rechecked today{{ end }}</span>
   </span>
 </a>
