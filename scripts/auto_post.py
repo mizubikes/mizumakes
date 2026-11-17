@@ -201,6 +201,9 @@ def generate_post(seed: str | None, posts: list[dict]) -> dict:
     for key in ("body", "description", "title"):
         data[key] = re.sub(r'[(<]cite index="[^"]*">(.*?)</cite>', r"\1", data[key], flags=re.S)
         data[key] = re.sub(r"</?cite[^>]*>", "", data[key])
+    # Sometimes the model double-escapes newlines, leaving literal "\\n" in the body
+    if data["body"].count("\\n") > data["body"].count("\n"):
+        data["body"] = data["body"].replace("\\n", "\n")
     if "cite index=" in data["body"]:
         sys.exit("Citation markup still present in body; refusing to write the post")
 
