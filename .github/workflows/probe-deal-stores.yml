@@ -5,9 +5,17 @@ on:
 jobs:
   probe:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with: { python-version: "3.12" }
-      - run: pip install requests
-      - run: python scripts/probe_deal_stores.py
+      - run: pip install requests pyyaml
+      - run: python scripts/deal_finder.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deal-data
+          path: |
+            data/deals.json
+            data/deal_history.json
+            static/deals-all.json
