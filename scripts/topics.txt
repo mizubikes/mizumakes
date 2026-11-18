@@ -1,4 +1,3 @@
-Carbon fiber filament: PLA-CF vs PETG-CF vs PA-CF for functional parts
 How to design 3D printed parts for strength: wall count, infill, and orientation
 Heat set inserts vs printed threads vs captive nuts
 Best slicer settings to reduce stringing
