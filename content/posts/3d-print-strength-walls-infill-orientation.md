@@ -71,7 +71,10 @@ There is one smart exception: local reinforcement. CNC Kitchen's SmartInfill app
 
 Pattern matters less than people expect. In a controlled tensile study summarized by one guide, the pattern changed maximum tensile strength by less than 5%. Choose by load direction and print time instead.
 
-Gyroid and cubic are my defaults. Prusa says gyroid has similar strength in every direction, no line crossings within a layer, and prints fairly quickly. Cubic is also a reasonable pick when strength under multi-directional load matters. Grid and lines are fine for simple, one-axis loads. Concentric infill only makes sense near 100%. At lower densities, it's the weakest pattern because it lacks horizontal strength.
+Gyroid and cubic are good defaults. Prusa says gyroid has similar strength in every direction, no line crossings within a layer, and prints fairly quickly. Cubic is also a reasonable pick when strength under multi-directional load matters. Grid and lines are fine for simple, one-axis loads. Concentric infill only makes sense near 100%. At lower densities, it's the weakest pattern because it lacks horizontal strength.
+
+![Slicer preview of a flat plate: gyroid infill in the middle, with solid perimeters around the outer edge and around each screw hole](/images/gyroid-infill-walls-around-bosses-slicer.webp)
+*Gyroid infill in a slicer preview. Perimeters ring the outer edge and every screw hole, so the edges and bosses are solid plastic while the middle stays light.*
 
 For density, one Bambu Studio walkthrough suggests 20-25% for strength parts. That's a sensible starting point. Above about 40%, adding walls is the cheaper way to gain strength.
 
