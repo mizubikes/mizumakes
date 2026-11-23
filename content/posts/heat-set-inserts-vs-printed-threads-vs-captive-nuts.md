@@ -59,6 +59,8 @@ The catch is load direction relative to layers, and this is my own reasoning fro
 
 For the pocket, nominal M3 nut dimensions are 5.5 mm across flats and 2.4 mm thick. Add clearance for your printer, and print a test strip first. For a closed pocket, you can pause the print and drop the nut in, but that introduces defect risk. A side-loading slot avoids this.
 
+Square nuts are often the better choice for those slots. A DIN 562 M3 square nut is 5.5 mm across and only 1.8 mm thick, so the slot stays shallow. Its flat sides also keep it from spinning, and it slides in along the slot without having to line up a hex point. That's why many printer designs, including Prusa's, use them. A [100-pack of M3 DIN 562 stainless square nuts](https://www.amazon.com/dp/B07G9TTZDB?tag=mizubikes-web-20) is cheap enough to keep on hand. Size the slot about 0.2 to 0.3 mm over the nut's width and thickness, then test-fit on your printer.
+
 ## How do I size the hole and wall for an M3 insert?
 
 Start from the manufacturer drawing, then correct for FDM. Ruthex lists a 4.0 mm hole, 5.7 mm length, and 1.6 mm minimum radial wall for the RX-M3x5.7. The same chart gives M4 at 5.6 mm hole with a 2.1 mm wall, and M5 at 6.4 mm with a 2.6 mm wall.
@@ -72,7 +74,7 @@ A few more rules:
 - **Boss:** one guide suggests a boss about twice the insert width, so 8 to 9 mm for a 4.6 mm M3 insert.
 - **Cooling:** let the insert cool before tightening a screw into it.
 
-On cost, inserts are cheap. 3DJake lists Ruthex M3x5.7, 100 pieces, at $8.36 before shipping, and marketplace resellers charge more. You can find [Ruthex M3 threaded inserts](https://www.amazon.com/s?k=Ruthex+M3+threaded+inserts+100+pieces&tag=mizubikes-web-20) on Amazon, though prices vary by seller. You will also want a [temperature-controlled soldering iron](https://www.amazon.com/s?k=temperature+controlled+soldering+iron&tag=mizubikes-web-20) rather than a fixed-wattage pencil, because the temperature window is narrow. For captive nuts, a [stainless M3 hex nut assortment](https://www.amazon.com/s?k=M3+stainless+hex+nut+assortment&tag=mizubikes-web-20) covers most pockets.
+On cost, inserts are cheap. 3DJake lists Ruthex M3x5.7, 100 pieces, at $8.36 before shipping, and marketplace resellers charge more. On Amazon, the same [ruthex M3x5.7 inserts, 100 pieces](https://www.amazon.com/dp/B08BCRZZS3?tag=mizubikes-web-20) are listed, though prices vary by seller. If you'll use more than M3, the [ruthex M2/M3/M4/M5 assortment bundled with seven heat-set tips](https://www.amazon.com/dp/B0FCXXW62N?tag=mizubikes-web-20) covers the common sizes plus the iron tips in one order. You will also want a [temperature-controlled soldering iron](https://www.amazon.com/s?k=temperature+controlled+soldering+iron&tag=mizubikes-web-20) rather than a fixed-wattage pencil, because the temperature window is narrow. For captive nuts, a [stainless M3 hex nut assortment](https://www.amazon.com/s?k=M3+stainless+hex+nut+assortment&tag=mizubikes-web-20) covers most pockets, and [M3 DIN 562 square nuts](https://www.amazon.com/dp/B07G9TTZDB?tag=mizubikes-web-20) suit side-loading slots.
 
 ## Which should I use for brackets, enclosures, and hot parts?
 
@@ -97,3 +99,4 @@ The common thread is that fastener choice is a boss design question. Add walls, 
 - [MDPI Polymers: Load-Bearing Assessment of Threads in 3D-Printed Polymer Elements](https://www.mdpi.com/2073-4360/18/1/112)
 - [MIT Fab Academy notes: embedded nut vs heat-set insert pull test](https://fab.cba.mit.edu/classes/863.25/people/MattiGruener/assignments/week4)
 - [3DJake: ruthex M3 inserts, 100 pieces](https://www.3djake.com/ruthex/threaded-insert-m3-100-pieces)
+- [Prusa forum: M3 DIN 562 square nuts](https://forum.prusa3d.com/forum/original-prusa-i3-mk3s-mk3-general-discussion-announcements-and-releases/m3-din-562-square-nuts/)
