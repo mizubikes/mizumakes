@@ -7,7 +7,7 @@ categories: ["Guides"]
 tags: ["heat set inserts", "fasteners", "design for 3d printing", "functional parts"]
 cover:
   image: "/images/heat-set-inserts-vs-printed-threads-vs-captive-nuts-cover.webp"
-  alt: "Stainless steel square nuts in increasing sizes, from M3 up"
+  alt: "Brass heat-set threaded inserts in several sizes with matching heat-set soldering iron tips"
   caption: ""
   relative: false
 draft: false
@@ -58,6 +58,8 @@ Often yes, on raw holding force, because a nut bears on a broad face instead of 
 The catch is load direction relative to layers, and this is my own reasoning from how FDM parts fail. If the nut pulls up against a few bridged roof layers, you are loading layer adhesion in tension, which is the weak axis. If you orient the part so the nut bears against a vertical wall of continuous perimeters, the load runs in-plane and the joint is much better. Pick the pocket orientation with that in mind.
 
 For the pocket, nominal M3 nut dimensions are 5.5 mm across flats and 2.4 mm thick. Add clearance for your printer, and print a test strip first. For a closed pocket, you can pause the print and drop the nut in, but that introduces defect risk. A side-loading slot avoids this.
+
+![Stainless steel square nuts in increasing sizes](/images/m3-square-nuts-sizes.webp)
 
 Square nuts are often the better choice for those slots. A DIN 562 M3 square nut is 5.5 mm across and only 1.8 mm thick, so the slot stays shallow. Its flat sides also keep it from spinning, and it slides in along the slot without having to line up a hex point. That's why many printer designs, including Prusa's, use them. A [100-pack of M3 DIN 562 stainless square nuts](https://www.amazon.com/dp/B07G9TTZDB?tag=mizubikes-web-20) is cheap enough to keep on hand. Size the slot about 0.2 to 0.3 mm over the nut's width and thickness, then test-fit on your printer.
 
