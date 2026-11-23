@@ -6,8 +6,8 @@ slug: heat-set-inserts-vs-printed-threads-vs-captive-nuts
 categories: ["Guides"]
 tags: ["heat set inserts", "fasteners", "design for 3d printing", "functional parts"]
 cover:
-  image: "/images/Parts-printed-in-printer.png"
-  alt: "Close-up of 3D printed parts on a workbench"
+  image: "/images/heat-set-inserts-vs-printed-threads-vs-captive-nuts-cover.webp"
+  alt: "Stainless steel square nuts in increasing sizes, from M3 up"
   caption: ""
   relative: false
 draft: false
