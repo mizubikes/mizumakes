@@ -285,3 +285,29 @@ body:has(.mb-hero) .mb-hero { grid-template-columns: minmax(0, 1fr) 420px; gap: 
 @media (max-width: 768px) {
   body:has(.mb-hero) .mb-hero { grid-template-columns: 1fr; }
 }
+
+/* Frame post images like the deal cards: thin border, rounded corners, white backing.
+   Product shots on white otherwise melt into the page in light mode. */
+.post-single .entry-cover img,
+.post-content img {
+  box-sizing: border-box;
+  border: 1px solid var(--tertiary);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.post-single .entry-cover { margin-bottom: 1.5rem; }
+.post-single .entry-cover figcaption,
+.post-single .entry-cover p { margin-top: 0.4rem; }
+:root:not([data-theme="dark"]) .post-single .entry-cover img,
+:root:not([data-theme="dark"]) .post-content img {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+/* same edge on the homepage thumbnails */
+.mb-side-card img,
+.mb-card img,
+.mb-wide-card img {
+  box-sizing: border-box;
+  border: 1px solid var(--tertiary);
+  background: #fff;
+}
+.mb-hero-main { border: 1px solid var(--tertiary); }
