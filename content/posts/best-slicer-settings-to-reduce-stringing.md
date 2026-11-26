@@ -7,8 +7,8 @@ categories: ["Guides"]
 tags: ["stringing", "slicer settings", "retraction", "troubleshooting"]
 cover:
   image: "/images/best-slicer-settings-to-reduce-stringing-cover.webp"
-  alt: "Close-up of a 3D printer nozzle extruding molten plastic onto a print"
-  caption: "Photo: ZMorph3D / Pixabay"
+  alt: "Printed parts on a textured PEI build plate inside an enclosed 3D printer"
+  caption: ""
   relative: false
 draft: false
 ---
