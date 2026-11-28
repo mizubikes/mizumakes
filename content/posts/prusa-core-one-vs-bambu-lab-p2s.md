@@ -6,8 +6,8 @@ slug: prusa-core-one-vs-bambu-lab-p2s
 categories: ["Guides"]
 tags: ["Prusa Core One", "Bambu P2S", "enclosed printers", "ABS and ASA"]
 cover:
-  image: "/images/Parts-printed-in-printer.png"
-  alt: "Enclosed CoreXY 3D printer printing a part inside its chamber"
+  image: "/images/prusa-core-one-vs-bambu-lab-p2s-cover.webp"
+  alt: "Side-by-side: the Prusa CORE One+ with a printed part in its chamber, and the gray Bambu Lab P2S"
   caption: ""
   relative: false
 draft: false
@@ -33,6 +33,9 @@ Below is how the two compare on the numbers that matter for brackets, enclosures
 
 The P2S figure is a promotional store price. It was $549 until late October, so expect it to move. Prusa is not cutting printer prices this season. It is adding bundled extras instead.
 
+![Prusa CORE One+ Black Friday offer: gifts valued up to $450 and free shipping](/images/prusa-core-one-plus-black-friday-2026.webp)
+*Prusa's Black Friday offer on the CORE One+ adds gifts rather than a price cut. It runs through November 30. Image: Prusa Research*
+
 The build volumes are close enough that part size rarely decides it. The P2S has a slight edge in Y, and the Core One+ is a little taller in Z.
 
 ## Does the Core One's heated chamber beat the P2S for ABS and ASA?
@@ -56,6 +59,9 @@ The P2S, out of the box. It ships with a hardened steel nozzle, and Bambu lists 
 The Core One+ ships with a brass high-flow nozzle. That nozzle is not rated for abrasive CF or GF filaments, so you need a hardened option. A hardened 0.4 mm E3D ObXidian runs $75.99. The step beyond that is Prusa's HT hotend. It's a $199.99 drop-in with a 0.4 mm ObXidian 500 nozzle that raises the ceiling to 400 °C. That opens PPS-CF, PPA-CF and PEKK-CF. The catch is that it can't be used with the standard Prusa nozzle, high-flow nozzles or standard ObXidian nozzles, and its chamber is still capped near 55 °C. That is a real upgrade path, but you would be buying a high-temperature hotend for a chamber that can't fully support the materials it unlocks. My [hardened nozzle guide](/posts/hardened-steel-nozzle-abrasive-filaments/) covers which filaments actually need one.
 
 ## Speed and volumetric flow: where the P2S pulls ahead
+
+![Bambu Lab P2S enclosed 3D printer](/images/bambu-lab-p2s.webp)
+*Bambu Lab P2S. Image: Bambu Lab*
 
 Bambu quotes a maximum flow of 40 mm³/s on the standard hotend, from its own test with ABS at 280 °C. Reported testing of the Core One's CHT high-flow nozzle put it at a real 30 mm³/s. That is a gap, but not a gulf. Both are enough that cooling and acceleration, not melt rate, limit most functional prints.
 
