@@ -12,7 +12,13 @@ cover:
   caption: "The P1S with the first-gen AMS. Image: Bambu Lab"
   relative: false
   hiddenInList: false
+saleEnds: 2026-12-01T23:59:00-08:00
+saleEndedText: "Bambu's Black Friday sale ended December 1. The Black Friday prices in this post were sale prices; the buying logic still holds, but check the current price before you order."
+saleEndedLink: https://us.store.bambulab.com/products/p1s
+saleEndedLinkText: "Check current P1S prices on Bambu's store"
 ---
+
+{{< sale-ended >}}
 
 > **Black Friday update (November 15, 2026):** Bambu's Black Friday sale (October 27 to December 1) has cut every configuration below. The **P1S AMS 2 Pro Combo is $509** and the **P2S Combo is $649**, which shrinks the gap from $170 to **$140**. The first-gen P1S AMS Combo is $479. Current prices and the full history are in the [price history table](#price-history) below. The buying logic in this post still holds at the new prices.
 

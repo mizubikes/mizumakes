@@ -1,6 +1,7 @@
 ---
-title: "Bambu Lab H3C Price and Specs, Plus H3C vs INDX vs H2C"
+title: "Bambu Lab H3C Price ($2,499), Specs, and H3C vs INDX"
 date: 2026-11-06
+lastmod: 2026-11-28
 description: "Bambu Lab H3C price ($2,499) and specs, plus H3C vs Prusa INDX vs H2C on tool change speed, purge waste, and build volume for functional parts."
 slug: bambu-lab-h3c-toolchanger-specs-price
 categories: ["Blog"]

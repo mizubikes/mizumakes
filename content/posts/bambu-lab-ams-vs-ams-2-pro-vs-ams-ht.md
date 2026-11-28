@@ -1,6 +1,7 @@
 ---
-title: "Bambu Lab AMS vs AMS 2 Pro vs AMS HT: Which to Buy"
+title: "AMS vs AMS 2 Pro vs AMS HT: Differences and Which to Buy"
 date: 2026-11-06
+lastmod: 2026-11-28
 description: "Bambu Lab AMS vs AMS 2 Pro vs AMS HT compared on drying limits, spool count, filament support, and cost per slot, so you can pick the right setup."
 slug: bambu-lab-ams-vs-ams-2-pro-vs-ams-ht
 categories: ["Guides"]
@@ -16,6 +17,8 @@ draft: false
 *MizuMakes may earn a commission from links in this post.*
 
 For most people choosing between the **Bambu Lab AMS vs AMS 2 Pro vs AMS HT**, the answer is the AMS 2 Pro: four spools with active drying. Add an AMS HT only if you print materials that need more heat than the 2 Pro can deliver. The original AMS only makes sense if you find it discounted and you print PLA and PETG. Each unit is a feeder, a sealed storage box, and in two cases a dryer. For functional parts, the dryer matters more than the color count.
+
+**AMS vs AMS 2 Pro, the short version:** both hold four spools. The AMS 2 Pro adds a heater that dries filament up to 65°C, a brushless servo feed motor that Bambu says feeds about 60% faster, and ceramic filament inlets. The original AMS keeps filament dry with desiccant but can't dry a spool that's already wet.
 
 ## What is the actual difference between AMS, AMS 2 Pro, and AMS HT?
 

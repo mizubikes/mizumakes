@@ -11,7 +11,13 @@ cover:
   caption: ""
   relative: false
 draft: false
+saleEnds: 2026-12-01T23:59:00-08:00
+saleEndedText: "Black Friday and Cyber Monday 2026 are over, so most prices below have expired."
+saleEndedLink: /3d-printer-deals/
+saleEndedLinkText: "See today's 3D printer and filament deals"
 ---
+
+{{< sale-ended >}}
 
 *MizuMakes may earn a commission from links in this post.*
 

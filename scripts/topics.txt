@@ -1,1 +1,19 @@
+# One topic per line, phrased the way people search. The auto-drafter uses the top line, then deletes it.
+# Search Console, Nov 2026: head-to-head printer and material comparisons and spec charts get the impressions here.
+# Broad "best X" roundups (best printer under $300, best PETG) rank on page 3-5, so keep them out of the queue.
+Filament drying temperature and time chart by material
+Bambu Lab X2D vs H2D: what's different and which to buy
+PETG vs ABS for functional parts
+Nozzle and bed temperature chart by filament
+Bambu Lab H2S vs H2D: is the second nozzle worth it
+ASA vs ABS for outdoor and enclosure parts
+TPU 95A vs 85A vs 68D: which hardness for functional parts
+Heat deflection temperature chart for 3D printing filaments
+Snapmaker U1 vs Bambu H2D: toolchanger vs dual nozzle
+PA6-CF vs PA12-CF: which nylon for functional parts
+0.4 vs 0.6 mm nozzle for functional parts: strength and print time
+Qidi Q2 vs Bambu P2S for engineering filaments
+PETG vs PETG HF: strength and speed compared
+How much electricity does a 3D printer use per hour
+Elegoo Centauri Carbon vs Bambu P2S
 Best 3D printing tools and accessories for a home workshop

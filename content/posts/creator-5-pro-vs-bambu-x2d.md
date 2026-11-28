@@ -1,7 +1,8 @@
 ---
-title: "Creator 5 Pro vs X2D: Which Fits Functional Parts?"
+title: "Flashforge Creator 5 Pro vs Bambu X2D: Which to Buy"
 date: 2026-11-15
-description: "Creator 5 Pro vs X2D compared on purge waste, chamber, nozzles, colors, and software, so you can pick the right printer for functional parts."
+lastmod: 2026-11-28
+description: "Flashforge Creator 5 Pro vs Bambu X2D: four toolheads with almost no purge vs two nozzles with an AMS. Price, chamber, nozzles, TPU and which to buy for functional parts."
 slug: creator-5-pro-vs-bambu-x2d
 categories: ["Guides"]
 tags: ["flashforge creator 5 pro", "bambu lab x2d", "toolchanger", "multi-material"]
@@ -11,7 +12,13 @@ cover:
   caption: "Images: Flashforge, Bambu Lab"
   relative: false
 draft: false
+saleEnds: 2026-12-01T23:59:00-08:00
+saleEndedText: "The Black Friday prices in this comparison have ended (Flashforge's sale ran to November 30, Bambu's to December 1). Regular prices are $949 for the Creator 5 Pro and $649 or $899 for the X2D."
+saleEndedLink: /3d-printer-deals/
+saleEndedLinkText: "See current 3D printer deals"
 ---
+
+{{< sale-ended >}}
 
 *MizuMakes may earn a commission from links in this post.*
 
