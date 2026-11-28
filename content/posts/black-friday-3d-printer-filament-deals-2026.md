@@ -17,7 +17,7 @@ draft: false
 
 **Short answer:** the best Black Friday 3D printer deals this year are the Bambu Lab P2S Combo at $649, the Flashforge Creator 5 Pro at $749 (a record low on Flashforge's store), and the Elegoo Centauri Carbon 2 at $319 for a budget enclosed printer. For filament, Elegoo's 10 kg PLA and Rapid PETG bundles at $89.99 work out to about $9/kg, which is the cheapest per-kilo price I've found.
 
-Most brands started early this year, so the majority of these sales are **live now**, and some end before Black Friday itself (November 27). I've listed what's live, what's still coming, and which deals are worth it if you print functional parts rather than figurines. **Prices checked November 14, 2026.** They change during flash rounds, so confirm in your cart.
+Most brands started early this year, so the majority of these sales are **live now**, and some end before Black Friday itself (November 27). I've listed what's live, what's still coming, and which deals are worth it if you print functional parts rather than figurines. **Prices checked November 14, 2026, and updated on Black Friday, November 27.** They change during flash rounds, so confirm in your cart.
 
 ## Best 3D printer deals live now
 
@@ -37,10 +37,14 @@ Most brands started early this year, so the majority of these sales are **live n
 | Elegoo Centauri Carbon 2 Combo | $369 | $449 | Elegoo store | Dec 1 |
 | Snapmaker U1 | from $699 | $999 | Snapmaker store | Not stated |
 | Anycubic Kobra S1 ACE 2 Pro Combo | $459 | $599 | Anycubic store | Nov 29 |
+| Prusa CORE One+ (Gen 2) | $999 kit, $1,299 assembled, plus gifts | Same price (no cut) | Prusa store | Nov 30 |
 
 Bambu's prices are from its US store sale that runs October 27 to December 1. Flashforge's discount applies automatically at checkout with no code. Anycubic prices are from October 26, so check them before you buy.
 
 ## The picks worth buying
+
+![Bambu Lab P2S](/images/bambu-lab-p2s.webp)
+*Bambu Lab P2S. Image: Bambu Lab*
 
 **Best for most people: [Bambu Lab P2S Combo](https://www.amazon.com/s?k=Bambu+Lab+P2S+Combo&tag=mizubikes-web-20), $649.** That's $100 off, and it includes the AMS 2 Pro, which dries filament. It's enclosed, fast, and runs PLA, PETG, ABS, and ASA. If you're choosing between it and the cheaper P1S AMS 2 Pro Combo at $509, my [P1S vs P2S breakdown](/posts/bambu-p1s-sale-vs-p2s/) covers the trade-off.
 
@@ -54,6 +58,11 @@ Bambu's prices are from its US store sale that runs October 27 to December 1. Fl
 **Cheapest toolchanger: Snapmaker U1, from $699.** Four toolheads for $50 less than the Creator 5 Pro, but it isn't enclosed and has no heated chamber, so it's a PLA, PETG, and TPU machine. My [Creator 5 Pro comparison](/posts/flashforge-creator-5-pro-deal-vs-h2d-indx-u1-p2s/) puts the two side by side.
 
 **Big build volume and high-temp materials: [Bambu Lab H2D Combo](https://www.amazon.com/s?k=Bambu+Lab+H2D+AMS+Combo&tag=mizubikes-web-20), $1,599.** That's the lowest price it has sold for. It gives you 350 × 320 × 325 mm, a 350 °C nozzle, and a 65 °C chamber. The [Bambu lineup post](/posts/bambu-lab-new-printers-2026/) explains how it compares with the H2S and X2D.
+
+![Prusa CORE One+ Black Friday offer: gifts up to $450 and free shipping](/images/prusa-core-one-plus-black-friday-2026.webp)
+*Prusa's Black Friday offer for the CORE One+. Image: Prusa Research*
+
+**Best if you want a Prusa: CORE One+ (Gen 2), $999 kit or $1,299 assembled, plus gifts.** Prusa isn't discounting the printer itself. Instead, it adds extras it values at up to $450: an OpenPrintTag upgrade, a 1 kg spool of Prusament PLA, a one-year extended warranty, a $50 voucher toward the INDX toolchanger upgrade, four 3D models, two Prusa Academy courses, and a voucher for nozzle-cleaning wires. Shipping is free on orders over $200. Most of that value is the warranty and the vouchers, so treat it as a sweetener rather than a $450 price cut. If you're choosing between the two most common enclosed picks, my [Prusa CORE One vs Bambu Lab P2S comparison](/posts/prusa-core-one-vs-bambu-lab-p2s/) covers the trade-offs, and the [CORE One+ heated chamber post](/posts/prusa-core-one-plus-heated-chamber-features/) explains what the "+" adds.
 
 **Skip if you're waiting for the H3C to drop:** Bambu's new [H3C nine-tool changer](/posts/bambu-lab-h3c-toolchanger-specs-price/) launched November 3 at $2,499 and isn't part of the sale.
 
@@ -112,3 +121,5 @@ I'll update this post as flash deals and new sales go live.
 - [Snapmaker Black Friday shopping guide](https://www.snapmaker.com/blog/3d-printer-shopping-guide-black-friday/)
 - [Makers101: 3D printer Black Friday deals, dates and target prices](https://makers101.com/best-black-friday-3d-printer-deals/)
 - [Prusa Black Friday 2026](https://www.prusa3d.com/category/black-friday-2026/)
+- [Prusa blog: Black Friday 2026 deals and gift list](https://blog.prusa3d.com/prusa-black-friday-2026-is-here-grab-the-biggest-deals-of-the-year_138966/)
+- [All3DP: Prusa Black Friday 2026 printer bundles](https://all3dp.com/4/prusa-kicks-off-black-friday-2026-sale-with-printer-bundles-and-up-to-40-off-filament/)
