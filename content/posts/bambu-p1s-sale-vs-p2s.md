@@ -1,9 +1,9 @@
 ---
-title: "P1S AMS 2 Pro Combo vs P2S Combo: Which One to Buy"
+title: "P1S AMS Combo vs AMS 2 Pro Combo vs P2S Combo: Which to Buy"
 date: 2026-07-20
-lastmod: 2026-11-15
+lastmod: 2026-11-28
 draft: false
-description: "P1S AMS 2 Pro combo vs P2S combo, plus why the first-gen P1S AMS combo is a trap. The price gap is the whole decision, and the answer isn't on the spec sheet."
+description: "P1S AMS combo vs P1S AMS 2 Pro combo vs P2S combo at Black Friday prices. Why the first-gen AMS combo is a trap, and whether the P2S is worth the extra $140."
 tags: ["bambu lab", "p1s", "p2s", "ams 2 pro", "3d printer buying guide"]
 categories: ["Guides"]
 cover:
@@ -41,6 +41,23 @@ Two things jump out of that table.
 **First: never buy the first-gen AMS combo.** It's $549. The AMS 2 Pro combo is $579. Thirty dollars separates them, and the 2 Pro adds active filament drying, sealed storage, servo-driven feeding that's meaningfully faster on color changes, and RFID spool sync. Thirty dollars. If you take one thing from this article, take that one — the $549 listing exists to make the $579 listing look good, and it works, because the $579 listing genuinely is good.
 
 **Second: never buy the AMS separately.** A standalone AMS 2 Pro runs around $299 on Bambu's store. P1S solo at $399 plus an AMS 2 Pro at $299 is $698. The combo is $579. You're paying $180 for the AMS inside the bundle instead of $299. If there's any chance you'll want multicolor eventually, buy the combo now.
+
+## P1S AMS combo vs P1S AMS 2 Pro combo
+
+This is the comparison most people searching for the P1S actually get stuck on, so here it is on its own. Both combos are the same P1S. The only difference is which four-spool feeder sits on top.
+
+| | P1S AMS Combo | P1S AMS 2 Pro Combo |
+|---|---|---|
+| Feeder | Original AMS | AMS 2 Pro |
+| Spools | 4 | 4 |
+| Active drying | None (desiccant only) | Up to 65°C |
+| Feed motor | Original | Brushless servo, about 60% faster feeding per Bambu |
+| Regular price | $549 | $579 |
+| Black Friday price | $479 | $509 |
+
+The original AMS keeps dry filament dry with desiccant, but it can't fix a spool that's already damp. The AMS 2 Pro has a heater, so it can dry PLA and PETG in the unit. One caveat: it only reaches 65°C when the room is above about 25°C, so a cold garage won't get you a full drying cycle.
+
+For $30, take the AMS 2 Pro combo. The gap was $30 at regular price and it's still $30 on sale. The only reason to buy the first-gen combo is if you find it well under $479 and you only print PLA. If you're adding a feeder to a printer you already own, or you're weighing the AMS HT for nylon and ABS, I compared all three in [AMS vs AMS 2 Pro vs AMS HT](/posts/bambu-lab-ams-vs-ams-2-pro-vs-ams-ht/).
 
 ## So the real question is $579 versus $749
 
