@@ -1,5 +1,9 @@
-{{- /* MizuMakes: GA4 event (deal_dest = store or amazon) when a reader clicks through to a deal. Works for the
-       deals page, category deal pages, search results and the homepage strip. */ -}}
+{{- /* MizuMakes: GA4 click events.
+       deal_click      — a reader clicks through to a deal card (deal_dest = store or amazon). Works for the
+                         deals page, category deal pages, search results and the homepage strip.
+       affiliate_click — a reader clicks any other affiliate link: Amazon / amzn.to links inside posts,
+                         the filament price tracker buttons, or any link marked rel="sponsored".
+       Both are marked as key events in GA4. */ -}}
 <script>
 (function () {
   function where(a) {
@@ -8,25 +12,62 @@
     if (a.closest('.dp-home')) return location.pathname === '/' ? 'home' : 'category_page_strip';
     return location.pathname.replace(/^\/3d-printer-deals\/?/, '').replace(/\/$/, '') || 'all_deals';
   }
+
+  function network(host) {
+    if (/(^|\.)amazon\.[a-z.]+$/.test(host) || host === 'amzn.to') return 'amazon';
+    if (/avantlink\./.test(host)) return 'avantlink';
+    return '';
+  }
+
+  function affiliateLocation(a) {
+    if (a.closest('.fp-btn') || /^\/filament-prices\/?/.test(location.pathname)) return 'filament_prices';
+    if (a.closest('.post-content')) return 'post';
+    return 'other';
+  }
+
   function track(e) {
-    var link = e.target.closest && e.target.closest('a.dp-card-main, a.dp-card-amz');
-    var a = link && link.closest('.dp-card');
-    if (!a || typeof gtag !== 'function') return;
+    if (typeof gtag !== 'function') return;
     if (e.type === 'auxclick' && e.button !== 1) return;     /* middle click only */
-    var d = a.dataset;
-    gtag('event', 'deal_click', {
-      deal_store: d.store || '',
-      deal_category: d.cat || '',
-      deal_brand: d.brand || '',
-      deal_name: (d.name || '').slice(0, 100),
-      deal_discount: parseFloat(d.pct) || 0,
-      deal_location: where(a),
-      deal_dest: link.classList.contains('dp-card-amz') ? 'amazon' : 'store',
-      value: parseFloat(d.price) || 0,
-      currency: 'USD',
+    var el = e.target.closest && e.target.closest('a[href]');
+    if (!el) return;
+
+    /* Deal cards */
+    var card = el.closest('.dp-card');
+    if (card) {
+      if (!el.matches('a.dp-card-main, a.dp-card-amz')) return;
+      var d = card.dataset;
+      gtag('event', 'deal_click', {
+        deal_store: d.store || '',
+        deal_category: d.cat || '',
+        deal_brand: d.brand || '',
+        deal_name: (d.name || '').slice(0, 100),
+        deal_discount: parseFloat(d.pct) || 0,
+        deal_location: where(card),
+        deal_dest: el.classList.contains('dp-card-amz') ? 'amazon' : 'store',
+        value: parseFloat(d.price) || 0,
+        currency: 'USD',
+        transport_type: 'beacon'
+      });
+      return;
+    }
+
+    /* Other affiliate links */
+    var url;
+    try { url = new URL(el.href, location.href); } catch (err) { return; }
+    if (url.hostname === location.hostname) return;
+    var net = network(url.hostname);
+    var sponsored = /\bsponsored\b/.test(el.getAttribute('rel') || '');
+    if (!net && !sponsored) return;
+    gtag('event', 'affiliate_click', {
+      affiliate_network: net || 'other',
+      link_domain: url.hostname,
+      link_url: url.href.slice(0, 100),
+      link_text: (el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 100),
+      click_location: affiliateLocation(el),
       transport_type: 'beacon'
     });
   }
+
   document.addEventListener('click', track, true);
   document.addEventListener('auxclick', track, true);
 })();
